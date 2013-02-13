@@ -1,0 +1,105 @@
+/* Presentation stylesheet */
+
+/* IDs */
+#zenpanes {
+  border: 1px solid;
+}
+#zen-hdr {
+  padding: 0px 0px 0px 0px;
+}
+#zen-hdr .title {
+  margin: 0;
+  padding: 0;
+}
+#zen-ftr {
+  padding: 1.5em;
+}
+#zen-ftr p {
+  margin: 0;
+  text-align: center;
+}
+
+/* your site header, logo and menu area */
+#zen-hdr {
+   border-bottom: 0px dotted;
+   background: #efefef url(pattern.gif);
+}
+
+/* backgrounds */
+.zen-cols-wrapper {
+  background-color: white;
+}
+
+/* wrapps around all the col wrapper and all three colums */
+#zenpanes {
+  background: #efefef url(pattern.gif);
+}
+
+/* classes */
+.zm,
+.zen-col-center {
+  margin: 0 .3em .3em .3em;
+}
+
+.zen-cols-wrapper {
+  border: 1px;
+  margin: 0 -1px;
+  border-style: solid solid solid solid;
+}
+.zen-hide-left .cols-wrapper {
+  border-left: none;
+  margin-left: 0;
+}
+.zen-hide-right .cols-wrapper {
+  border-right: none;
+  margin-right: 0;
+}
+.zen-hide-both .cols-wrapper {
+  border-style: none none dotted none;
+  margin: 0;
+}
+.zm {
+  font-size: 92%;
+  
+/*  line-height: 30px; */
+}
+#zen-ftr,
+.zm {
+  color: #333;
+}
+
+
+.zm .zm-bdy
+{
+	clear: both;
+}
+
+
+.div_ev_Table{
+	   background: #efefef url(pattern.gif);
+}
+
+/* Portal Title area */
+/* Title Image Replacement */
+.portaltitle
+{
+	color: #F48E00;
+	font-size: 36px;
+	font-family:Tahoma;
+	/*line-height: 75px;*/
+	font-weight: bold;
+	top: 0px;
+	margin: 0px;
+	padding: 0px;
+	width: 99%;
+	text-align:  justify ;
+	text-indent: 15px;
+	vertical-align: middle;
+}
+
+
+/* Sign in module when in left column */
+.zen-col-left .Signin_ascx .Normal
+{
+	color:#802000;
+}

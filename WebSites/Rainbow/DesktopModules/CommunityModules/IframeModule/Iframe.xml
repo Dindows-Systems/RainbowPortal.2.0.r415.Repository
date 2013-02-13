@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rainbow.Modules.IFrame</name>
+    </assembly>
+    <members>
+        <member name="T:Rainbow.Content.Web.ModulesIframeModule">
+            <summary>
+            The IframeModule provides an IFRAME where you can set the
+            source URL and the height of the frame using the settings system.
+            Default height is 200px and URL is http://www.rainbowportal.net
+            Written by: Jakob Hansen, hansen3000@hotmail
+            </summary>
+        </member>
+        <member name="F:Rainbow.Content.Web.ModulesIframeModule.LiteralIframe">
+            <summary>
+            Iframe
+            </summary>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesIframeModule.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesIframeModule.OnInit(System.EventArgs)">
+            <summary>
+            Raises Init event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesIframeModule.InitializeComponent">
+            <summary>
+            	Required method for Designer support - do not modify
+             the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Rainbow.Content.Web.ModulesIframeModule.GuidID">
+            <summary>
+            General module GUID
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<project name="Rainbow" default="build" basedir=".">
+	<property name="configuration" value="release" />
+	<property name="bin_directory" value=".\bin" />
+	<property name="nant.settings.currentframework" value="net-1.0"/> 
+	<target name="build" description="Main compilation">
+		<solution configuration="${configuration}">
+			<projects>
+				<includes name="Rainbow.duemetri.net.csproj" />
+			</projects>
+		</solution>
+	</target>
+	<include buildfile="RainbowResources.build" />
+</project>

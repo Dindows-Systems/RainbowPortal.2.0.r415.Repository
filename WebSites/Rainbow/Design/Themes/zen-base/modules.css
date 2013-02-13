@@ -1,0 +1,78 @@
+/* Rainbow.Zen Module Base File - Jes1111 */
+div.zm-bdy p{
+font-size:1em;
+margin:0 0 0.33em 0;
+color:Black;
+}
+div.zm-bdy a{
+color:Black;
+}
+div.zm-bdy a:hover{
+color:White;
+background-color:Black;
+}
+div.zm-bdy h1{
+font-size:1.8em;
+}
+div.zm-bdy h2{
+font-size:1.4em;
+}
+.exp{
+width:30em;
+margin:10px auto;
+}
+hr{
+width:35em;
+margin:10px auto;
+}
+div.zm-hdr{
+margin:0em;
+padding:0em;
+text-align:left;
+z-index:auto;
+}
+div.zm-hdr h2{
+margin:0em;
+padding:0em 5px 0em 5px;
+font-weight:bold;
+font-size:1.2em;
+line-height:2em;
+border-bottom:1px dotted Black;
+}
+div.zm-hdr div.zm-content{
+margin:0;
+padding:0;
+}
+div.zm-bdy{
+margin:0.5em 0.5em;
+padding:0;
+font-size:1em;
+/*border-top:1px dotted Black;*/
+}
+div.zm{
+position:relative;
+margin:3px 3px;
+padding:0em;
+font-size:1em;
+}
+div.zm-ftr{
+}
+div.zm-ftr div.zm-content{
+}
+div.zen-col-middle div.zm{
+}
+div.zen-col-left div.zm{
+}
+div.zen-col-right div.zm{
+}
+div.zen-col-middle div.zm-bdy{
+font-size:1em;
+}
+div.zen-col-left div.zm-bdy{
+font-size:0.8em;
+line-height:1.2em;
+}
+div.zen-col-right div.zm-bdy{
+font-size:0.8em;
+line-height:1.2em;
+}

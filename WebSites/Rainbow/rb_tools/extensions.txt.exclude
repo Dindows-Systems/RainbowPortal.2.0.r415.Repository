@@ -1,0 +1,8 @@
+Rainbow runtime extensions
+*.asax;*.ascx;*.asmx;*.aspx;*.bat;*.config;*.css;*.dll;*.doc;
+*.dwp;*.gif;*.htc;*.htm;*.html;*.ico;*.jpg;*.js;*.resx;*.sql;
+*.swf;*.txt;*.wsdl;*.xml;*.wsf;*.xsd;*.xsl;*.xslt
+
+Rainbow code extensions
+*.build;*.cs;*.csproj;*.exe;*.map;*.png;*.sln;*.suo;*.vb;
+*.webinfo;*.xsx;*.zip;

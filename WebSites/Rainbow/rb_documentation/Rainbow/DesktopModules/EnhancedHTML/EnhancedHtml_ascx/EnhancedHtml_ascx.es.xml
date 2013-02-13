@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps C:\Archivos de programa\Altova\AUTHENTIC2004\sps\Template\dita\dita.sps?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <topic id="EnhancedHtml-es" xml:lang="es">
+        <title>EnhancedHtml</title>
+        <titlealts>
+            <navtitle>EnhancedHtml</navtitle>
+            <searchtitle>EnhancedHtml</searchtitle>
+        </titlealts>
+        <shortdesc>Muestra y gestiona multiples páginas de contenido en diferentes lenguajes</shortdesc>
+        <prolog>
+            <author type="creator" href="http://www.portalServices.net">José Viladiu</author>
+            <critdates>
+                <created date="2004-08-25" />
+                <revised modified="2004-09-02" />
+            </critdates>
+            <metadata>
+                <audience type="user" job="using" experiencelevel="general" />
+                <category>UserModules</category>
+                <keywords>
+                    <keyword>Módulo EnhancedHtml</keyword>
+                    <keyword>Editor</keyword>
+                    <keyword>Contenidos</keyword>
+                    <keyword>Páginas</keyword>
+                    <keyword>Módulos</keyword>
+                    <keyword>Edición</keyword>
+                    <keyword>Workflow</keyword>
+                    <keyword>Buscar</keyword>
+                    <keyword>Módulos de Usuario</keyword>
+                </keywords>
+                <prodinfo>
+                    <prodname>Rainbow Portal</prodname>
+                    <component>/DesktopModules/EnhancedHtml/EnhancedHtml.ascx</component>
+                </prodinfo>
+            </metadata>
+        </prolog>
+        <body>
+            <section>
+                <title>Introducción</title>
+                <p>Este módulo es capaz de mostrar múltiples páginas de contenido localizado dentro de un simple módulo. Las páginas son Html normal y pueden ser editadas con los editores gráficos que soporta el portal. </p>
+                <p>El módulo proporciona acceso a las diferentes páginas mediante un índice horizontal y un comando estandard siguiente - anterior. Los índices de navegación son construídos dinámicamente y las opciones de la ventana de propiedades proporcionan al usuario el control sobre cómo se verán estos índices.</p>
+                <p>El usuario puede seleccionar si quiere esconder o mostrar cualquiera de los índices de navegación y dónde y cómo se verán. El módulo provee tambien de una opción por la que el usuario puede ver el contenido completo de todas las páginas en una página simple. Esta selección es guardada en una cookie para que las preferencias del usuario se preserven entre visitas.</p>
+                <image alt="Un ejemplo sofisticado usado en una web real" href="/images/EnhancedHTML.gif" />
+                <p>Un ejemplo sofisticado usado en una web real</p>
+            </section>
+            <section>
+                <title>Propiedades del Módulo</title>
+                <image alt="Un ejemplo de las características del módulo" href="/images/EnhancedHTML_properties.gif" />
+                <p>Aclaraciones:</p>
+                <ul>
+                    <li>Topic: Lista de palabras que utiliza el buscador interno del portal</li>
+                    <li>Add Invariant Culture: Si esta opción es seleccionada, entonces las páginas marcadas como Cultura Invariante se mostraran siempre.</li>
+                    <li>Show Multimode icon: Esta opción muestra u oculta un pequeño icono que se utiliza para cambiar entre la vista multi-página y la vista de todas las páginas.</li>
+                </ul>
+            </section>
+            <section>
+                <title>Editando Contenidos</title>
+                <image alt="Un ejemplo de Edición" href="/images/EnhancedHTML_edition1.gif" />
+                <p>En esta sección puede crearse una nueva página o seleccionar una página existente para modificarla o borrarla</p>
+                <image alt="Un ejemplo de Edición" href="/images/EnhancedHTML_edition2.gif" />
+            </section>
+        </body>
+    </topic>
+</dita>

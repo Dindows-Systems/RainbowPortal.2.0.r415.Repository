@@ -1,0 +1,74 @@
+.EventCalendar
+{
+}
+.BlogTitle
+{
+}
+.BlogFooter
+{
+}
+.BlogArchiveLink
+{
+}
+.SurveyQuestion
+{
+	color: DarkRed;
+}
+.SurveyPanel
+{
+	color: Silver;
+	background-color: Silver;
+}
+.SurveyOption
+{
+	color: Black;
+}
+.SurveyButton
+{
+	color: DarkRed;
+	font-weight: bold;
+}
+
+.rb_PageKeyPhrase
+{
+	color: Black;
+	font-size: 12px;
+}
+.EnhancedHtmlTitlePage
+{
+	color: Black;
+	font-size: 15px;
+}
+.EnhancedHtmlLink
+{
+	color: Black;
+	font-size: 12px;
+	font-weight: 800;
+}
+A.EnhancedHtmlLink:link
+{
+	color: Black;
+	text-decoration: none;
+}
+A.EnhancedHtmlLink:visited
+{
+	color: Black;
+	text-decoration: none;
+}
+A.EnhancedHtmlLink:active
+{
+	color: Black;
+	text-decoration: none;
+}
+A.EnhancedHtmlLink:hover
+{
+	color: Black;
+	text-decoration: underline;
+}
+
+.ArticleHead
+{
+	color: Black;
+	font-size: 15px;
+	font-weight: bold;
+}

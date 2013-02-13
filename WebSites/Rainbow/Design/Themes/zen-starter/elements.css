@@ -1,0 +1,398 @@
+/* 
+Style properties for HTML elements based on the HTML 4.01 Specification
+We try to cover general elements here to make sure you dont have any random defaults or something from the browser in
+common tags used all around.
+*/
+
+/* Section 7.5: The document body */
+body
+{
+	background-color: #FFFFFF;
+	color: #802000;
+	font-family: Arial, Verdana, Geneva, Helvetica, sans-serif;
+	font-weight: 200;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+h1
+{
+	font-size: 18px;
+}
+
+h2
+{
+	font-size: 15px;
+}
+
+h3
+{
+	font-size: 12px;
+	font-style: italic;
+}
+
+h4, h5, h6
+{
+	font-size: 9px;
+}
+
+h4
+{
+}
+
+h5
+{
+}
+
+h6
+{
+	font-style: italic;
+}
+
+address
+{
+}
+
+/* Section 9: Text */
+/* 9.2: Structured text */
+
+em
+{
+}
+
+strong
+{
+}
+
+dfn
+{
+}
+
+code
+{
+	font-family: "Bitstream Vera Sans Mono" , "Courier New" , Monaco, Courier, monospace; /* [3] */
+}
+
+samp
+{
+}
+
+kbd
+{
+}
+
+var
+{
+}
+
+cite
+{
+}
+
+abbr
+{
+}
+
+acronym
+{
+}
+
+blockquote
+{
+}
+
+q
+{
+}
+
+sub
+{
+}
+
+sup
+{
+}
+
+/* End of 9.2 */
+
+p
+{
+}
+
+pre
+{
+	font-family: Arial; /* [3] */
+	font-size: 12px;
+}
+
+ins
+{
+}
+
+del
+{
+}
+
+/* Section 10: Lists */
+
+ul
+{
+	margin: 12px 0;
+	padding: 0 0 0 9px;
+}
+
+ul ul
+{
+	margin: 0;
+	padding: 0 0 0 9px;
+}
+
+ol
+{
+	margin: 12px;
+	padding: 0 9px;
+}
+
+ol ol
+{
+	margin: 0;
+}
+
+li
+{
+	margin: 5px;
+	padding: 0;
+}
+
+dl
+{
+}
+
+dt
+{
+}
+
+dd
+{
+}
+
+/* Section 11: Tables */
+
+table
+{
+}
+
+caption
+{
+}
+
+thead
+{
+}
+
+tfoot
+{
+}
+
+tbody
+{
+}
+
+colgroup
+{
+}
+
+col
+{
+}
+
+tr
+{
+}
+
+th
+{
+}
+
+td
+{
+}
+
+/* Section 12.2:  The A element */
+
+a:link
+{
+	font-weight: 400;
+	text-decoration: underline;
+	color: #801212;
+}
+
+a:visited
+{
+	font-weight: 400;
+	text-decoration: underline;
+	color: #801212;
+}
+
+a:hover
+{
+	text-decoration: underline;
+	color: #363693;
+	font-weight: 400;
+}
+
+a:active
+{
+	text-decoration: underline;
+	color: #801212;
+	font-weight: 400;
+}
+
+a:link:hover
+{
+	text-decoration: underline;
+	color: #363693;
+	font-weight: 400;
+}
+
+a:visited:hover
+{
+	font-weight: 400;
+	text-decoration: underline;
+	color: #363693;
+}
+
+a:focus
+{
+	font-weight: 400;
+	text-decoration: underline;
+	color: #801212;
+}
+
+a:focus:hover
+{
+	font-weight: 400;
+	text-decoration: underline;
+	color: #363693;
+}
+
+/* Section 13: Objects, Images, and Applets */
+
+img
+{
+	margin: 0px;
+	border: 0px;
+}
+
+object
+{
+}
+
+applet
+{
+}
+
+/* Section 15: Alignment, font styles, and horizontal rules */
+
+/* 15.2: Fonts "[...] their use is discouraged in favor of style sheets." */
+
+tt
+{
+}
+
+i
+{
+}
+
+b
+{
+}
+
+big
+{
+}
+
+small
+{
+}
+
+/* End of 15.2 */
+
+hr
+{
+}
+
+/* Section 16: Frames */
+
+iframe
+{
+}
+
+/* Section 17: Forms */
+
+form
+{
+}
+
+input
+{
+	font-size: 9px;
+}
+
+input:focus
+{
+}
+
+button
+{
+	font-size: 9px;
+}
+
+button:focus
+{
+}
+
+select
+{
+	font-size: 12px;
+}
+
+select:focus
+{
+}
+
+optgroup
+{
+	font-size: 12px;
+}
+
+option
+{
+	font-size: 12px;
+}
+
+textarea
+{
+	font-size: 12px;
+}
+
+textarea:focus
+{
+}
+
+label
+{
+	font-size: 12px;
+}
+
+fieldset
+{
+}
+
+legend
+{
+}
+

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xmlspysps http://www.altova.com/sps/template/dita/dita.sps?>
+<dita xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="C:\Documents and Settings\Jeremy\Desktop\dita13\dita13\schema\ditabase.xsd">
+	<topic id="ServiceItemList" xml:lang="en">
+		<title>ServiceItemList - An Introduction</title>
+		<titlealts>
+			<navtitle>ServiceItemList</navtitle>
+			<searchtitle>ServiceItemList</searchtitle>
+		</titlealts>
+		<shortdesc>This module lists data from another Rainbow based portal or the same portal as where the module resides.</shortdesc>
+		<prolog>
+			<author type="creator">Jacob Hansen</author>
+			<critdates>
+				<created date="2004-10-13"/>
+				<revised modified="2004-10-13"/>
+			</critdates>
+			<metadata>
+				<audience type="administrator" job="administratoring" experiencelevel="expert"/>
+				<category>Modules</category>
+				<keywords>
+					<keyword>ServiceItemList</keyword>
+					<keyword>WebService</keyword>
+					<keyword>Community</keyword>
+					<keyword>Module</keyword>
+					<keyword>Admin</keyword>
+					<keyword>Administration</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<vrmlist>
+						<vrm version="1.0" release="2004-10-13" modification="0"/>
+					</vrmlist>
+					<component>/DesktopModules/ServiceItemList/ServiceItemList.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<p>The ServiceItemList module uses the Rainbow community WebService. This module lists data from another Rainbow based portal or the same portal as where the module resides.</p>
+			<p>This module list data from another Rainbow based portal in a table that looks similar to the PortalSearch output. Data from the same portal where the module resides can also be displayed. Various kinds of data-filtering, searching and ordering are supported.</p>
+			<p>To get a quick understanding of how this module works please add the module to a page and edit the Module setting (lets pretend you are interrested in localization stuff):</p>
+			<p>ServiceItemList Module settings - simple example:
+			<table>
+					<tr>
+						<td>URL</td>
+						<td>http://www.rainbowportal.net/</td>
+					</tr>
+					<tr>
+						<td>PortalAlias</td>
+						<td>&lt;Leave this field empty&gt;</td>
+					</tr>
+					<tr>
+						<td>LocalMode</td>
+						<td>Unchecked</td>
+					</tr>
+					<tr>
+						<td>Searchstring</td>
+						<td>localization</td>
+					</tr>
+				</table>
+			</p>
+			<p>NOTE: just use the default settings of the rest of the fields! Press OK and see the resulting list of items in a table. The table should list approx. 9 items: 4 Announcements, 3 articles and 2 HTML Documents.</p>
+			<p>The layout of the table can be controlled by settings that start with &quot;Show&quot;. E.g.: Showcreateddate controls if column Date shold be displyed. Ordering is controlled using   fields Sortfield and SortDirection.</p>
+			<p>Description of all settings
+				<table>
+					<tr>
+						<td>URL</td>
+						<td>The url of the Rainbow portal that supplies the data.</td>
+					</tr>
+					<tr>
+						<td>Portalalias</td>
+						<td>Represents the Alias of the site. Must be set for a multiportal Rainbow installation.</td>
+					</tr>
+					<tr>
+						<td>Localmode</td>
+						<td>When checked data from the local Rainbow database is used. Please still fill out URL.</td>
+					</tr>
+					<tr>
+						<td>Moduletype</td>
+						<td>All;Announcements;Contacts;Discussion;Events;HtmlModule;Documents; Pictures;Articles;Tasks;FAQs;ComponentModule. Controls which module data is comming from. Default value is &quot;All&quot; which is all modules.</td>
+					</tr>
+					<tr>
+						<td>Maxhits</td>
+						<td>The maximum numbers of items to display in the table.</td>
+					</tr>
+					<tr>
+						<td>Searchstring</td>
+						<td>All listed items must include this string. THIS SETTING CAN NOT BE EMPTY! Please see search tips below.</td>
+					</tr>
+					<tr>
+						<td>Searchfield</td>
+						<td>ModuleName;Title;CreatedByUser;CreatedDate;TabName. Sorting is always done on the selected field.</td>
+					</tr>
+					<tr>
+						<td>Sortdirection</td>
+						<td>ASC;DESC. Sort Ascending or Descending.</td>
+					</tr>
+					<tr>
+						<td>Mobileonly</td>
+						<td>If checked only items for mobiledevices are listed.</td>
+					</tr>
+					<tr>
+						<td>Idlist</td>
+						<td>Comma separeted list of id&apos;s. Here you can enter a list of e.g. modules you want to get data from, e.g.: 3327,3328,3329. The type of id is controlled by setting Idlisttype</td>
+					</tr>
+					<tr>
+						<td>Idlisttype</td>
+						<td>Item;Module;Tab. Controls the type of id&apos;s in setting Idlist.</td>
+					</tr>
+					<tr>
+						<td>Tag</td>
+						<td>Not used (leave the 0).</td>
+					</tr>
+					<tr>
+						<td>Target</td>
+						<td>Blank;parent;self;top. Default value is &quot;Blank&quot; which will open a new btrser.</td>
+					</tr>
+					<tr>
+						<td>Showid</td>
+						<td>If true ID&apos;s are displayed in the lists</td>
+					</tr>
+					<tr>
+						<td>Showmodulefriendlyname</td>
+						<td>If true column X are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showsearchtitle</td>
+						<td>If true column Title are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showdescription</td>
+						<td>If true column Description are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showcreatedbyuser</td>
+						<td>If true column User are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showcreateddate</td>
+						<td>If true column Date are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showlink</td>
+						<td>If true column Link are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showtabname</td>
+						<td>If true column Tab are displayed in the list</td>
+					</tr>
+					<tr>
+						<td>Showmoduletitle</td>
+						<td>If true column Module are displayed in the list</td>
+					</tr>
+				</table>
+			</p>
+			<p>
+				<b>Search tips for field Searchstring:</b>
+				<ul>
+					<li>Use AND and NOT</li>
+					<li>It is not necessary to type AND between words</li>
+					<li>Use &apos;-&apos; in front of words. Example: &quot;word1 word2 -word3&quot; and &quot;word1 word2 NOT word3&quot; returns same result</li>
+					<li>Use ? as singlecharacter wildcart</li>
+					<li>OR is not supported (it is ignored)</li>
+					<li>Phrase searching supported using quotes: &quot;this is a phrase&quot;</li>
+				</ul>
+			</p>
+			<p>NOTE: The search code PortalSearch uses are called by module ServiceItemList.</p>
+		</body>
+		<related-links>
+			<linklist>
+				<link loc="Rainbow/DesktopModules/PortalSearch/PortalSearch_ascx" src="PortalSearch_ascx">
+					<linktext>PortalSearch Module</linktext>
+				</link>
+			</linklist>
+		</related-links>
+	</topic>
+</dita>

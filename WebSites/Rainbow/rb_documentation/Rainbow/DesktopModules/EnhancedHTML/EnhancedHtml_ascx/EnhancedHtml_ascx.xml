@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?altova_sps C:\Archivos de programa\Altova\AUTHENTIC2004\sps\Template\dita\dita.sps?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<topic id="EnhancedHtml-en" xml:lang="en">
+		<title>EnhancedHtml</title>
+		<titlealts>
+			<navtitle>EnhancedHtml</navtitle>
+			<searchtitle>EnhancedHtml</searchtitle>
+		</titlealts>
+		<shortdesc>Show and manage multiple pages of localized html content</shortdesc>
+		<prolog>
+			<author type="creator" href="http://www.portalServices.net">José Viladiu</author>
+			<critdates>
+				<created date="2004-08-25"/>
+				<revised modified="2004-09-02"/>
+			</critdates>
+			<metadata>
+				<audience type="user" job="using" experiencelevel="general"/>
+				<category>UserModules</category>
+				<keywords>
+					<keyword>EnhancedHtml Module</keyword>
+					<keyword>Editor</keyword>
+					<keyword>Contents</keyword>
+					<keyword>Tabs</keyword>
+					<keyword>Modules</keyword>
+					<keyword>Edition</keyword>
+					<keyword>Workflow</keyword>
+					<keyword>Search</keyword>
+					<keyword>User Modules</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<component>/DesktopModules/EnhancedHtml/EnhancedHtml.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<section>
+				<title>Introduction</title>
+				<p>This module is able to show multiple pages of localized content inside a single module. The pages are normal Text/Html pages that can be edited with the graphical editors which comes bundled with your Rainbow installation. </p>
+				<p>The module provides access to the multiple pages using horizontal list of index links, and using a standard next - previous command bar. The navigation indexes are build dynamically, and the edit options screen provides you with control over their layout.</p>
+				<p>You are able to select if you want hide or show any of the navigation items, if they should be shown over, under, at the left, or at the right side of the page content. The module has a site wide option where the user can select to see all the content from all pages within the module as a single page. The selection is stored in a cookie, so the preference is preserved between visits.</p>
+				<image alt="An example of what the EnhancedHtml Module looks like" href="/images/EnhancedHTML.gif"/>
+				<p>A sofisticated sample used in a real website</p>
+			</section>
+			<section>
+				<title>Module Properties</title>
+				<image alt="An example of Module Settings" href="/images/EnhancedHTML_properties.gif"/>
+				<p>Remarks:</p>
+				<ul>
+					<li>Topic: List of words for internal portal search use</li>
+					<li>Add Invariant Culture: If this option is selected, then the marked pages as invariant culture is always seen.</li>
+					<li>Show Multimode icon: This option show a litle icon for change between multipage mode and page mode.  </li>
+				</ul>
+			</section>
+			<section>
+				<title>Editing Contents</title>
+				<image alt="An example of Edit Mode" href="/images/EnhancedHTML_edition1.gif"/>
+				<p>You can select in this section create a new page or select a existing page for modify or delete</p>
+				<image alt="An example of Edit Mode" href="/images/EnhancedHTML_edition2.gif"/>
+			</section>
+		</body>
+	</topic>
+</dita>

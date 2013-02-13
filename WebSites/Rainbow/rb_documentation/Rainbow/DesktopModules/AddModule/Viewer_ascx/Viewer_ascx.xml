@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<topic id="AddModule-en" xml:lang="en">
+		<title>Add Module - An Introduction</title>
+		<titlealts>
+			<navtitle>Add Module</navtitle>
+			<searchtitle>Add Module</searchtitle>
+		</titlealts>
+		<shortdesc>Provides administrative control of role permissions for adding modules to tabs.</shortdesc>
+		<prolog>
+			<author type="creator" href="http://weblogs.asp.net/jmandia/">John Mandia</author>
+			<author type="contributor">Jeremy Esland</author>
+			<critdates>
+				<created date="2004-08-25"/>
+				<revised modified="2004-09-02"/>
+			</critdates>
+			<metadata>
+				<audience type="administrator" job="administratoring" experiencelevel="expert"/>
+				<category>Admin Modules</category>
+				<keywords>
+					<keyword>Add Module</keyword>
+					<keyword>Admin</keyword>
+					<keyword>Administration</keyword>
+					<keyword>Tabs</keyword>
+					<keyword>Roles</keyword>
+					<keyword>Authority</keyword>
+					<keyword>Authorized</keyword>
+					<keyword>Authorization></keyword>
+					<keyword>User Roles</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<component>/DesktopModules/AddModule/Viewer.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<p>Welcome to the &quot;Add Module&quot; help file. The &quot;Add Module&quot; was built to allow administrators to easily select roles that could add modules at the tab level This allows you to:</p>
+			<ul>
+				<li>Give other roles permission to add modules for a particular tab or all tabs (by selecting the show on all tabs tickbox -&gt;Properties-&gt;Edit Base Settings) </li>
+				<li>Assign roles that will have default add, edit, delete, properties permissions on all modules added via this module.</li>
+				<li>Restrict available modules (All powerful modules are now called Admin - Module Name and are marked as an admin module). Any role that has edit properties permission for the &quot;Add Module&quot; will be able to see admin modules so I recommend only adding admins and maybe 1 other power role (e.g. Site Administrators).  </li>
+				<li>Set View permissions for added modules. You can select the following default view permissions: &quot;All Users&quot;, &quot;Authenticated Users&quot;, &quot;UnAuthenticated Users&quot; and &quot;Authorised Roles&quot; (Authorised Roles will add all roles that have View permission for the &quot;Add Module&quot; module).</li>
+				<li>Find out more about each module via the new help system.</li>
+				<li>Provide a name for your module.</li>
+			</ul>
+			<image alt="An example of what the Add Module looks like" href="images/example.gif"/>
+		</body>
+	</topic>
+</dita>

@@ -1,0 +1,1030 @@
+P
+{
+    MARGIN-TOP: 0px;
+    FONT-SIZE: 10pt;
+    COLOR: black;
+    PADDING-TOP: 0px;
+    FONT-FAMILY: Verdana, Arial
+}
+DIV
+{
+    FONT-SIZE: 10pt
+}
+TD
+{
+    FONT-SIZE: 10pt;
+    LIST-STYLE-IMAGE: url(img/bulleye.gif);
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial
+}
+.Error
+{
+    COLOR: crimson
+}
+.HeadBg
+{
+    BACKGROUND-COLOR: #ffffff
+}
+BODY
+{
+    PADDING-LEFT: 0px;
+    FONT-SIZE: 10pt;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px;
+    PADDING-RIGHT: 0px;
+    BACKGROUND-COLOR: #ffffff
+}
+
+.Menu
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Verdana, Arial
+}
+
+/* Standard Navigation Non-Selected Tab classes */
+.Pages
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    color: #ffffff;
+    font-size:13px;
+    border-right: solid 1px #cccccc;
+    border-left: solid 1px #cccccc;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    white-space:nowrap;
+    
+    text-decoration: none;
+    font-weight: normal;
+}
+A.Pages:link
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.Pages:visited
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.Pages:hover
+{
+    COLOR: white;
+    TEXT-DECORATION: underline
+}
+/* end Non-Selected Tab Classes */
+
+/* Standard Navigation Selected Tab(?) classes */
+.DownTabs
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    color: #660000;
+    font-size:13px;
+    background-color:#eeeeee;
+    border-bottom: solid 1px #eeeeee;
+    border-right: solid 1px #cccccc;
+    border-left: solid 1px #eeeeee;
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 1px;
+    padding-bottom: 5px;
+    white-space:nowrap;
+}
+A.DownTabs:link
+{
+    COLOR: #660000;
+    TEXT-DECORATION: none
+}
+A.DownTabs:visited
+{
+    COLOR: #660000;
+    TEXT-DECORATION: none
+}
+A.DownTabs:hover
+{
+    COLOR: #660000;
+    TEXT-DECORATION: underline
+}
+/* end Selected Tab Classes */
+
+/* Standard Navigation Currently Selected Tab(?) classes */
+.DownSelectedTab
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 13px;
+    color:  #ffffff;
+    font-weight: normal;
+}
+A.DownSelectedTab:link
+{
+    COLOR: #660000;
+    TEXT-DECORATION: none
+}
+A.DownSelectedTab:visited
+{
+    COLOR: #660000;
+    TEXT-DECORATION: none
+}
+/* end Currently Selected Tab Classes */
+
+/* Standard Navigation Selected Tab classes */
+.SelectedTabs
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 13px;
+    color:  #ffffff;
+    font-weight: normal;
+}
+A.SelectedTabs:hover
+{
+	text-decoration: underline;
+    color: #660000;
+}
+A.SelectedTabs:link
+{
+	text-decoration: none;
+    color: #660000;
+}
+A.SelectedTabs:visited
+{
+	text-decoration: none;
+    color: #660000;
+}
+/* end Selected Tab Classes */
+
+/* Standard Navigation Sub Tab classes */
+.SubTabs
+{
+    BORDER-RIGHT: white thin;
+    PADDING-RIGHT: 10px;
+    BORDER-TOP: white thin;
+    PADDING-LEFT: 10px;
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: white thin;
+    COLOR: white;
+    LINE-HEIGHT: normal;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: white thin;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #999999;
+    TEXT-ALIGN: center;
+    TEXT-DECORATION: none
+}
+A.SubTabs:link
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+A.SubTabs:visited
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+A.SubTabs:hover
+{
+    COLOR: #666666;
+    TEXT-DECORATION: none
+}
+/* end Sub Tab classes */
+
+/* Standard Navigation Selected Sub Tab classes */
+.SelectedSubTabs
+{
+    BORDER-RIGHT: white thin;
+    PADDING-RIGHT: 10px;
+    BORDER-TOP: white thin;
+    PADDING-LEFT: 10px;
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: white thin;
+    COLOR: #333333;
+    LINE-HEIGHT: normal;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: white thin;
+    FONT-FAMILY: Verdana, Arial;
+    BACKGROUND-COLOR: #f9ccb0;
+    TEXT-ALIGN: center
+}
+A.SelectedSubTabs:hover
+{
+    COLOR: #666666;
+    TEXT-DECORATION: none
+}
+A.SelectedSubTabs:link
+{
+    COLOR: #666666;
+    TEXT-DECORATION: none
+}
+A.SelectedSubTabs:visited
+{
+    COLOR: #666666;
+    TEXT-DECORATION: none
+}
+/* end Selected Sub Tab classes */
+
+/* Portal Site Title */ 
+.SiteTitle
+{
+	font-weight: bold;
+    font-size: 24px;
+    color: #660000;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+/* Site Links (The links to access additional user and misc. management tools) */
+.SiteLink
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.SiteLink, TD
+{
+	white-space:nowrap;
+}
+.SiteLinkAlt
+{
+	font-size:10px;
+	COLOR: #FFFFFF;
+}
+A.SiteLink:link
+{
+	font-size: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #ffffff;
+}
+A.SiteLink:visited
+{
+	font-size: 10px;
+	text-decoration: none;
+    font-weight: normal;
+    color: #ffffff;
+}
+A.SiteLink:active
+{
+	font-size: 10px;
+    text-decoration: none;
+    font-weight: normal;
+    color: #ffffff;
+}
+
+A.SiteLink:hover
+{
+    text-decoration: underline;
+    font-weight: normal;
+    color: #ffffff;
+}
+/* End Site Links classes */
+
+.Accent
+{
+	font-size:16px;
+    color: #eeeeee;
+    font-weight: normal;
+}
+.Message
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    font-size: 11px;
+    background-color: #eeeeee;
+}
+.ItemTitle
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #666666;
+}
+.ItemDate
+{
+	font-weight: bold;
+    font-size: 11px;
+    color: #999999;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+/* First level Header style */
+.Head
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+/* Second level Header style (used by most control labels) */
+.SubHead
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333333;
+}
+.SubHead, LABEL
+{
+	white-space:nowrap;
+}
+/* Third level Header style (used by most Content Groupings/Fieldsets) */
+.SubSubHead
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: black;
+}
+/* General text style */
+.Normal
+{
+    PADDING-RIGHT: 0pt;
+    FONT-SIZE: 11px;
+    COLOR: black;
+    LINE-HEIGHT: normal;
+    FONT-FAMILY: Verdana, Arial;
+    LETTER-SPACING: normal
+}
+
+.NormalTextBox
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+.NormalBold
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.NormalRed
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: red;
+}
+.NormalItalic
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* Default styles for Input Controls inside modules */ 
+INPUT.CommandButton
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+INPUT
+{
+}
+/* end Input Control styles */
+
+A.CommandButton
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+}
+A.CommandButton:visited
+{
+	text-decoration: underline;
+    color: #333333;
+}
+A.CommandButton:hover
+{
+	text-decoration: underline;
+    color: red;
+}
+A.CommandButton:link
+{
+	text-decoration: underline;
+    color: #333333;
+}
+H1
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 12px
+}
+H2
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 20px
+}
+H3
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 18px
+}
+H4
+{
+    FONT-WEIGHT: normal;
+    FONT-SIZE: 16px
+}
+H5
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 14px
+}
+DT
+{
+}
+H6
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 12px
+}
+TFOOT
+{
+    FONT-SIZE: 8px
+}
+THEAD
+{
+    FONT-SIZE: 10pt
+}
+TH
+{
+    FONT-SIZE: 10pt;
+    VERTICAL-ALIGN: baseline;
+    COLOR: #333333
+}
+A:link
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-SIZE: 11px;
+    BORDER-LEFT: medium none;
+    COLOR: #ee7a35;
+    BORDER-BOTTOM: medium none;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    COLOR: #999999;
+    BORDER-BOTTOM: medium none;
+    TEXT-DECORATION: none
+}
+A:active
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    COLOR: #f9ccb0;
+    BORDER-BOTTOM: medium none;
+    TEXT-DECORATION: none
+}
+A:visited
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-SIZE: 10pt;
+    BORDER-LEFT: medium none;
+    COLOR: #ee7a35;
+    BORDER-BOTTOM: medium none;
+    TEXT-DECORATION: none
+}
+SMALL
+{
+}
+BLOCKQUOTE
+{
+    FONT-SIZE: 11pt
+}
+PRE
+{
+}
+UL LI
+{
+    LIST-STYLE-IMAGE: url(img/bulleye.gif);
+    LIST-STYLE-TYPE: circle
+}
+UL LI LI
+{
+    LIST-STYLE-IMAGE: url(img/bulleye.gif);
+    LIST-STYLE-TYPE: square
+}
+UL LI LI LI
+{
+    LIST-STYLE-IMAGE: url(img/bulleye.gif);
+    LIST-STYLE-TYPE: lower-roman
+}
+OL LI
+{
+    LIST-STYLE-TYPE: decimal
+}
+OL OL LI
+{
+    LIST-STYLE-TYPE: lower-alpha
+}
+OL OL OL LI
+{
+    LIST-STYLE-TYPE: lower-roman
+}
+HR
+{
+    COLOR: #999999;
+    HEIGHT: 1pt;
+    TEXT-ALIGN: center
+}
+.ArticleHead
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 15px;
+    BACKGROUND-COLOR: white
+}
+
+/* The left pane cell */
+.LeftPane
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px
+}
+
+/* The right pane cell */
+.RightPane
+{
+    PADDING-RIGHT: 2px;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    PADDING-TOP: 0px
+}
+
+/* The main content pane(middle) cell */
+.ContentPane
+{
+    BORDER-RIGHT: medium none;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: medium none;
+    PADDING-LEFT: 2px;
+    PADDING-BOTTOM: 0px;
+    MARGIN: 0px;
+    BORDER-LEFT: medium none;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: medium none
+}
+.Titlehead
+{
+    PADDING-LEFT: 0pt;
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 11px;
+    LINE-HEIGHT: 14pt;
+    FONT-FAMILY: Arial, Verdana
+}
+IMG
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    BORDER-BOTTOM: medium none
+}
+
+.SurveyQuestion
+{
+    PADDING-RIGHT: 5pt;
+    PADDING-LEFT: 5pt
+}
+.SurveyOption
+{
+}
+.SurveyButton
+{
+    FONT-WEIGHT: 600
+}
+.NormalDim
+{
+    FONT-SIZE: 11px;
+    FONT-FAMILY: Verdana, Arial
+}
+
+.rb_LangSw_tbl
+{
+    TEXT-DECORATION: none
+}
+A.rb_LangSw_tbl:link
+{
+    TEXT-DECORATION: none
+}
+A.rb_LangSw_tbl:visited
+{
+}
+A.rb_LangSw_tbl:hover
+{
+    COLOR: #da0b0b
+}
+.rb_LangSw_sel
+{
+}
+
+/* Footer Module classes */
+.linkFooter
+{
+    FONT-WEIGHT: 500;
+    FONT-SIZE: 9pt;
+    COLOR: black;
+    FONT-FAMILY: Verdana, Arial
+}
+A.linkFooter:link
+{
+    FONT-WEIGHT: normal
+}
+A.linkFooter:visited
+{
+    FONT-WEIGHT: normal
+}
+A.linkFooter:hover
+{
+    FONT-WEIGHT: normal
+}
+/* End Footer Module Classes */
+
+OL
+{
+    FONT-SIZE: 10pt
+}
+UL
+{
+    FONT-SIZE: 10pt;
+    LIST-STYLE-IMAGE: url(img/bulleye.gif);
+    LIST-STYLE-TYPE: disc
+}
+A
+{
+    FONT-SIZE: 10pt
+}
+DL
+{
+    FONT-SIZE: 10pt
+}
+.RightPane, .Titlehead
+{
+    FONT-WEIGHT: 600;
+    FONT-SIZE: 11pt;
+    COLOR: white;
+    FONT-FAMILY: Arial, Verdana
+}
+CAPTION
+{
+    FONT-SIZE: 10pt;
+    COLOR: #515530
+}
+.MenuItem
+{
+    BORDER-RIGHT: white 1pt solid;
+    BORDER-TOP: white thin;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: salmon;
+    COLOR: #515530;
+    BORDER-BOTTOM: white 1pt solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #e1eaff
+}
+.MenuItemHi
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: medium none;
+    COLOR: white;
+    BORDER-BOTTOM: white 1pt solid;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #0163ac
+}
+.MenuSub
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    FONT-FAMILY: Arial
+}
+.MenuSubHi
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: white;
+    FONT-FAMILY: Arial;
+    BACKGROUND-COLOR: #0163ac
+}
+
+/*  DESKTOP PORTAL BANNER SETTINGS */
+.rb_DefaultPortalHeader
+{
+width: 100%;
+margin: 0px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
+border-collapse: collapse;
+}
+
+/* The div and the table style allow you to offer cross browser support for table positioning and size which allows you to apply your theme to all pages within rainbow, not just desktopdefault.aspx */
+/* This is used throughout all standard - user based pages */
+.rb_DefaultLayoutTable
+{
+	width: 100%;
+    text-align: left;   
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border-collapse: collapse; 
+}
+.rb_DefaultLayoutDiv
+{
+	text-align:  left; 
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;  
+}
+
+/* The Alternate Layout style (for other .aspx pages) */
+.rb_AlternateLayoutTable
+{
+    BACKGROUND-COLOR: white;
+    width: 100%;
+    text-align: left;   
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	border-collapse: collapse;
+}
+.rb_AlternateLayoutDiv
+{
+	text-align:  left; 
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;  
+}
+
+/* Alternate pages LABEL tag style (for those pages which haven't been converted to new style classes yet) */
+.rb_AlternateLayoutDiv LABEL
+{
+	font-size:11px;
+	white-space: nowrap;
+}
+
+/* Module Buttons */
+.rb_mod_btn
+{
+	display:block;
+	margin:0px 0px 0px 2px;
+}
+.rb_mod_btn.btn-img-txt, .rb_mod_btn.btn-img-only{
+}
+.rb_mod_btn.btn-img-txt, .rb_mod_btn.btn-img-only-css{
+	overflow:hidden;
+}
+div.btn-img-only,div.btn-img-only-css
+{
+	display:block;width:0px;height:0px;overflow:hidden
+}
+div.btn-img-txt
+{
+	display:block;width:0px;height:0px;overflow:hidden
+}
+div.btn-txt-only
+{
+	font-size:9px;
+	line-height:0.8;
+}
+
+/* The module content cell for modules - do not set padding for module here*/
+.module
+{
+	width:100%;
+	background-color:#ffffff;
+}
+/* Scrollable content area in a module - set padding for the content of a module here */
+.modulePadding
+{
+	PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 5px;
+    PADDING-TOP: 5px
+}
+
+/* The Module's toolbar cell (includes title and buttons) */ 
+.moduleTitleArea { padding-bottom:4px;padding-left:4px;padding-right:4px;background-color:#660000;}
+ 
+/* The Module's title */
+.moduleTitle { font-family:verdana;font-size:12px;font-weight:bold;color:white;white-space:nowrap;}
+ 
+/* The cell following the Module's title and before its buttons */
+.moduleTitleMiddle {white-space:nowrap;}
+.moduleTitleMiddle img { vertical-align:middle;}
+ 
+/* The Module's toolbar button cells */
+.moduleButtons {white-space:nowrap;}
+.moduleButtons img { vertical-align:middle; margin-top:2px; margin-bottom:2px;}
+.moduleButtons a { border:1px solid #660000;}
+.moduleButtons a:visited { border:1px solid #660000;}
+.moduleButtons a:hover { border:1px solid #cccccc;}
+ 
+/* style of custom separator(between custom and default buttons) in module title bar */
+.rb_mod_title_sep
+{
+	vertical-align:middle;
+	height:23px;
+	width:1px;
+	border-left:solid 1px #a8a9ba;
+	border-right:solid 1px white;
+	background-color:#68697a;
+}
+
+ /* The Module's custom scrollbar styles */
+.moduleScrollBars 
+{
+	scrollbar-face-color:#660000;
+	scrollbar-3dlight-color:#999999;
+	scrollbar-arrow-color:#eeeeee;
+	scrollbar-base-color:#eeeeee;
+	scrollbar-track-color:buttonface;
+	scrollbar-shadow-color:#eeeeee;
+	scrollbar-highlight-color:#eeeeee;
+	scrollbar-darkshadow-color:#999999;
+}
+ 
+/* The User Information area in the Header */
+.headerUserInfo { padding-top:5px;padding-right:5px;font-family:verdana;font-size:12px;color:#660000;}
+ 
+/* The User and misc. management links area in the Header */
+.navigationBar {background-color:#660000; border-bottom:solid 1px #cccccc; color:white; }
+ 
+/* The Date Element in the Header */
+.dateCurrent { padding-right:4px; font-family:verdana;font-size:10px;color:#ffff99;line-height:10px;}
+ 
+/* The Last Visit Element in the Header */
+.dateLastVisit { padding-right:4px; font-family:verdana;font-size:9px;color:#ffcc00;line-height:9px;}
+ 
+.navigationItem { font-family:verdana;font-size:11px;color:white; }
+.navigationNonSelected { border-bottom:solid 1px #cccccc;}
+ 
+/* Content Groupings(Fieldsets) inside Modules */
+.SettingsTableGroup { margin-top:4px;}
+
+/* Label for Content Groupings(Fieldsets) */
+.SettingsTableGroup LEGEND 
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    padding-right: 4px;
+    color: black;
+}
+/* Label for each user entry item in a Content Groupings(Fieldsets) */
+.SettingsTableGroup LABEL 
+{
+	font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #333333;
+    white-space: nowrap;
+    line-height: 19px;
+    vertical-align:middle;
+}
+/* Cell for each user entry item in a Content Groupings(Fieldsets) */
+.SettingsTableGroup TD 
+{ 
+	vertical-align: text-top;
+}
+/* Control for each user entry item in a Content Groupings(Fieldsets) */
+.SettingsTableGroup INPUT, .SettingsTableGroup SELECT
+{ 
+	margin-right:4px;
+}
+ 
+/* =============================
+   BreadCrumbs styles
+   ============================= */
+.bc_Row		{font-family: verdana;padding-left:57px;border-left:solid 1px #999999;border-bottom:solid 2px #cccccc;background-color:#eeeeee;}
+.bc_Text	{FONT-SIZE:10px;}
+.bc_Link, .bc_Link:link, .bc_Link:visited {padding-left:10px;FONT-SIZE:10px;font-weight:bold;text-decoration:none;color:#660000;}
+.bc_Link:hover	{text-decoration:underline;}
+
+
+
+/* =============================
+   SolpartNavigation menu styles
+   ============================= */
+
+.spm_MenuContainer	{font-family: verdana; border-collapse: collapse; }
+.spm_MenuBar		{height:22px;}
+.spm_MenuBar TD		{FONT-SIZE: 12px;vertical-align:middle;}
+.spm_MenuBar TD TD   	{border-left:solid 1px #999999;}
+.spm_SubMenu		{font-family: verdana;z-index:200; border-bottom: Gray 1px solid; border-left: White 1px solid; border-top: White 1px solid; border-right: Gray 1px solid;}
+.spm_SubMenu TD		{border:none;height:18px;}
+.spm_MenuBreak		{height:0px;}
+.spm_MenuItem 		{background-color:#660000;cursor:pointer;cursor:hand;}
+.spm_MenuItem TD	{height:22px;background-color:#660000;font-size:12px;color:white;padding-left:3px; padding-right:3px; }
+.spm_MenuIcon		{border:none;}
+.spm_MenuItemSel	{background-color:#660000;color:white;cursor:pointer;cursor:hand;}
+.spm_MenuItemSel TD	{border-left:solid 1px #999999;color:white;font-size:12px;text-decoration:underline;padding-left:3px; padding-right:3px;}
+.spm_MenuArrow		{font-family: webdings;font-size: 10pt; cursor: hand; }
+.spm_RootMenuArrow	{font-family: webdings;font-size: 10pt; cursor: hand; }
+.spm_DefaultItem	{background-color:#eeeeee;color:#660000;cursor:pointer;cursor:hand;}
+.spm_DefaultItem TD	{height:23px;font-size:12px;padding-left:3px; padding-right:3px;}
+.spm_DefaultItemHighlight	{cursor:pointer;cursor:hand;}
+.spm_DefaultItemHighlight TD	{background-color:#eeeeee;color:#660000;text-decoration:underline;font-size:12px;padding-left:3px; padding-right:3px;}
+
+/* ================================ */
+
+/* ================================
+   EnhancedHtml Module
+   ================================ */
+
+.EnhancedHtmlTitlePage
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color:darkblue;
+}
+
+.EnhancedHtmlLink
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: darkgray
+}
+
+A.EnhancedHtmlLink:link
+{
+    text-decoration: none;
+    color: black;
+}
+
+A.EnhancedHtmlLink:visited
+{
+	color: olive;
+	text-decoration: none;
+}
+ 
+A.EnhancedHtmlLink:active
+{
+    text-decoration: none;
+    color: green;
+}
+ 
+A.EnhancedHtmlLink:hover
+{
+    text-decoration: none;
+    color: red;
+}
+
+
+/* ===================================================================================
+   These styles are primarily intended for use with the asp:datagrid tag.
+   NOTE: PortalSearch and GoogleSearch only uses _Header, _Item and _AlternatingItem.
+   =================================================================================== */
+.Grid_Header
+{
+	color: White;
+	background-color: #697898;
+}
+.Grid_Footer 
+{
+}
+.Grid_Item
+{
+}
+.Grid_AlternatingItem
+{
+	background-color: #F0F0F0;
+}
+.Grid_SelectedItem
+{
+}
+.Grid_Pager
+{
+}
+
+/* ===================================================================================
+   These styles are primarily intended for use with the Task Module.
+   NOTE: Only three status change the color.
+     Complete = 100%
+     Beginning < 50%
+	 NearlyComplete >= 50% and < 100%
+   =================================================================================== */
+.Task_Complete
+{
+	color: white;
+	background-color: #ffffff;
+}
+.Task_Beginning
+{
+	background-color: #ffffff;
+}
+.Task_NearlyComplete
+{
+	background-color: #ffffff;
+}

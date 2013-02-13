@@ -1,0 +1,3 @@
+nant -buildfile:RainbowModules.build -D:configuration=debug > RainbowModules_debug.log
+type RainbowModules_debug.log
+@pause

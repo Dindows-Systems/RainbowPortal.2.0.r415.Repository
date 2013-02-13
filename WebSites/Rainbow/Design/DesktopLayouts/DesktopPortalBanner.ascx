@@ -1,0 +1,2 @@
+<%@ Control Language="c#" Inherits="Rainbow.Content.Web.Modules.DesktopPortalBanner" Src="DesktopPortalBanner.ascx.cs" AutoEventWireup="false" %>
+<asp:PlaceHolder id="LayoutPlaceHolder" runat="server"></asp:PlaceHolder>

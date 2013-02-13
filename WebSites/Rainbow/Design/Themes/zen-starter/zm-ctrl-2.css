@@ -1,0 +1,64 @@
+/* Rainbow.Zen ZenModule Controls  */
+/* by Jes1111 - jeremy@marinateq.com */
+/* layout */
+div.zm-hdr ul{
+display: block;
+padding:0;
+margin:0;
+}
+div.zm-hdr:hover ul{
+display: block;
+}
+div.zm-ctrl{
+position: relative;
+top:0px;
+right:0px;
+margin: 0 0 3px 3px;
+}
+div.zm-ctrl ul{
+position: relative;
+top: 0px;
+float: right;
+padding-left:0px;
+margin-left:0px;
+}
+div.zm-ctrl li{
+list-style-type:none;
+margin:0px;
+float: left;
+cursor:default;
+cursor:hand;
+}
+/* presentational */
+div.zm-hdr div.zm-ctrl {
+border-style: none;
+border-color: red;
+border-width: 0px 1px 1px 1px;
+}
+div.zm-bdy div.zm-ctrl, div.zm-ftr div.zm-ctrl {
+display: none;
+}
+div.zm-ctrl img{
+background-color: transparent;
+width: auto;
+}
+div.zm-ctrl li{
+color: #4E4E4E;
+background-color: transparent;
+padding: 3px;
+font-size: 0.8em;
+}
+div.zm-ctrl li:hover{
+background-color: Silver;
+color: Black;
+padding: 3px;
+font-size: 0.8em;
+}
+div.zm-ctrl li a{
+color: Black;
+display:block;
+text-decoration:none
+}
+div.zm-ctrl li a:hover{
+color: Black;
+}

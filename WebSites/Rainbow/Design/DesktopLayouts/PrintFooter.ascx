@@ -1,0 +1,2 @@
+<%@ Control Language="c#" AutoEventWireup="false" Src="PrintFooter.ascx.cs" Inherits="Rainbow.Content.Web.Modules.PrintFooter" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+<asp:PlaceHolder id="LayoutPlaceHolder" runat="server"></asp:PlaceHolder>

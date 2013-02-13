@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xmlspysps http://www.altova.com/sps/template/dita/dita.sps?>
+<dita xmlns:fo="http://www.w3.org/1999/XSL/Format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="C:\Documents and Settings\Jeremy\Desktop\dita13\dita13\schema\ditabase.xsd">
+	<topic id="Contacts" xml:lang="en">
+		<title>Contacts</title>
+		<titlealts>
+			<navtitle>Contacts</navtitle>
+			<searchtitle>Contacts</searchtitle>
+		</titlealts>
+		<shortdesc>Manage a list of Contacts.</shortdesc>
+		<prolog>
+			<author type="creator">unknown</author>
+			<critdates>
+				<created date="2004-10-13" />
+				<revised modified="2004-10-13" />
+			</critdates>
+			<metadata>
+				<audience type="user" job="using" experiencelevel="general" />
+				<category>Modules</category>
+				<keywords>
+					<keyword>Module</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<vrmlist>
+						<vrm version="1.0" release="2004-10-13" modification="0" />
+					</vrmlist>
+					<component>/DesktopModules/Contacts/Contacts.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<section>
+				<title>Introduction</title>
+				<p>The Contacts module was one if the first modules to be ported over from the orginal IBS source.</p>
+				<p>This module lets the user manage a list of contacts. The list is fairly simple, keeping track of things like Name (first and last), Role, Email, Phone Number, etc. The contact list can be sorted by any of the header fields by clicking on the field.</p>
+				<image alt="An example of the Module" href="/images/Contacts_view.gif" />
+				<p>Shows the module will all fields enabled.</p>
+			</section>
+			<section>
+				<title>Module Specific Properties</title>
+				<p>The module specific properties allow you to change the fields that are displayed when a person is viewing the Contact information. To change whether a field is visible or not, toggle the check box from checked to unchecked. If the box is checked, the column will be visible. You can toggle the following fields...</p>
+				<ul>
+					<li>Show Column Contact1</li>
+					<li>Show Column Contact2</li>
+					<li>Show Column Email</li>
+					<li>Show Column Address</li>
+					<li>Show Column Fax</li>
+				</ul>
+			</section>
+			<section>
+				<title>Adding and Editing Contacts</title>
+				<p>You can add a new contact by clicking on the "Add" button. The add button may look different depending on the module theme, but the tool tip (caption) that is displayed when you hover over the button will read “Add new contact…”</p>
+				<p>Enter any information that you want displayed, and select apply changes when you are finished. The form to add or edit a contact is shown below.</p>
+				<image alt="An example of the Add/Edit Module page" href="/images/Contacts_edit.gif" />
+			</section>
+		</body>
+	</topic>
+</dita>

@@ -1,0 +1,37 @@
+/* Rainbow.Zen Module Buttons - Joel */
+/* center column in title,left and right columns below title */
+/* Module Buttons */
+
+.rb_mod_btn
+{
+	display:block;
+	margin:0px 0px 0px 2px;
+}
+
+.rb_mod_btn.btn-img-txt, .rb_mod_btn.btn-img-only
+{
+}
+
+.rb_mod_btn.btn-img-txt, .rb_mod_btn.btn-img-only-css
+{
+overflow:hidden;
+}
+
+div.btn-img-only,div.btn-img-only-css
+{
+	visibility:visible;width:0px;height:0px;overflow:hidden
+}
+
+div.btn-img-txt
+{
+	visibility:visible;width:0px;height:0px;overflow:hidden
+}
+
+div.btn-txt-only
+{
+	font-size: 9px ;
+	line-height: 1px ;
+}
+
+
+

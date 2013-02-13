@@ -1,0 +1,57 @@
+/* Rainbow.Zen HeaderMenu */
+/* by Jes1111 - jeremy@marinateq.com */
+/* buttons */
+.headermenu{
+position: absolute;
+top: 5px;
+right: 0px;
+font-size:0.8em;
+}
+.headermenu ul{
+position: relative;
+top:0px;
+right:0px;
+line-height:2;
+color: White;
+padding:0;
+margin:0;
+}
+.headermenu li{
+float:left;
+list-style:none;
+padding:0px 5px 0px 0px;
+margin:0;
+text-align:center;
+}
+.headermenu li a{
+display:block;
+min-height:1%;
+padding:0em 1em;
+margin:0px;
+background-color: transparent;
+color: Black;
+text-decoration:none;
+border: 1px solid Black;
+}
+.headermenu li a:hover{
+color: White;
+background-color: Black;
+}
+/* labels */
+.headerlabels{
+position:absolute;
+top:3em;
+right:0px;
+padding:0px 5px 0px 0px;
+margin:0;
+font-size:0.8em;
+}
+.headerlabels ul{
+padding:0;
+margin:0;
+}
+.headerlabels li{
+list-style:none;
+padding:0;
+margin:0;
+}

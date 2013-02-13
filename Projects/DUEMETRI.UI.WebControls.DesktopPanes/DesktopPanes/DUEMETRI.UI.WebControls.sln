@@ -1,0 +1,33 @@
+Microsoft Visual Studio Solution File, Format Version 7.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DUEMETRI.UI.WebControls", "DUEMETRI.UI.WebControls.csproj", "{BA2ED003-058E-418B-B0DD-FB7D4D4B2329}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DektopPanesTest", "http://localhost/DektopPanesTest/DektopPanesTest.csproj", "{CBD0D4D5-C321-4BB3-B651-5A186650DCD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HWMenu", "..\HWMenu\HWMenu.csproj", "{DCDA0619-FD70-42B6-B2DA-78EAFA4BE955}"
+EndProject
+Global
+	GlobalSection(SolutionConfiguration) = preSolution
+		ConfigName.0 = Debug
+		ConfigName.1 = Release
+	EndGlobalSection
+	GlobalSection(ProjectDependencies) = postSolution
+	EndGlobalSection
+	GlobalSection(ProjectConfiguration) = postSolution
+		{BA2ED003-058E-418B-B0DD-FB7D4D4B2329}.Debug.ActiveCfg = Debug|.NET
+		{BA2ED003-058E-418B-B0DD-FB7D4D4B2329}.Debug.Build.0 = Debug|.NET
+		{BA2ED003-058E-418B-B0DD-FB7D4D4B2329}.Release.ActiveCfg = Release|.NET
+		{BA2ED003-058E-418B-B0DD-FB7D4D4B2329}.Release.Build.0 = Release|.NET
+		{CBD0D4D5-C321-4BB3-B651-5A186650DCD9}.Debug.ActiveCfg = Debug|.NET
+		{CBD0D4D5-C321-4BB3-B651-5A186650DCD9}.Debug.Build.0 = Debug|.NET
+		{CBD0D4D5-C321-4BB3-B651-5A186650DCD9}.Release.ActiveCfg = Release|.NET
+		{CBD0D4D5-C321-4BB3-B651-5A186650DCD9}.Release.Build.0 = Release|.NET
+		{DCDA0619-FD70-42B6-B2DA-78EAFA4BE955}.Debug.ActiveCfg = Debug|.NET
+		{DCDA0619-FD70-42B6-B2DA-78EAFA4BE955}.Debug.Build.0 = Debug|.NET
+		{DCDA0619-FD70-42B6-B2DA-78EAFA4BE955}.Release.ActiveCfg = Release|.NET
+		{DCDA0619-FD70-42B6-B2DA-78EAFA4BE955}.Release.Build.0 = Release|.NET
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+	EndGlobalSection
+	GlobalSection(ExtensibilityAddIns) = postSolution
+	EndGlobalSection
+EndGlobal

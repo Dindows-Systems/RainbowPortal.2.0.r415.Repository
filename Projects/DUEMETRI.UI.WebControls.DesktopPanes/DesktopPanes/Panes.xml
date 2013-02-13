@@ -1,0 +1,297 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DUEMETRI.UI.WebControls.Panes</name>
+    </assembly>
+    <members>
+        <member name="T:DUEMETRI.UI.WebControls.DesktopPanes">
+            <summary>
+            DesktopPanes class for supporting three pane browsing
+            </summary>
+        </member>
+        <member name="F:DUEMETRI.UI.WebControls.DesktopPanes.IDX_LEFT_PANE_DATA">
+            <summary>
+            Left pane index
+            </summary>
+        </member>
+        <member name="F:DUEMETRI.UI.WebControls.DesktopPanes.IDX_CONTENT_PANE_DATA">
+            <summary>
+            Content pane index
+            </summary>
+        </member>
+        <member name="F:DUEMETRI.UI.WebControls.DesktopPanes.IDX_RIGHT_PANE_DATA">
+            <summary>
+            Right pane index
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.DataBind">
+            <summary>
+            Binds a data source to the invoked server control and all its child controls.
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.LoadViewState(System.Object)">
+            <summary>
+            This member overrides Control.LoadViewState
+            </summary>
+            <param name="savedState"></param>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.SaveViewState">
+            <summary>
+            This member overrides Control.SaveViewState
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.TrackViewState">
+            <summary>
+            This member overrides Control.TrackViewState.
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.CreateControlStyle">
+            <summary>
+            Web server control can set its control style to 
+            any class that derives from Style by overriding 
+            the WebControl.CreateControlStyle method
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.InitializeDataSource">
+            <summary>
+            Initialize internal data source
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.OnDataBinding(System.EventArgs)">
+            <summary>
+            This member overrides Control.OnDataBinding
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.CreateChildControls">
+            <summary>
+            This member overrides Control.CreateChildControls
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.Render(System.Web.UI.HtmlTextWriter)">
+            <summary>
+            This member overrides Control.Render
+            </summary>
+            <param name="writer"></param>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.PrepareControlHierarchy">
+            <summary>
+            This member overrides Control.PrepareControlHierarchy
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.CreateControlHierarchy">
+            <summary>
+            This member overrides Control.CreateControlHierarchy
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.GetHorizontalSeparator">
+            <summary>
+            Returns a reference to Horizontal separator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DUEMETRI.UI.WebControls.DesktopPanes.GetVerticalSeparator">
+            <summary>
+            Returns a reference to Vertical separator
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.ShowFirstSeparator">
+            <summary>
+            Show First Separator.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.ShowLastSeparator">
+            <summary>
+            Show Last Separator.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.CellPadding">
+            <summary>
+            The cell padding of the rendered table.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.CellSpacing">
+            <summary>
+            The cell spacing of the rendered table.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.Width">
+            <summary>
+            The width of the rendered table.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.Height">
+            <summary>
+            The height of the rendered table.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.GridLines">
+            <summary>
+            The grid lines to be shown in the rendered table.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.LeftPaneStyle">
+            <summary>
+            The style to be applied to LeftPane.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.RightPaneStyle">
+            <summary>
+            The style to be applied to RightPane.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.ContentPaneStyle">
+            <summary>
+            The style to be applied to ContentPane.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.HorizontalSeparatorStyle">
+            <summary>
+            The style to be applied to Horizontal Separator.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.VerticalSeparatorStyle">
+            <summary>
+            The style to be applied to Horizontal Separator.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.DataSource">
+            <summary>
+            The DataSource.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.LeftPaneTemplate">
+            <summary>
+            The Left Pane.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.ContentPaneTemplate">
+            <summary>
+            The Content Pane.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.RightPaneTemplate">
+            <summary>
+            The Right Pane.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.HorizontalSeparatorTemplate">
+            <summary>
+            The HorizontalSeparator.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.VerticalSeparatorTemplate">
+            <summary>
+            The VerticalSeparator.
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.LeftPane">
+            <summary>
+            LeftPane
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.ContentPane">
+            <summary>
+            ContentPane
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.WebControls.DesktopPanes.RightPane">
+            <summary>
+            RightPane
+            </summary>
+        </member>
+        <member name="T:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner">
+            <summary>
+            DesktopPanes design support class for Visual Studio.
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.Initialize(System.ComponentModel.IComponent)">
+            <summary>
+            Initialize components
+            </summary>
+            <param name="component"></param>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.GetCachedTemplateEditingVerbs">
+            <summary>
+            Override the GetCachedTemplateEditingVerbs method. 
+            A control overrides this method to return the list 
+            of template editing verbs applicable to the control. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.CreateTemplateEditingFrame(System.Web.UI.Design.TemplateEditingVerb)">
+            <summary>
+            Override the CreateTemplateEditingFrame method. 
+            This method takes a TemplateEditingVerb instance as an argument. 
+            TemplateEditingVerb is a designer verb (a class that derives from DesignerVerb) 
+            that enables the template editor to add a command to the control at design time. 
+            </summary>
+            <param name="verb"></param>
+            <returns></returns>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.Dispose(System.Boolean)">
+            <summary>
+            A type's Dispose method should release all the resources 
+            that it owns. It should also release all resources owned 
+            by its base types by calling its parent type's Dispose 
+            method. 
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.GetDesignTimeHtml">
+            <summary>
+            As with any other designer, override the GetDesignTimeHtml.
+            Gets the HTML that is used to represent the control at design time.
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.GetEmptyDesignTimeHtml">
+            <summary>
+            As with any other designer, 
+            override the GetEmptyDesignTimeHtml.
+            Gets the HTML used to represent 
+            an empty template-based control at design time.
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.GetTemplateContent(System.Web.UI.Design.ITemplateEditingFrame,System.String,System.Boolean@)">
+            <summary>
+            Override the GetTemplateContent method that gets 
+            the template content. 
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.SetTemplateContent(System.Web.UI.Design.ITemplateEditingFrame,System.String,System.String)">
+            <summary>
+            Override the SetTemplateContent method that sets 
+            the template content. 
+            </summary>
+        </member>
+        <member name="P:DUEMETRI.UI.Design.WebControls.DesktopPanesDesigner.AllowResize">
+            <summary>
+            Override the AllowResize property inherited
+            from ControlDesigner to enable the control 
+            to be resized. 
+            It is recommended that controls allow resizing 
+            when in template mode even if they normally 
+            do not allow resizing. 
+            </summary>
+        </member>
+        <member name="T:DUEMETRI.UI.Design.WebControls.DesktopPanesTemplate">
+            <summary>
+            DesktopPanes design support class for Visual Studio. Pane Template.
+            </summary>
+        </member>
+        <member name="M:DUEMETRI.UI.Design.WebControls.DesktopPanesTemplate.#ctor(DUEMETRI.UI.WebControls.DesktopPanes)">
+            <summary>
+            Default constructor
+            </summary>
+            <param name="parent"></param>
+        </member>
+    </members>
+</doc>

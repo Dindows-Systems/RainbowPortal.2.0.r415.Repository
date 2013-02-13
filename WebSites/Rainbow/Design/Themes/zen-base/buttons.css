@@ -1,0 +1,94 @@
+/* Rainbow.Zen Module Buttons - Jes1111 */
+/* center column in title,left and right columns below title */
+/* Module Buttons */
+.rb_mod_btn
+{
+	display:block;
+	margin:0px 0px 0px 2px;
+}
+.rb_mod_btn.btn-img-txt, .rb_mod_btn.btn-img-only{
+}
+.rb_mod_btn.btn-img-txt, .rb_mod_btn.btn-img-only-css{
+overflow:hidden;
+}
+div.btn-img-only,div.btn-img-only-css
+{
+	display:block;width:0px;height:0px;overflow:hidden
+}
+div.btn-img-txt
+{
+	display:block;width:0px;height:0px;overflow:hidden
+}
+div.btn-txt-only
+{
+	font-size:9px;
+	line-height:0.8;
+}
+div.zen-col-center div.zm-ctrl{
+position: absolute;
+top:3px;
+right:0px;
+}
+div.zen-col-center div.zm-ctrl ul{
+float:right;
+padding:0px;
+margin:0px;
+background:White;
+}
+div.zen-col-center div.zm-ctrl li{
+margin:0px;
+float:left;
+width:25px;
+padding:0px;
+list-style-type:none;
+color:#4E4E4E;
+background-color:White;
+font-size:0.8em;
+height:25px;
+}
+div.zen-col-center div.zm-ctrl li a{
+width:25px;
+display:block;
+color:Black;
+background:center;
+text-decoration:none;
+height:25px;
+}
+div.zen-col-center div.zm-ctrl li:hover,div.zen-col-center div.zm-ctrl a:hover{
+background-color:Silver;
+color:Black;
+}
+div.zen-col-left div.zm-ctrl,div.zen-col-right div.zm-ctrl{
+clear:both;
+position:relative;
+top:0px;
+left:0px;
+}
+div.zen-col-left div.zm-ctrl ul,div.zen-col-right div.zm-ctrl ul{
+float:left;
+padding:0px;
+margin:0px;
+background:White;
+}
+div.zen-col-left div.zm-ctrl li,div.zen-col-right div.zm-ctrl li{
+margin:0px;
+float:left;
+width:25px;
+padding:0px;
+list-style-type:none;
+color:#4E4E4E;
+background-color:White;
+font-size:0.8em;
+height:25px;
+}
+div.zen-col-left div.zm-ctrl li a,div.zen-col-right div.zm-ctrl li a{
+width:25px;
+display:block;
+color:Black;
+background:center;
+text-decoration:none;
+height:25px;
+}
+div.zm div.zm-bdy{
+clear:both;
+}

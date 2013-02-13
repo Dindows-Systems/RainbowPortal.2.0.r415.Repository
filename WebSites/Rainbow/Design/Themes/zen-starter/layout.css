@@ -1,0 +1,149 @@
+/* 
+Layout stylesheet 
+This file controls all that is positioning and layout for your theme.
+It will decide where your left, middle and right columns are placed and how.
+
+Be sure that you combine the logic with whatever you use in MainMenu.css
+
+  [1] Play nice with EMs in Opera 6 and IE Win.
+  [2] Support for Mozilla, but IE doesn't likes it.
+  [3] Z indixes needed for link clickability in IE Mac and Opera 6.
+  [4] Mozilla needs a non zero value, seems to be a bug.
+*/
+
+body {
+  margin: 0px;
+  padding: 3px;
+  font-size: 1em; /* [1] */
+}
+
+#zenpanes
+{
+	position: absolute;
+	width: 99%;
+	margin: 0px;
+	border: 0px;
+	padding:0px;
+	min-height:100%;/*for mozilla as IE treats height as min-height anyway*/
+
+}
+
+/*
+This is your header, logo, main menu if its in the header, and header menu ( loging, home, edit profile.... )
+*/
+#zen-hdr
+{
+	position: relative;
+	z-index: 20;
+	padding: 0px 0px 0px 0px;
+	margin: 0px 0px 0px 0px;
+	height: 118px;
+	top:0px;
+	/*min-width: 795px;*/
+/*	overflow:hidden;*/
+}
+
+
+
+/* Layout for middle column */
+#zen-col-middle {
+  float: right;
+  width: 100%;
+  
+
+}
+#zen-col-middle[id] { /* [2] */
+  margin-left: -1px;
+}
+
+/* Layout for left column */
+#zen-col-left {
+  float: left;
+  margin-left: -149px;
+  z-index: 10; /* [3] */
+  
+}
+#zen-col-left[id] { /* [2] */
+  margin-right: 1px;
+}
+
+/* Layout for right column */
+#zen-col-right {
+  float: right;
+  margin-right: -149px;
+  z-index: 11; /* [3] */
+  
+}
+#zen-col-right[id] { /* [2] */
+  margin-left: 1px;
+}
+
+/* when showing all columns, you want to pad show all so that the middle colulmn is 
+placed correctly without pushing left and right out.*/
+.zen-show-all{
+  padding: 0 150px 0 150px;
+}
+/* if there are 0 modules in left column */
+.zen-hide-left {
+  padding: 0 150px 0 0;
+}
+/* if there are 0 modules in right column*/
+.zen-hide-right {
+  padding: 0 0 0 150px;
+}
+
+.zen-cols-wrapper {
+  width: 100%;
+  margin-top:5px;
+}
+.zen-cols-wrapper[class] {
+  padding-bottom: 0.1px; /* [4] */
+}
+.zen-float-wrapper {
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+.zen-float-wrapper[class] { /* [2] */
+  margin-right: -1px;
+}
+
+/* The layout for your left column */
+.zen-col-left{
+  position: relative;
+  width: 143px;
+  overflow: hidden;
+}
+
+/* The layout for your right column */
+.zen-col-right {
+  position: relative;
+  width: 143px;
+  overflow: hidden;
+}
+
+.zm .zen-col-center {
+  margin: 0em 0em 0em 0em;
+}
+
+/* position modules in left colum */
+.zm .zen-col-left {
+  margin: 0em 0em 0em 0em;
+}
+
+/* position modules in right colum */
+.zen-col-right .zm{
+  margin: 0px 0px 0px 5px;
+}
+
+/* Dont play with this :-) */
+.zen-clear {
+  clear: both;
+}
+/* Dont play with this :-) */
+.none {
+  display: none;
+}
+
+

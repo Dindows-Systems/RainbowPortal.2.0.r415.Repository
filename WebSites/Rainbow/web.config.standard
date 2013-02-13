@@ -1,0 +1,626 @@
+<?xml version="1.0"?>
+<configuration xmlns="http://schemas.microsoft.com/.NetConfiguration/v2.0">
+  <configSections>
+    <sectionGroup name="blowery.web">
+      <section name="httpCompress" type="blowery.Web.HttpCompress.SectionHandler, blowery.Web.HttpCompress" />
+    </sectionGroup>
+    <section name="yafnet" type="yaf.SectionHandler,yaf" requirePermission="false" />
+    <section name="BankGateways" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Custom=null" requirePermission="false" />
+    <section name="ShippingObjects" type="System.Configuration.NameValueSectionHandler, System, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, Custom=null" requirePermission="false" />
+    <section name="log4net" type="log4net.Config.Log4NetConfigurationSectionHandler,log4net" requirePermission="false" />
+    <sectionGroup name="providers">
+      <section name="log" type="Rainbow.Framework.Provider.ProviderConfigurationHandler, Rainbow.Framework.Core" requirePermission="false" />
+      <section name="urlBuilder" type="Rainbow.Framework.Provider.ProviderConfigurationHandler, Rainbow.Framework.Core" requirePermission="false" />
+      <section name="geographic" type="Rainbow.Framework.Provider.ProviderConfigurationHandler, Rainbow.Framework.Core" requirePermission="false"/>
+    </sectionGroup>
+    <section name="urlrewritingnet" restartOnExternalChanges="true" requirePermission="false" type="UrlRewritingNet.Configuration.UrlRewriteSection, UrlRewritingNet.UrlRewriter" />
+    <sectionGroup name="system.web.extensions" type="System.Web.Configuration.SystemWebExtensionsSectionGroup, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <sectionGroup name="scripting" type="System.Web.Configuration.ScriptingSectionGroup, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+        <section name="scriptResourceHandler" type="System.Web.Configuration.ScriptingScriptResourceHandlerSection, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false"/>
+        <sectionGroup name="webServices" type="System.Web.Configuration.ScriptingWebServicesSectionGroup, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+          <section name="jsonSerialization" type="System.Web.Configuration.ScriptingJsonSerializationSection, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" />
+          <section name="profileService" type="System.Web.Configuration.ScriptingProfileServiceSection, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" />
+          <section name="authenticationService" type="System.Web.Configuration.ScriptingAuthenticationServiceSection, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" requirePermission="false" />
+        </sectionGroup>
+      </sectionGroup>
+    </sectionGroup>
+  </configSections>
+  <!-- config section for my http module -->
+  <!--
+         Here's an example on how to change the algorithm or compression level :
+                           <compressionModule preferredAlgorithm="deflate|gzip" compressionLevel="high|normal|low"/>
+    
+                So, to use deflate by default, and high compression, you would use the following line :
+
+                  <httpCompress preferredAlgorithm="deflate" compressionLevel="normal">
+  -->
+  <blowery.web>
+    <httpCompress preferredAlgorithm="deflate" compressionLevel="normal">
+      <excludedMimeTypes>
+        <add type="image/jpeg" />
+        <add type="image/gif" />
+      </excludedMimeTypes>
+      <excludedPaths>
+        <add path="WebResource.axd" />
+        <add path="FtbWebResource.axd" />
+        <add path="NoCompress.aspx" />
+      </excludedPaths>
+    </httpCompress>
+  </blowery.web>
+  <connectionStrings>
+    <clear />
+    <!-- 
+    Changing authentication type across installations is NOT RECOMMENDED
+    Particulary: If you update DB using integrated security you should keep using it.
+    Or use a script for changing existing owner.
+    INstaller create a stored procedure called rb_ChangeObjectOwner
+
+    WISEMETA: value="server=[SERVER];database=[DESTINATIONDB];uid=[RUNTIMEUSER];pwd=[RUNTIMEPASSWORD];" 
+    
+    <add name="ConnectionString" connectionString="data source=localhost;initial catalog=Rainbow;integrated security=false;persist security info=True;User ID=sa;Password="/>
+    <add name="ConnectionString" connectionString="server=localhost;Trusted_Connection=true;database=Rainbow;Application Name=Rainbow" />
+    <add name="ConnectionString" connectionString="Data Source=.\SQLEXPRESS;AttachDbFilename='|DataDirectory|\Database.mdf';Integrated Security=True;Connect Timeout=30;User Instance=True;Application Name=Rainbow"/>
+    <add name="ConnectionString" connectionString="server=localhost;Trusted_Connection=true;database=Rainbow2.0-Trunk;Application Name=Rainbow" providerName="System.Data.SqlClient" />
+        -->
+    <add name="ConnectionString" connectionString="{!!! CHANGE ME TO A VALID CONNECTION STRING !!!}" />
+    <add name="Providers.ConnectionString" connectionString="{!!! CHANGE ME TO A VALID CONNECTION STRING !!!}" />
+    <add name="RainbowProviders.ConnectionString" connectionString="{!!! CHANGE ME TO A VALID CONNECTION STRING !!!}" />
+    <add name="Main.ConnectionString" connectionString="{!!! CHANGE ME TO A VALID CONNECTION STRING !!!}" />
+  </connectionStrings>
+
+  <!-- Application specific settings -->
+  <appSettings file="Rainbow.config">
+    <add key="RainbowConfigUpdated" value="06/03/2006" />
+    <add key="EnableMultiDbSupport" value="false" />
+    <add key="SchedulerEnable" value="false" />
+    <add key="SchedulerCacheSize" value="100" />
+    <add key="SchedulerPeriod" value="60000" />
+    <add key="SmtpServer" value="localhost" />
+    <add key="EmailFrom" value="portal@localhost.com" />
+    <add key="ADdns" value="LDAP://DomainControllerName/DC=MyDomain, DC=com; WinNT://MyDomain" />
+    <add key="ADAdministratorGroup" value="MyDomain\Administrators" />
+    <add key="EnableADUser" value="false" />
+    <add key="ADUserName" value="MyDomain\UserName" />
+    <add key="ADUserPassword" value="password" />
+    <add key="EncryptPassword" value="false" />
+    <add key="DefaultLanguage" value="en" />
+    <add key="ProxyServer" value="http://127.0.0.1" />
+    <add key="ProxyUserID" />
+    <add key="ProxyPassword" />
+    <add key="ProxyDomain" />
+    <add key="UseProxyServerForServerWebRequests" value="false" />
+    <add key="DefaultPortal" value="Rainbow" />
+    <add key="PortalTitlePrefix" value=" " />
+    <add key="PortalsDirectory" value="Portals" />
+    <add key="RemoveWWW" value="true" />
+    <add key="RemoveTLD" value="true" />
+    <add key="SecondLevelDomains" value="aero;biz;com;coop;info;museum;name;net;org;pro;gov;edu;mil;int;co;ac;sch;nhs;police;mod;ltd;plc;me" />
+    <add key="DefaultTheme" value="Default" />
+    <add key="UseSingleUserBase" value="false" />
+    <add key="EnableMonitoring" value="true" />
+    <add key="EnableWebCompile" value="false" />
+    <add key="AmazonPromoCode" value="minondcom-20" />
+    <add key="AmazonDevToken" />
+    <add key="ELBScriptPath" value="aspnet_client/ELB" />
+    <add key="UseSettingsGroupingTabs" value="true" />
+    <add key="SettingsGroupingWidth" value="600" />
+    <add key="SettingsGroupingHeight" value="350" />
+    <add key="UrlToleranceLevel" value="3" />
+    <add key="SmartErrorRedirect" value="~/app_support/SmartError.aspx" />
+    <add key="InvalidPageIdRedirect" value="~/app_support/SmartError.aspx" />
+    <add key="InvalidAliasRedirect" value="~/app_support/SmartError.aspx" />
+    <add key="DatabaseUpdateResponse" value="503" />
+    <add key="DatabaseUpdateRedirect" value="~/Setup/Update.aspx" />
+    <add key="LockAllPortals" value="false" />
+    <add key="LockKeyHolders" value="127.0.0.1" />
+    <add key="LockResponse" value="503" />
+    <add key="LockRedirect" value="~/app_support/ErrorLocked.html" />
+    <add key="CriticalErrorResponse" value="503" />
+    <add key="CriticalErrorRedirect" value="~/app_support/GeneralError.html" />
+    <add key="NoPortalErrorResponse" value="404" />
+    <add key="NoPortalErrorRedirect" value="~/app_support/ErrorNoPortal.html" />
+    <add key="CodeUpdateResponse" value="503" />
+    <add key="CodeUpdateRedirect" value="~/app_support/GeneralError.html" />
+    <add key="DatabaseErrorResponse" value="503" />
+    <add key="DatabaseErrorRedirect" value="~/app_support/GeneralError.html" />
+    <add key="ForceExpire" value="false" />
+    <add key="CookieExpire" value="60" />
+    <add key="AlternateLogLocation" />
+    <add key="LogMessageMode" value="Full" />
+    <add key="LogFileFormat" value="Daily" />
+    <add key="LogToFile" value="true" />
+    <add key="LogToFileErrorList" value="All" />
+    <add key="LogToEventLog" value="false" />
+    <add key="LogToEventLogErrorList" value="403 500" />
+    <add key="SupportEventLogSource" value="Application" />
+    <add key="LogToEmail" value="false" />
+    <add key="LogToEmailErrorList" value="403 500" />
+    <add key="SupportFromEmailAddress" value="portaladmin@localhost.com" />
+    <add key="SupportToEmailAddress" value="portaladmin@localhost.com" />
+    <add key="HandlerTargetUrl" value="DesktopDefault.aspx" />
+    <add key="UseAlias" value="false" />
+    <add key="WindowMgmtControls" value="true" />
+    <add key="WindowMgmtWantClose" value="false" />
+    <add key="CheckForFilePermission" value="false" />
+    <add key="Ie7Script" value="/aspnet_client/ie7/0_9/ie7-standard-p.js" />
+    <add key="DefaultDOCTYPE" value="&lt;!DOCTYPE HTML PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd' &gt;" />
+    <add key="PortalSettingCaching" value="0" />
+    <add key="ModuleOverrideCache" value="0" />
+
+    <add key="HandlerDefaultSplitter" value="__" />
+    <add key="HandlerFlag" value="site"  />
+    <add key="UseAlias" value="false" />
+    <add key="LangInURL" value="false" />
+    <add key="FriendlyPageName" value="Default.aspx" />
+    <add key="PageIdNoSplitter" value="false" />
+  </appSettings>
+  <system.net>
+    <mailSettings>
+      <smtp from="{!!! CHANGE ME TO A VALID MAIL ADDRESS !!!}">
+        <network host="{!!! CHANGE ME TO A VALID SMTP HOST !!!}" />
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <system.web>
+    <anonymousIdentification enabled="true" />
+    <trust level="Full" />
+    <membership defaultProvider="RainbowSqlMembershipProvider">
+      <providers>
+        <clear />
+        <add name="RainbowSqlMembershipProvider" type="Rainbow.Framework.Providers.RainbowMembershipProvider.RainbowSqlMembershipProvider, Rainbow.Framework.Providers.RainbowSqlMembershipProvider" connectionStringName="RainbowProviders.ConnectionString" enablePasswordRetrieval="true" enablePasswordReset="true" requiresQuestionAndAnswer="false" applicationName="Rainbow" requiresUniqueEmail="true" passwordFormat="Clear" maxInvalidPasswordAttempts="5" minRequiredPasswordLength="5" minRequiredNonalphanumericCharacters="0" passwordAttemptWindow="10" passwordStrengthRegularExpression="" />
+      </providers>
+    </membership>
+    <roleManager enabled="true" defaultProvider="RainbowSqlRoleProvider" cacheRolesInCookie="true" cookieName=".RainbowRolesCookie" cookieTimeout="30" cookieSlidingExpiration="true" cookieProtection="All">
+      <providers>
+        <clear />
+        <add name="RainbowSqlRoleProvider" type="Rainbow.Framework.Providers.RainbowRoleProvider.RainbowSqlRoleProvider, Rainbow.Framework.Providers.RainbowSqlRoleProvider" connectionStringName="RainbowProviders.ConnectionString" applicationName="Rainbow" />
+      </providers>
+    </roleManager>
+    <profile enabled="true" defaultProvider="RainbowSqlProfileProvider">
+      <providers>
+        <clear />
+        <add name="RainbowSqlProfileProvider" connectionStringName="Providers.ConnectionString" applicationName="Rainbow" type="System.Web.Profile.SqlProfileProvider" />
+        <!--<add name="TableProfileProvider" type="Microsoft.Samples.SqlTableProfileProvider"  connectionStringName="TestDatabase" table="ProfileTable_1" applicationName="DatabaseProfileProviderTest" />-->
+      </providers>
+      <properties>
+        <!--<group name="UserInfo">-->
+        <add name="Name" />
+        <add name="Company" />
+        <add name="Address" />
+        <add name="Zip" />
+        <add name="City" />
+        <add name="CountryID" />
+        <add name="StateID" type="System.Int32" />
+        <add name="Fax" />
+        <add name="Phone" />
+        <add name="SendNewsletter" type="System.Boolean" />
+        <!--</group>-->
+      </properties>
+    </profile>
+    <siteMap enabled="true" defaultProvider="RainbowSqlSiteMapProvider">
+      <providers>
+        <add name="RainbowSqlSiteMapProvider" type="Rainbow.Framework.Providers.RainbowSiteMapProvider.RainbowSqlSiteMapProvider" securityTrimmingEnabled="true" connectionStringName="ConnectionString" description="Rainbow SQL Server site map provider"/>
+      </providers>
+    </siteMap>
+    <caching>
+      <sqlCacheDependency enabled="true" pollTime="5000">
+        <databases>
+          <add name="Rainbow2.0-dev" connectionStringName="ConnectionString" />
+        </databases>
+      </sqlCacheDependency>
+    </caching>
+    <browserCaps>
+      <!-- 
+      Name:    BrowserCaps update for modern browsers, http://slingfive.com/pages/code/browserCaps/
+      Author:    Rob Eberhardt, http://slingfive.com/
+      History:
+        2004-11-19  improved detection of Safari, Konqueror &amp; Mozilla variants, added Opera detection
+        2003-12-21  updated TagWriter info
+        2003-12-03  first published
+      -->
+      <!-- GECKO Based Browsers (Netscape 6+, Mozilla/Firefox, ...) //
+      <case match="^Mozilla/5\.0 \([^)]*\) (Gecko/[-\d]+)(?'VendorProductToken' (?'type'[^/\d]*)([\d]*)/(?'version'(?'major'\d+)(?'minor'\.\d+)(?'letters'\w*)))?">
+        browser=Gecko
+        <filter>
+          <case match="(Gecko/[-\d]+)(?'VendorProductToken' (?'type'[^/\d]*)([\d]*)/(?'version'(?'major'\d+)(?'minor'\.\d+)(?'letters'\w*)))">
+            type=${type}
+          </case>
+          <case> 
+            type=Mozilla
+          </case>
+        </filter>
+        frames=true
+        tables=true
+        cookies=true
+        javascript=true
+        javaapplets=true
+        ecmascriptversion=1.5
+        w3cdomversion=1.0
+        css1=true
+        css2=true
+        xml=true
+        tagwriter=System.Web.UI.HtmlTextWriter
+        <case match="rv:(?'version'(?'major'\d+)(?'minor'\.\d+)(?'letters'\w*))">
+          version=${version}
+          majorversion=0${major}
+          minorversion=0${minor}
+          <case match="^b" with="${letters}">
+            beta=true
+          </case>
+        </case>
+      </case>
+      -->
+      <!-- AppleWebKit Based Browsers (Safari...) //-->
+      <case match="AppleWebKit/(?'version'(?'major'\d?)(?'minor'\d{2})(?'letters'\w*)?)">
+        browser=AppleWebKit
+        version=${version}
+        majorversion=0${major}
+        minorversion=0.${minor}
+        frames=true
+        tables=true
+        cookies=true
+        javascript=true
+        javaapplets=true
+        ecmascriptversion=1.5
+        w3cdomversion=1.0
+        css1=true
+        css2=true
+        xml=true
+        tagwriter=System.Web.UI.HtmlTextWriter
+        <case match="AppleWebKit/(?'version'(?'major'\d)(?'minor'\d+)(?'letters'\w*))(.* )?(?'type'[^/\d]*)/.*( |$)">
+          type=${type}
+        </case>
+      </case>
+      <!-- Konqueror //-->
+      <case match=".+[K|k]onqueror/(?'version'(?'major'\d+)(?'minor'(\.[\d])*)(?'letters'[^;]*));\s+(?'platform'[^;\)]*)(;|\))">
+        browser=Konqueror
+        version=${version}
+        majorversion=0${major}
+        minorversion=0${minor}
+        platform=${platform}
+        type=Konqueror
+        frames=true
+        tables=true
+        cookies=true
+        javascript=true
+        javaapplets=true
+        ecmascriptversion=1.5
+        w3cdomversion=1.0
+        css1=true
+        css2=true
+        xml=true
+        tagwriter=System.Web.UI.HtmlTextWriter
+      </case>
+      <!-- Opera //-->
+      <case match="Opera[ /](?'version'(?'major'\d+)(?'minor'\.(?'minorint'\d+))(?'letters'\w*))">
+        <filter match="[7-9]" with="${major}">
+          tagwriter=System.Web.UI.HtmlTextWriter
+        </filter>
+        <filter>
+          <case match="7" with="${major}">
+            <filter>
+              <case match="[5-9]" with="${minorint}">
+                ecmascriptversion=1.5
+              </case>
+              <case>
+                ecmascriptversion=1.4
+              </case>
+            </filter>
+          </case>
+          <case match="[8-9]" with="${major}">
+            ecmascriptversion=1.5
+          </case>
+        </filter>
+      </case>
+    </browserCaps>
+    <!--  GLOBALIZATION
+          This section sets the globalization settings of the application. 
+          Utf-8 is not supported on Netscape 4.x 
+          If you need netscape compatiblity leave iso-8859-1.
+          UTF-8 is recommended for complex languages
+          ** Jes1111 - added culture, uiCulture and fileEncoding
+    -->
+    <trace enabled="false" pageOutput="false" localOnly="true" />
+    <globalization requestEncoding="UTF-8" responseEncoding="UTF-8" fileEncoding="UTF-8" culture="auto:en-US" uiCulture="en-US" />
+    <!--<globalization culture="en-US" uiCulture="en"  fileEncoding="iso-8859-1" requestEncoding="iso-8859-1" responseEncoding="iso-8859-1"/>-->
+    <pages validateRequest="false">
+      <controls>
+        <add tagPrefix="asp" namespace="System.Web.UI" assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagPrefix="asp" namespace="Microsoft.Web.Preview.UI" assembly="Microsoft.Web.Preview"/>
+        <add tagPrefix="asp" namespace="Microsoft.Web.Preview.UI.Controls" assembly="Microsoft.Web.Preview"/>
+        <add tagPrefix="ajaxtoolkit" namespace="AjaxControlToolkit" assembly="AjaxControlToolkit"/>
+
+        <add assembly="Rainbow.Framework.Core" namespace="Rainbow.Framework.Web.UI.WebControls" tagPrefix="rbfwebui" />
+        <!--<add assembly="Rainbow.Framework.Core" namespace="Rainbow.Framework.Web.UI.WebControls.WebParts" tagPrefix="rbfwebui"/>-->
+        <add assembly="Rainbow.Framework.Web.UI.WebControls" namespace="Rainbow.Framework.Web.UI.WebControls" tagPrefix="rbfwebui" />
+      </controls>
+      <tagMapping>
+        <add tagType="System.Web.UI.WebControls.CompareValidator" mappedTagType="System.Web.UI.Compatibility.CompareValidator, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagType="System.Web.UI.WebControls.CustomValidator" mappedTagType="System.Web.UI.Compatibility.CustomValidator, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagType="System.Web.UI.WebControls.RangeValidator" mappedTagType="System.Web.UI.Compatibility.RangeValidator, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagType="System.Web.UI.WebControls.RegularExpressionValidator" mappedTagType="System.Web.UI.Compatibility.RegularExpressionValidator, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagType="System.Web.UI.WebControls.RequiredFieldValidator" mappedTagType="System.Web.UI.Compatibility.RequiredFieldValidator, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        <add tagType="System.Web.UI.WebControls.ValidationSummary" mappedTagType="System.Web.UI.Compatibility.ValidationSummary, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      </tagMapping>
+      <namespaces>
+        <add namespace="Rainbow" />
+        <add namespace="Rainbow.Framework.Core" />
+        <add namespace="Rainbow.Framework" />
+        <add namespace="Rainbow.Framework.Site.Configuration" />
+        <!-- 
+        <add namespace="Rainbow.Framework.Settings" />
+        <add namespace="Rainbow.Framework.Web" />
+        <add namespace="Rainbow.Framework.Web.UI" />
+        -->
+        <add namespace="Rainbow.Framework.Web.UI.WebControls" />
+      </namespaces>
+    </pages>
+    <!---->
+    <!-- Session state -->
+    <sessionState mode="InProc" />
+    <!-- set debugmode to false for running application -->
+    <compilation debug="true" defaultLanguage="c#">
+      <assemblies>
+        <add assembly="System.DirectoryServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Configuration, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Xml, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Management, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Web.RegularExpressions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Drawing.Design, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Security, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A" />
+        <add assembly="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089" />
+        <add assembly="System.Configuration.Install, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Services, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.DirectoryServices.Protocols, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.EnterpriseServices, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.ServiceProcess, Version=2.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Web.Extensions.Design, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+        <add assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35"/>
+      </assemblies>
+      <buildProviders>
+        <add extension="*.asbx" type="Microsoft.Web.Preview.Services.BridgeBuildProvider"/>
+      </buildProviders>
+    </compilation>
+
+    <authentication mode="Forms">
+      <forms name=".ASPXAUTH" protection="All" timeout="60" />
+    </authentication>
+
+    <!-- Set here max upload size -->
+    <httpRuntime useFullyQualifiedRedirectUrl="true" maxRequestLength="4096" />
+    <customErrors defaultRedirect="~/app_support/GeneralError.html" mode="RemoteOnly" />
+    <httpHandlers>
+      <remove verb="*" path="*.asmx"/>
+      <add verb="*" path="*.asmx" validate="false" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add verb="GET,HEAD" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false"/>
+      <add verb="GET,HEAD,POST" path="*.asbx" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" validate="false"/>
+          
+      <add verb="GET" path="FtbWebResource.axd" type="FreeTextBoxControls.AssemblyResourceHandler, FreeTextBox" />
+      <add path="UploadDialog.aspx" verb="*" type="StaticDust.Web.UploadHandler, StaticDust.Web.UI.Controls.UploadDialog" validate="false" />
+    </httpHandlers>
+
+    <!-- HttpURLHandler for handling url requests -->
+    <httpModules>
+      <add name="ScriptModule" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add name="UrlRewriteModule" type="UrlRewritingNet.Web.UrlRewriteModule, UrlRewritingNet.UrlRewriter" />
+      <!--<add name="CompressionModule" type="blowery.Web.HttpCompress.HttpModule, blowery.web.HttpCompress"/>-->
+    </httpModules>
+  </system.web>
+
+  <system.web.extensions>
+    <scripting>
+      <webServices>
+        <!-- Uncomment this line to customize maxJsonLength and add a custom converter -->
+        <!--
+      <jsonSerialization maxJsonLength="500">
+        <converters>
+            <add name="DataSetConverter" type="Microsoft.Web.Preview.Script.Serialization.Converters.DataSetConverter, Microsoft.Web.Preview, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+            <add name="DataRowConverter" type="Microsoft.Web.Preview.Script.Serialization.Converters.DataRowConverter, Microsoft.Web.Preview, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+            <add name="DataTableConverter" type="Microsoft.Web.Preview.Script.Serialization.Converters.DataTableConverter, Microsoft.Web.Preview, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+        </converters>
+      </jsonSerialization>
+      -->
+        <!-- Uncomment this line to enable the authentication service. Include requireSSL="true" if appropriate. -->
+        <!--
+        <authenticationService enabled="true" requireSSL = "true|false"/>
+      -->
+
+        <!-- Uncomment these lines to enable the profile service. To allow profile properties to be retrieved
+           and modified in ASP.NET AJAX applications, you need to add each property name to the readAccessProperties and
+           writeAccessProperties attributes. -->
+        <!--
+      <profileService enabled="true"
+                      readAccessProperties="propertyname1,propertyname2"
+                      writeAccessProperties="propertyname1,propertyname2" />
+      -->
+      </webServices>
+      <!-- 
+      <scriptResourceHandler enableCompression="true" enableCaching="true" />
+      -->
+    </scripting>
+  </system.web.extensions>
+
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <modules>
+      <add name="ScriptModule" preCondition="integratedMode" type="System.Web.Handlers.ScriptModule, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+    </modules>
+    <handlers>
+      <remove name="WebServiceHandlerFactory-ISAPI-2.0"/>
+      <add name="ScriptHandlerFactory" verb="*" path="*.asmx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+      <add name="ScriptResource" verb="GET" path="ScriptResource.axd" type="System.Web.Handlers.ScriptResourceHandler, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+      <add name="ASBXHandler" verb="GET,HEAD,POST" path="*.asbx" preCondition="integratedMode" type="System.Web.Script.Services.ScriptHandlerFactory, System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"/>
+    </handlers>
+  </system.webServer>
+
+  <yafnet>
+    <connstr>server=;database=;uid=;pwd=</connstr>
+    <root>/DesktopModules/yaf/</root>
+    <language>english.xml</language>
+    <theme>standard.xml</theme>
+    <uploaddir>/DesktopModules/yaf/upload/</uploaddir>
+    <!--logtomail>email=;server=;user=;pass=;</logtomail-->
+  </yafnet>
+  <BankGateways>
+    <!-- key must match the Name property of the gateway.  value="FullClass with namespace,Assembly" -->
+    <add key="CreditTransfer" value="Rainbow.ECommerce.Gateways.GatewayCreditTransfer,DUEMETRI.Rainbow.ECommerce.BankGateway.dll" />
+    <!--
+    <add key="Carige" value="Rainbow.ECommerce.Gateways.GatewayCarige,DUEMETRI.Rainbow.ECommerce.GatewayItalianBanks.dll" />
+    <add key="Telepay" value="Rainbow.ECommerce.Gateways.GatewayTelepay,DUEMETRI.Rainbow.ECommerce.GatewayItalianBanks.dll" />
+    <add key="SellaCripto" value="Rainbow.ECommerce.Gateways.GatewaySellaCripto,DUEMETRI.Rainbow.ECommerce.GatewayItalianBanks.dll" />
+    <add key="BankPass" value="Rainbow.ECommerce.Gateways.GatewayBankPass,DUEMETRI.Rainbow.Ecommerce.GatewayItalianBanks.dll" />
+    -->
+  </BankGateways>
+  <ShippingObjects>
+    <!-- key must match the Name property of the Shipping Object. value="FullClass with namespace,Assembly" -->
+    <add key="FixedShipping" value="Rainbow.ECommerce.ShippingFixed,Rainbow.ECommerce.dll" />
+    <add key="ElectronicDelivery" value="Rainbow.ECommerce.ShippingElectronicDelivery,Rainbow.ECommerce.dll" />
+    <add key="SimpleShipping" value="Rainbow.ECommerce.ShippingSimple,Rainbow.ECommerce.dll" />
+  </ShippingObjects>
+  <log4net>
+    <logger name="Rainbow">
+      <level value="ALL" />
+      <appender-ref ref="RollingFile" />
+      <appender-ref ref="SmartError" />
+      <!--<appender-ref ref="SmtpAppender"/>-->
+      <!--<appender-ref ref="SqlNetAppender" /> -->
+    </logger>
+    <!-- see: http://logging.apache.org/log4net/release/config-examples.html -->
+    <appender name="RollingFile" type="log4net.Appender.RollingFileAppender">
+      <!-- .resx extension is not served -->
+      <file value="rb_logs/rb_log.resx" />
+      <appendToFile value="true" />
+      <rollingStyle value="Date" />
+      <!-- starts new logfile each day -->
+      <datePattern value="yyyyMMdd" />
+      <layout type="log4net.Layout.PatternLayout">
+        <!-- see: http://logging.apache.org/log4net/release/sdk/index.html for syntax (refer to: log4net.Layout.PatternLayout class) -->
+        <conversionPattern value="***Level: %level%n%date{ISO8601}%nAppl.Uptime: %timestamp ms%nLogger: %logger%n%message%nCode version: %property{CodeVersion}%n%property{RewrittenUrl}%n%exception" />
+        <!--conversionPattern value="%d %-4r [%t] %-5p %c %x - %m%n" /-->
+      </layout>
+    </appender>
+    <appender name="SmartError" type="log4net.Appender.MemoryAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="&#xA;          &lt;table class='SmartErrorSupportInfo'&gt;&#xA;          &lt;tr&gt;&lt;td colspan='2'&gt;&lt;b&gt;%level&lt;/b&gt; %date{ISO8601} (Uptime: %timestampms)&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;Message&lt;/td&gt;&lt;td&gt;%message&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;RewrittenURL&lt;/td&gt;&lt;td&gt;&lt;a href='%property{RewrittenUrl}'&gt;%property{RewrittenUrl}&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;CodeVersion&lt;/td&gt;&lt;td&gt;%property{CodeVersion}&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;User&lt;/td&gt;&lt;td&gt;%property{User}&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;UserAgent&lt;/td&gt;&lt;td&gt;%property{UserAgent}&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;UserIP&lt;/td&gt;&lt;td&gt;%property{UserIP}&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;UserLanguages&lt;/td&gt;&lt;td&gt;%property{UserLanguages}&lt;/td&gt;&lt;/tr&gt;&#xA;          &lt;tr&gt;&lt;td&gt;Exception&lt;/td&gt;&lt;td&gt;%exception&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;" />
+      </layout>
+    </appender>
+    <appender name="AspNetTrace" type="log4net.Appender.AspNetTraceAppender">
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="***NEW EVENT***%nLevel: %p%n%d{ISO8601}%nAppl.Uptime: %r ms%nLogger: %c%n%m%n" />
+      </layout>
+    </appender>
+    <!-- Create db table before using it -->
+    <appender name="SqlNetAppender" type="log4net.Appender.ADONetAppender">
+      <param name="BufferSize" value="100" />
+      <param name="ConnectionType" value="System.Data.SqlClient.SqlConnection, System.Data, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      <!-- ConnectionString must match your database -->
+      <!-- param name="ConnectionString" value="data source=localhost;initial catalog=Rainbow;integrated security=false;persist security info=True;User ID=sa;Password=" /-->
+      <param name="ConnectionString" value="{!!! CHANGE ME TO A VALID CONNECTION STRING !!!}" />
+      <param name="CommandText" value="INSERT INTO rb_Log ([Date],[Thread],[Level],[Logger],[Message],[Exception]) VALUES (@log_date, @thread, @log_level, @logger, @message, @exception)" />
+      <param name="Parameter">
+        <param name="ParameterName" value="@log_date" />
+        <param name="DbType" value="DateTime" />
+        <param name="Layout" type="log4net.Layout.RawTimeStampLayout" />
+      </param>
+      <param name="Parameter">
+        <param name="ParameterName" value="@thread" />
+        <param name="DbType" value="String" />
+        <param name="Size" value="255" />
+        <param name="Layout" type="log4net.Layout.PatternLayout">
+          <param name="ConversionPattern" value="%t" />
+        </param>
+      </param>
+      <param name="Parameter">
+        <param name="ParameterName" value="@log_level" />
+        <param name="DbType" value="String" />
+        <param name="Size" value="50" />
+        <param name="Layout" type="log4net.Layout.PatternLayout">
+          <param name="ConversionPattern" value="%p" />
+        </param>
+      </param>
+      <param name="Parameter">
+        <param name="ParameterName" value="@logger" />
+        <param name="DbType" value="String" />
+        <param name="Size" value="255" />
+        <param name="Layout" type="log4net.Layout.PatternLayout">
+          <param name="ConversionPattern" value="%c" />
+        </param>
+      </param>
+      <param name="Parameter">
+        <param name="ParameterName" value="@message" />
+        <param name="DbType" value="String" />
+        <param name="Size" value="4000" />
+        <param name="Layout" type="log4net.Layout.PatternLayout">
+          <param name="ConversionPattern" value="%m" />
+        </param>
+      </param>
+      <param name="Parameter">
+        <param name="ParameterName" value="@exception" />
+        <param name="DbType" value="String" />
+        <param name="Size" value="2000" />
+        <param name="Layout" type="log4net.Layout.ExceptionLayout" />
+      </param>
+    </appender>
+    <appender name="SmtpAppender" type="log4net.Appender.SmtpAppender">
+      <to value="errores@mgf.com.uy" />
+      <from value="errores@mgf.com.uy" />
+      <subject value="[Logger Rainbow 2.0] ERROR" />
+      <smtpHost value="localhost" />
+      <bufferSize value="1" />
+      <layout type="log4net.Layout.PatternLayout">
+        <conversionPattern value="Fecha: %d%nInfo: %-4r [%t] %-5p %c %x - %m%n%n" />
+      </layout>
+      <filter type="log4net.Filter.LevelRangeFilter">
+        <levelMin value="WARN" />
+        <levelMax value="FATAL" />
+      </filter>
+    </appender>
+  </log4net>
+  <!--
+  Name conventions for provider class:
+  Specific type + Provider Type + "Provider" keyword
+  eg: AccessLogProvider or SqlLogProvider or Log4NetLogProvider
+  
+  Namespace conventions:
+  Namespace Extension as usual, no special namespace for providers, group by functionalities
+  (eg: Rainbow.Framework.Configuration or Rainbow.Web or Duemetri.Configuration)
+  
+  Friendly Name conventions:
+  Specific type + Provider Type, remove "Provider" keyword
+  eg: AccessLog or SqlLog or Log4NetLog
+  -->
+  <providers>
+    <log defaultProvider="Log4NetLog">
+      <providers>
+        <clear />
+        <add name="Log4NetLog" type="Rainbow.Framework.Logging.Log4NetLogProvider, Rainbow.Framework.Core" />
+      </providers>
+    </log>
+    <urlBuilder defaultProvider="SqlUrlBuilder">
+      <providers>
+        <clear />
+        <add name="SqlUrlBuilder" type="Rainbow.Framework.Web.SqlUrlBuilderProvider, Rainbow.Framework.Core" handlerflag="site" handlersplitter="__" pageidnosplitter="true" friendlypagename="default.aspx" aliasinurl="false" langinurl="false" cacheminutes="5" ignoretargetpage="PageLayout.aspx" />
+      </providers>
+    </urlBuilder>
+    <geographic defaultProvider="GeographicProvider">
+      <providers>
+        <clear/>
+        <add name="GeographicProvider" type="Rainbow.Framework.Providers.Geographic.SqlGeographicProvider, Rainbow.Framework.Core" countriesFilter=""/>
+      </providers>
+    </geographic>
+  </providers>
+  <urlrewritingnet xmlns="http://www.urlrewriting.net/schemas/config/2006/07" >
+    <providers>
+      <add name="RainbowUrlRewritingProvider" type="Rainbow.Framework.UrlRewriting.RainbowUrlRewritingProvider, Rainbow.Framework.UrlRewriting"/>
+    </providers>
+    <rewrites>
+      <add name="RainbowUrl" provider="RainbowUrlRewritingProvider" rewriteUrlParameter="ExcludeFromClientQueryString" ignoreCase="true" handlerFlag="site" handlerSplitter="__" pageIdNoSplitter="true" friendlyPageName="DesktopDefault.aspx"  />
+    </rewrites>
+  </urlrewritingnet>
+</configuration>

@@ -1,0 +1,160 @@
+<?xml version="1.0" ?>
+<project name="Rainbow" default="build" basedir="..">
+	<property name="configuration" value="release" />
+	<property name="bin_directory" value=".\bin" />
+	<property name="nant.settings.currentframework" value="net-1.1"/> 
+	<mkdir dir="${bin_directory}\cs" />
+	<resgen input=".\Resources\Rainbow.cs.resx" output="${bin_directory}\cs\Rainbow.Resources.Rainbow.cs.resources" />
+	<al output="${bin_directory}\cs\Rainbow.resources.dll" target="lib" culture="cs">
+		<sources>
+			<includes name="${bin_directory}\cs\Rainbow.Resources.Rainbow.cs.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\da" />
+	<resgen input=".\Resources\Rainbow.da.resx" output="${bin_directory}\da\Rainbow.Resources.Rainbow.da.resources" />
+	<al output="${bin_directory}\da\Rainbow.resources.dll" target="lib" culture="da">
+		<sources>
+			<includes name="${bin_directory}\da\Rainbow.Resources.Rainbow.da.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\de" />
+	<resgen input=".\Resources\Rainbow.de.resx" output="${bin_directory}\de\Rainbow.Resources.Rainbow.de.resources" />
+	<al output="${bin_directory}\de\Rainbow.resources.dll" target="lib" culture="de">
+		<sources>
+			<includes name="${bin_directory}\de\Rainbow.Resources.Rainbow.de.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\en" />
+	<resgen input=".\Resources\Rainbow.en.resx" output="${bin_directory}\en\Rainbow.Resources.Rainbow.en.resources" />
+	<al output="${bin_directory}\en\Rainbow.resources.dll" target="lib" culture="en">
+		<sources>
+			<includes name="${bin_directory}\en\Rainbow.Resources.Rainbow.en.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\es-ES" />
+	<resgen input=".\Resources\Rainbow.es-ES.resx" output="${bin_directory}\es-ES\Rainbow.Resources.Rainbow.es-ES.resources" />
+	<al output="${bin_directory}\es-ES\Rainbow.resources.dll" target="lib" culture="es-ES">
+		<sources>
+			<includes name="${bin_directory}\es-ES\Rainbow.Resources.Rainbow.es-ES.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\es-MX" />
+	<resgen input=".\Resources\Rainbow.es-MX.resx" output="${bin_directory}\es-MX\Rainbow.Resources.Rainbow.es-MX.resources" />
+	<al output="${bin_directory}\es-MX\Rainbow.resources.dll" target="lib" culture="es-MX">
+		<sources>
+			<includes name="${bin_directory}\es-MX\Rainbow.Resources.Rainbow.es-MX.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\es" />
+	<resgen input=".\Resources\Rainbow.es.resx" output="${bin_directory}\es\Rainbow.Resources.Rainbow.es.resources" />
+	<al output="${bin_directory}\es\Rainbow.resources.dll" target="lib" culture="es">
+		<sources>
+			<includes name="${bin_directory}\es\Rainbow.Resources.Rainbow.es.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\fr" />
+	<resgen input=".\Resources\Rainbow.fr.resx" output="${bin_directory}\fr\Rainbow.Resources.Rainbow.fr.resources" />
+	<al output="${bin_directory}\fr\Rainbow.resources.dll" target="lib" culture="fr">
+		<sources>
+			<includes name="${bin_directory}\fr\Rainbow.Resources.Rainbow.fr.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\is" />
+	<resgen input=".\Resources\Rainbow.is.resx" output="${bin_directory}\is\Rainbow.Resources.Rainbow.is.resources" />
+	<al output="${bin_directory}\is\Rainbow.resources.dll" target="lib" culture="is">
+		<sources>
+			<includes name="${bin_directory}\is\Rainbow.Resources.Rainbow.is.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\it" />
+	<resgen input=".\Resources\Rainbow.it.resx" output="${bin_directory}\it\Rainbow.Resources.Rainbow.it.resources" />
+	<al output="${bin_directory}\it\Rainbow.resources.dll" target="lib" culture="it">
+		<sources>
+			<includes name="${bin_directory}\it\Rainbow.Resources.Rainbow.it.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\nl-BE" />
+	<resgen input=".\Resources\Rainbow.nl-BE.resx" output="${bin_directory}\nl-BE\Rainbow.Resources.Rainbow.nl-BE.resources" />
+	<al output="${bin_directory}\nl-BE\Rainbow.resources.dll" target="lib" culture="nl-BE">
+		<sources>
+			<includes name="${bin_directory}\nl-BE\Rainbow.Resources.Rainbow.nl-BE.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\nl" />
+	<resgen input=".\Resources\Rainbow.nl.resx" output="${bin_directory}\nl\Rainbow.Resources.Rainbow.nl.resources" />
+	<al output="${bin_directory}\nl\Rainbow.resources.dll" target="lib" culture="nl">
+		<sources>
+			<includes name="${bin_directory}\nl\Rainbow.Resources.Rainbow.nl.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\no" />
+	<resgen input=".\Resources\Rainbow.no.resx" output="${bin_directory}\no\Rainbow.Resources.Rainbow.no.resources" />
+	<al output="${bin_directory}\no\Rainbow.resources.dll" target="lib" culture="no">
+		<sources>
+			<includes name="${bin_directory}\no\Rainbow.Resources.Rainbow.no.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\pl" />
+	<resgen input=".\Resources\Rainbow.pl.resx" output="${bin_directory}\pl\Rainbow.Resources.Rainbow.pl.resources" />
+	<al output="${bin_directory}\pl\Rainbow.resources.dll" target="lib" culture="pl">
+		<sources>
+			<includes name="${bin_directory}\pl\Rainbow.Resources.Rainbow.pl.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\pt" />
+	<resgen input=".\Resources\Rainbow.pt.resx" output="${bin_directory}\pt\Rainbow.Resources.Rainbow.pt.resources" />
+	<al output="${bin_directory}\pt\Rainbow.resources.dll" target="lib" culture="pt">
+		<sources>
+			<includes name="${bin_directory}\pt\Rainbow.Resources.Rainbow.pt.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\ru" />
+	<resgen input=".\Resources\Rainbow.ru.resx" output="${bin_directory}\ru\Rainbow.Resources.Rainbow.ru.resources" />
+	<al output="${bin_directory}\ru\Rainbow.resources.dll" target="lib" culture="ru">
+		<sources>
+			<includes name="${bin_directory}\ru\Rainbow.Resources.Rainbow.ru.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\sl" />
+	<resgen input=".\Resources\Rainbow.sl.resx" output="${bin_directory}\sl\Rainbow.Resources.Rainbow.sl.resources" />
+	<al output="${bin_directory}\sl\Rainbow.resources.dll" target="lib" culture="sl">
+		<sources>
+			<includes name="${bin_directory}\sl\Rainbow.Resources.Rainbow.sl.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\sv" />
+	<resgen input=".\Resources\Rainbow.sv.resx" output="${bin_directory}\sv\Rainbow.Resources.Rainbow.sv.resources" />
+	<al output="${bin_directory}\sv\Rainbow.resources.dll" target="lib" culture="sv">
+		<sources>
+			<includes name="${bin_directory}\sv\Rainbow.Resources.Rainbow.sv.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\tr" />
+	<resgen input=".\Resources\Rainbow.tr.resx" output="${bin_directory}\tr\Rainbow.Resources.Rainbow.tr.resources" />
+	<al output="${bin_directory}\tr\Rainbow.resources.dll" target="lib" culture="tr">
+		<sources>
+			<includes name="${bin_directory}\tr\Rainbow.Resources.Rainbow.tr.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\uk" />
+	<resgen input=".\Resources\Rainbow.uk.resx" output="${bin_directory}\uk\Rainbow.Resources.Rainbow.uk.resources" />
+	<al output="${bin_directory}\uk\Rainbow.resources.dll" target="lib" culture="uk">
+		<sources>
+			<includes name="${bin_directory}\uk\Rainbow.Resources.Rainbow.uk.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\zh-CN" />
+	<resgen input=".\Resources\Rainbow.zh-CN.resx" output="${bin_directory}\zh-CN\Rainbow.Resources.Rainbow.zh-CN.resources" />
+	<al output="${bin_directory}\zh-CN\Rainbow.resources.dll" target="lib" culture="zh-CN">
+		<sources>
+			<includes name="${bin_directory}\zh-CN\Rainbow.Resources.Rainbow.zh-CN.resources" />
+		</sources>
+	</al>
+	<mkdir dir="${bin_directory}\zh-TW" />
+	<resgen input=".\Resources\Rainbow.zh-TW.resx" output="${bin_directory}\zh-TW\Rainbow.Resources.Rainbow.zh-TW.resources" />
+	<al output="${bin_directory}\zh-TW\Rainbow.resources.dll" target="lib" culture="zh-TW">
+		<sources>
+			<includes name="${bin_directory}\zh-TW\Rainbow.Resources.Rainbow.zh-TW.resources" />
+		</sources>
+	</al>
+</project>

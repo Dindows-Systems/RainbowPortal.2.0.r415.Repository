@@ -1,0 +1,71 @@
+<%@ Page language="c#" Codebehind="Update.aspx.cs" AutoEventWireup="false" Inherits="Rainbow.Setup.Update" %>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>Setup</title>
+		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="msdefault.css" type="text/css" rel="stylesheet">
+	</HEAD>
+	<body bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0" marginwidth="0" marginheight="0">
+		<form id="Setup" method="post" runat="server">
+			<TABLE id="Table1" height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<TR>
+					<td align="right" bgColor="white" height="92"><IMG src="logo_big.gif"></td>
+				</tr>
+				<TR>
+					<td vAlign="center" align="middle" bgColor="#ccffff">
+						<TABLE class="normal" id="Table2" cellSpacing="1" cellPadding="1" width="512" border="0">
+							<TR>
+								<td>
+									<P>&#160;</P>
+									<P>Congratulations! You have successfully installed Rainbow.</P>
+									<P>&#160;</P>
+									<P class="ArticleHead">web site ACCESS</P>
+									<P>To access the web site, point your browser to: <A href="http://localhost/Rainbow">http://localhost/Rainbow</A></P>
+									<P>&#160;</P>
+									<P>If you chose to install the Rainbow database remotely, you need to manually run 
+										the SQL scripts provided in the Setup/Scripts subfolder and&#160;run setup.bat</P>
+									<P>If you use a db name other than Rainbow update web.config</P>
+									<P>If you use integrated security grant ASPNET access to the database</P>
+									<P>&#160;</P>
+									<P class="ArticleHead">Upgrade note</P>
+									<P>If you get an error like this:
+									</P>
+									<P>Server: Msg 446, Level 16, State 9, Procedure rb_GetModulesAllPortals, Line 9 
+										Cannot resolve collation conflict for UNION operation. Server: Msg 446, Level 
+										16, State 9, Procedure rb_GetModulesSinglePortal, Line 11 Cannot resolve 
+										collation conflict for UNION operation.
+									</P>
+									<P>Or similar updating database or runnning it after update you should fix the 
+										collation on the named tables.</P>
+									<UL>
+										<LI>
+										Open enterprise manager
+										<LI>
+										Edit the named table (Modules for example)
+										<LI>
+										Look for nvarchar fields
+										<LI>
+											Set collation to Default database for all fields</LI></UL>
+								</td>
+							</tr>
+						</TABLE>
+					</td>
+				</tr>
+				<tr>
+					<td class="HeadBg" height="10">
+						<TABLE id="Table3" cellSpacing="5" cellPadding="1" width="100%" border="0">
+							<TR>
+								<td class="NORMAL" style="COLOR: white">&#160;<STRONG>Rainbow portal - (c) 2003</STRONG></td>
+							</tr>
+						</TABLE>
+					</td>
+				</tr>
+			</TABLE>
+		</form>
+		</tr></TBODY></TABLE>
+	</body>
+</HTML>

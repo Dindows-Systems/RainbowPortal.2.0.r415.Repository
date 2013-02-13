@@ -1,0 +1,7 @@
+/* Rainbow.Zen Module Buttons - Jes1111 */
+.zm-ctrl{position:relative;bottom:0px;right:0px;}
+.zm-ctrl ul{float:right;padding:0px;margin:0px;background:White;}
+.zm-ctrl li{margin:0px;float:left;width:25px;padding:0px;list-style-type:none;color:#4E4E4E;background-color:White;font-size:0.8em;height:25px;}
+.zm-ctrl li a{width:25px;display:block;color:Black;background:center;text-decoration:none;height:25px;}
+.zm-ctrl li:hover,.zm-ctrl a:hover{background-color:Silver;color:Black;}
+.zm .zm-bdy{clear:both;}

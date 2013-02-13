@@ -1,0 +1,68 @@
+/* Rainbow.Zen Module Base File - Jes1111 */
+div.zm-bdy p{
+font-size:1em;
+margin:0px 0px 0.33em 0px;
+color:Black;
+}
+div.zm-bdy a{
+color:Black;
+}
+div.zm-bdy a:hover{
+color:White;
+background-color:Black;
+}
+div.zm-bdy h1{
+font-size:1.8em;
+}
+div.zm-bdy h2{
+font-size:1.4em;
+}
+.exp{
+width:30em;
+margin:10px auto;
+}
+hr{
+width:35em;
+margin:10px auto;
+}
+div.zm-hdr{
+margin:0px;
+padding:0px;
+text-align:left;
+position:relative;
+z-index:auto;
+}
+div.zm-hdr h2{
+font-size:14px;
+font-weight:bold;
+font-family:Arial,sans-serif;
+padding:3px 0px 2px 0px;
+margin:2px 4px 2px 0px;
+color:#660000;
+border-bottom:1px solid #660000;
+}
+div.zm-hdr div.zm-content{
+margin:0px;
+padding:0px;
+}
+div.zm-bdy{
+padding:0.5em 0.5em;
+margin:0px;
+font-size:1em;
+}
+div.zm{
+margin:8px 5px;
+padding:0px;
+border-collapse:collapse;
+}
+div.zen-col-middle div.zm-bdy{
+font-size:1em;
+}
+div.zen-col-left div.zm-bdy{
+font-size:0.8em;
+line-height:1.2em;
+}
+div.zen-col-right div.zm-bdy{
+font-size:0.8em;
+line-height:1.2em;
+}

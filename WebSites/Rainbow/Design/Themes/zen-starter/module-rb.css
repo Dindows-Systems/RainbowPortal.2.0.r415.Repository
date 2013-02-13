@@ -1,0 +1,81 @@
+.zm-bdy p{
+font-size:1em;
+margin:0 0 0.33em 0;
+color: Black;
+}
+.zm-bdy a{
+color: Black;
+}
+.zm-bdy a:hover{
+color: White;
+background-color:Black;
+}
+.zm-bdy h1{
+font-size:1.8em
+}
+.zm-bdy h2{
+font-size:1.4em
+}
+.exp{
+width:30em;
+margin:10px auto
+}
+hr{
+width:35em;
+margin:10px auto
+}
+* html .zm-hdr h1{
+}
+* html .zm-hdr h2{
+}
+.zm-hdr{
+position:relative;
+margin:0em;
+padding:0em;
+text-align:left;
+z-index:auto
+}
+.zm-hdr h2{
+margin:0em;
+padding:0em 1em 0em 5px;
+font-weight:bold;
+font-size:1.2em;
+line-height:2em;
+border-bottom: 1px dotted Black;
+}
+.zm-hdr .zm-content{
+margin:0;
+padding:0
+}
+.zm-bdy{
+margin:0;
+padding:5px 0.75em 5px 5px;
+font-size:1em
+}
+.zm{
+margin:3px 3px;
+padding:0em;
+padding-bottom:0;
+font-size:1em
+}
+.zm-ftr{
+}
+.zm-ftr .zm-content{
+}
+.zen-col-middle .zm{
+}
+.zen-col-left .zm{
+}
+.zen-col-right .zm{
+}
+.zen-col-middle .zm-bdy{
+font-size:1em
+}
+.zen-col-left .zm-bdy{
+font-size:0.9em;
+line-height:1.2em
+}
+.zen-col-right .zm-bdy{
+font-size:0.9em;
+line-height:1.2em
+}

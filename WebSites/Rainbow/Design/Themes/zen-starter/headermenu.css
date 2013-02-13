@@ -1,0 +1,91 @@
+/* Rainbow.Zen HeaderMenu Base File - Joel */
+/* buttons */
+
+.headermenu
+{
+	position: absolute;
+	top: 5px;
+	right: 0px;
+	font-size: 12px;
+}
+
+.headermenu ul
+{
+	position: relative;
+	top: 0px;
+	right: 0px;
+	line-height: 21px;
+	color: #000000;
+	padding: 0;
+	margin: 0;
+}
+
+.headermenu li
+{
+	color: #212166;
+	float: left;
+	list-style: none;
+	padding: 0px 5px 0px 0px;
+	margin: 0;
+	text-align: center;
+	text-decoration: none;
+}
+
+.headermenu li a
+{
+	display: block;
+	font-weight: 400;
+	padding: 0px 12px;
+	margin: 0px;
+	text-decoration: none;
+	border: 1px solid #212166;
+	background-color: #CDE0E9;
+	color: #212166;
+}
+
+.headermenu li a:visited
+{
+	display: block;
+	font-weight: 400;
+	padding: 0px 12px;
+	margin: 0px;
+	text-decoration: none;
+	border: 1px solid #212166;
+	background-color: #CDE0E9;
+	color: #212166;
+}
+
+.headermenu li a:hover
+{
+	background-color: #97C5EF;
+	color: #F5FAFF;
+	text-decoration: none;
+}
+
+/* labels */
+
+.headerlabels
+{
+	font-family: arial;
+	position: absolute;
+	top: 35px;
+	right: 0px;
+	padding: 0px 5px 0px 0px;
+	margin: 0px;
+	font-size: 18px;
+	font-weight: 600;
+	color: #F48E00;
+}
+
+.headerlabels ul
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+.headerlabels li
+{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}

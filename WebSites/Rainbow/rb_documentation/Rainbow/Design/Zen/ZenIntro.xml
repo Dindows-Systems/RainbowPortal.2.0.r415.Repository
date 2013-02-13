@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dita>
+	<topic id="zen_intro">
+		<title>Zen and the Art of Website Maintenance</title>
+		<titlealts>
+			<navtitle>Zen Introduction</navtitle>
+			<searchtitle>Zen Introduction</searchtitle>
+		</titlealts>
+		<shortdesc>Zen is a new rendering system for Rainbow, an alternative to what should now be called the "Classic" Rainbow rendering system. Using table-less layout and advanced CSS, Zen produces Rainbow pages which are highly accessible and Search Engine friendly. The CSS-based design techniques open up new possibilities and flexibility in the production of Rainbow Layouts/Themes.</shortdesc>
+		<prolog>
+			<author type="creator" href="mailto:jeremy@marinateq.com">Jeremy Esland</author>
+			<critdates>
+				<created date="2004-10-15"/>
+				<revised modified="2004-10-16"/>
+			</critdates>
+			<metadata>
+				<audience experiencelevel="advanced" job="administratoring" type="something"/>
+				<category>Design</category>
+				<keywords/>
+				<prodinfo>
+					<prodname>Rainbow</prodname>
+					<component>n/a</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<section id="background">
+				<title>Background</title>
+				<p>The layout/theme system in Rainbow is clever stuff, but it has some limitations and frustrations. 
+				In line with the poor support in ASP.NET for CSS and its virtual ignorance of web standards, Rainbow 
+				produces very "table-heavy" HTML code with large 
+				amounts of deprecated tags (&lt; font&gt;, &lt;align&gt;, etc). This has distinct disadvantages in many 
+				areas: speed (the pages are "heavy" and slow to render in the browser), search engine optimisation 
+				(the SE spider will often "give up" before it reaches the true "content" of the page) and accessibility 
+				(tables-nested-inside-tables-nested-inside-tables just looks like spaghetti to a screen-reading browser).
+				 Inspired by <a href="http://www.csszengarden.com">The CSS Zen Garden</a>, 
+				 I decided that it was time for Rainbow to have a new rendering system that would match its strengths in other areas.</p>
+				<p>It is important to be clear about my intentions with Zen. Zen does not necessarily make the production of a Rainbow site <i>easier</i>. 
+				In fact, if you are unfamiliar with CSS, you may well find Zen design to be <i>more difficult</i> than Classic Rainbow. The objective was to make 
+				it more flexible, powerful, Search Engine friendly and accessible than Classic. I hope it has achieved that. Furthermore, with Whidbey (ASP.NET version 2)
+				looming on the horizon, I hoped to create a stepping stone between Classic Rainbow and "Son of Rainbow" (i.e. Rainbow as it may become when re-written to make
+				use of Whidbey's new features). Microsoft seems to be shy of adopting "hard core" CSS design techniques: I hope that Zen will show the Rainbow 
+				community the benefits and strengths of a standards-base CSS approach, so that we avoid the temptation to adopt, blindly and without due consideration, all of the "Master Pages" approach 
+				that Whidbey favours. The word is that Microsoft has listened to the criticism about ASP.NET's almost complete bypass of web standards and that ASP.NET 2.0 will
+				correct the problems. But, for sure, ASP.NET 2.0 will allow many of the transgressions to remain in use, in the interests of "backward compatibility". If we, the Rainbow community, 
+				regard Zen as the stepping-stone toward ASP.NET 2.0, rather than the Classic rendering system, then our 2.0-based version of Rainbow should be a better product.</p>
+			</section>
+			<section id="who_is_zen_for">
+				<title>Who is Zen for?</title>
+				<p>Simply stated, Zen is for advanced Rainbow builders who need to go further than Classic Rainbow can take them, and who are prepared to put in the work and thought necessary to achieve
+				that goal.</p>
+				<p>Zen is <b>not</b> the right choice if you want a simple, point-and-shoot Rainbow site. The Classic rendering system is more robust, more straight-forward, is compatible across more browsers and is generally therefore
+				more suitable for "casual" use than Zen.</p>
+			</section>
+			<section id="zen-features">
+				<title>Zen Features</title>
+				<ul>
+					<li>Table-less, CSS-based page layout and design</li>
+					<li>100% CSS-based page design</li>
+					<li>Fine-grained design control: <i>every</i> structural &lt;div&gt; is individually addressable in CSS</li>
+					<li>Lighter, faster pages</li>
+					<li>Standards compliant pages</li>
+					<li>Highly accessible pages: Section 508 and Accessibility Guidelines compliancy</li>
+					<li>Search Engine friendly pages</li>
+					<li>Ordered column layout: CenterColumn content occurs before left and right column content in the page source</li>
+					<li>Sematically correct mark-up</li>
+					<li>Complete separation between Layout and Theme</li>
+					<li>Flexible module button options: drop-down menu, relative positioning, image/text options etc.</li>
+					<li>Custom Theme per module support, including full CSS isolation</li>
+					<li>Easy cross-browser compatibility</li>
+					<li>Overcomes many IE CSS problems</li>
+				</ul>
+			</section>
+			<section id="backward_compatibility">
+				<title>Backward Compatibility</title>
+				<p>The greatest challenge was to maintain backward compatibility with existing Rainbow Layouts and 
+				Themes. So if you take a look at Zen and think "Why did he do it <i>that</i> way?", the answer is probably "backward compatibility".</p>
+				<p>In retro-fitting Zen into Rainbow, it quickly became obvious that the PortalModuleControl and DesktopModuleTitle
+				classes were in a big mess, their fundamental structure having never changed from the very start of
+				Rainbow. Therefore, in parallel with the development of Zen, I "re-worked" PortalModuleControl. The first big change there
+				was to eliminate the DesktopModuleTitle control: having it as a separate control was messy and over-complicated. So 
+				what remains now is only a "stub" in order to maintain backward compatibility. All the properties that used to be
+				in DesktopModuleTitle are now in PortalModuleControl. "Old style" modules that set properties in DesktopModuleTitle
+				will still work, but should be upgraded to set those properties directly in PortalModuleControl.</p>
+				<p>The other major area of change in PortalModule control is how the page is built. I have separated the "business logic" from the "rendering logic", making it simpler to see what is going on. My intention
+				was to make it possible to "hook" Zen into the process, but the work should also be useful for anyone else who wants to review, improve or extend the module rendering part of Rainbow (Whidbey, anyone?).</p>
+				<p>Essentially, the modifications I made to PortalModuleControl are <i>completely separate</i> from Zen. The two bodies of work
+				happened to be done at the same time, but it is important to realise that they are not related. "Classic" Layouts and Themes still work 
+				the way they always have, but in the background the code which handles them is neater and more logically arranged. Zen only comes 
+				into play when you select a Zen Layout/Theme combination for a portal tab/page. So if your custom-built modules have problems (under a "Classic" Layout/Theme), Zen is not the problem: blame the changes 
+				in PortalModuleControl!</p>
+			</section>
+			<section id="zen_architecture">
+				<title>Zen Architecture</title>
+				<p>Zen works on the same lines as "Classic" Layouts/Themes, but achieves a cleaner separation between Layout and Theme, and much more flexibility. A Zen Layout determines
+				what "elements" are present on the page, e.g. HeaderMenu, Navigation, etc., but has no direct influence on the appearance of the rendered page. A Zen 
+				Theme contains all the appearance-related "commands", mostly in the form of CSS.</p>
+				<p>A Zen Layout resembles an ASP.NET control template. It has a single root-level element: a &lt;ZenLayout&gt;. This has five child elements: &lt;HeaderTemplate&gt;, 
+				&lt;LeftColTemplate&gt;, &lt;CenterColTemplate&gt;, &lt;RightColTemplate&gt; and &lt;FooterTemplate&gt;. Each Template area can contain any number of controls and/or 
+				fixed content. All the Template areas are optional, e.g. you can omit the LeftColTemplate and RightColTemplate if you wanted a single column layout. The column Templates 
+				can contain a special Zen control called a &lt;ZenContent&gt;. The ZenContent control has a "Content" attribute which ties it to a particular "column identifier" in Rainbow, e.g. 
+				<code>&lt;ZenContent Content="LeftPane" ...&gt;</code> will cause that column Template to be filled with any modules that are marked "LeftPane". </p>
+				<codeblock><![CDATA[<ZenLayout>
+  <HeaderTemplate>
+    ...
+  </HeaderTemplate>
+  <LeftColTemplate>
+    <ZenContent Content="LeftPane" .../>
+  </LeftColTemplate>
+  <CenterColTemplate>
+    <ZenContent Content="CenterPane" .../>
+  </CenterColTemplate>
+  <RightColTemplate>
+    <ZenContent Content="RightPane" .../>
+  </RightColTemplate>
+  <FooterTemplate>
+    ...
+  </FooterTemplate>
+</ZenLayout>]]></codeblock>
+				<p>A Zen page uses a fixed hierarchy of &lt;div&gt; elements (lots of them!) to "contain" the controls/modules for that page. It does not use HTML tables at all. In the current version of Zen, the hierarchy
+				of &lt;div&gt; elements is fixed: future version will allow a template to supply the hierarchy. Importantly, the three columns are arranged in the order CenterColumn, LeftColumn, RightColumn within the output page. This is crucial 
+				to producing Search Engine friendly and 508-compliant pages. The CSS is responsible for "shifting" the columns into the order in which they actually show on the page. To do this it manipulates the display of the left and right columns,
+				"floating" them into the top of the center column and then using negative margins to move them <i>outside</i> the edges of the center column. Zen also uses extensively the technique of "images as backgrounds" instead of placing &lt;img&gt; tags.  The "chrome" for a page is built up using the images as backgrounds set on the &lt;div&gt; elements. 
+				This ensures that "chrome" images are concentrated into the CSS, which is where they belong since they are part of the "design".</p>
+				<p>At the module level, Zen does things quite differently to Classic. The Theme.xml file in a Zen Theme contains just one "ThemePart", called "ModuleLayout". This is an XML representation
+				of the module container with some additional "script" elements which direct the Zen rendering engine. Below is a typical Zen ModuleLayout ThemePart:</p>
+<codeblock><![CDATA[<ThemePart Name="ModuleLayout">
+ <HTML>
+  <div class="zm">
+   <div class="zm-hdr">
+   <if:Title>
+    <div class="zm-content">
+     <h2>
+      <content:TitleText />
+     </h2>
+    </div>
+   </if:Title>
+   <if:Buttons>
+    <div class="zm-ctrl">
+     <ul>
+      <loop:Buttons>
+       <li>
+        <content:Button />
+       </li>
+      </loop:Buttons>
+     </ul>
+    </div>
+   </if:Buttons>
+  </div>
+   <if:Body>
+   <div class="zm-bdy">
+    <div class="zm-content">
+     <content:ModuleContent />
+    </div>
+   </div>
+  </if:Body>
+   <if:Footer>
+   <div class="zm-ftr">
+    <div class="zm-content">
+     <if:ShowModifiedBy>
+      <content:ModifiedBy />
+     </if:ShowModifiedBy>
+    </div>
+   </div>
+  </if:Footer>
+  </div>
+ </HTML>
+</ThemePart> ]]>
+</codeblock>
+<p>Removing the "script" elements and adding some example content makes it easier to see the actual &lt;div&gt; structure that will be built:</p>
+<codeblock><![CDATA[<div class="zm">
+ <div class="zm-hdr">
+  <div class="zm-content">
+   <h2>Module Title</h2>
+  </div>
+  <div class="zm-ctrl">
+   <ul>
+    <li>Button 1</li>
+    <li>Button 2</li>
+   </ul>
+  </div>
+ </div>
+ <div class="zm-bdy">
+  <div class="zm-content">
+   Module Body Content
+  </div>
+ </div>
+ <div class="zm-ftr">
+  <div class="zm-content">
+   Module Footer Content
+  </div>
+ </div>
+</div>]]>
+</codeblock>
+<p>Comparing the two, it easy to see the function of the "script" elements. The module uses a nest of &lt;div&gt; elements which provide straightforward access to the specific
+parts of the module container; to allow them to be styled as containers, e.g. <code>.zm-hdr{background:Black}</code> and also to allow other tags enclosed by them to be styled, e.g. <code>.zm-bdy p{color:Green}</code>.</p>
+<p>PortalModuleControl also adds one more &lt;div&gt; around the whole module from within code: each module will be enclosed like this:</p>
+<codeblock><![CDATA[<div class="HtmlModule_ascx" id="mID10667">
+  ...
+</div>
+]]></codeblock>
+<p>The <code>class</code> identifies the module type and the <code>id</code> identifies the module instance. This happens for Classic Rainbow too, and allows even more control, particularly for contextual CSS tagging (<xref loc="Rainbow/Design/Zen/" src="ZenIntro" frag="mark_up_tactics">see below</xref>).</p>
+			</section>
+			<section id="mark_up_tactics">
+				<title>A short discussion about "mark-up tactics"</title>
+				<p>HTML (of whatever vintage/flavour) has a number of tags which can be used to "mark up" page
+				content. There are two important ways to "categorize" these tags. On the one hand you can divide them into "block level elements" and "inline elements". If you don't
+				know the difference between these two types, please go and find a good HTML primer: understanding the difference is vital to understanding and using Zen. The other 
+				important categorization is to divide them into "semantically meaningfull" and "semantically meaningless" tags.</p>
+				<p>"Semantically meaningfull" tags are those which grant a "semantic meaning" to the text which they enclose. For example, the &lt;p&gt; tag represents a "paragraph": a "real world" thing
+				that we can understand and recognize. We have a visual expectation of what a paragraph should look like on a page. Similarly, the &lt;h1&gt; through &lt;h6&gt; tags
+				have "semantic meaning": they represent headings of varying levels. As such, we have a visual expectation of their appearance on a page. Although we can style these 
+				paragraph and heading tags using CSS, the result is always (or should always be) "recognisable" as a paragraph or a heading.</p>
+				<p>"Semantically meaningless" tags do not grant any "meaning" to the text they enclose, and we have no visual expectation of what they should look like. The &lt;div&gt; element, for example, and
+				its inline cousin, the &lt;span&gt; element, have no semantic meaning and we have no expectation of their appearance.</p>
+				<p>Zen attempts to maintain this distinction between "meaningfull" and "meaningless" mark-up. It uses &lt;div&gt; elements purely as "layout cues". On the other hand, when
+				it is appropriate to grant "semantic meaning" to something, Zen will use a "semantically meaningfull" tag: for example, Zen navigation uses a &lt;ul&gt; (unordered list) construction because 
+				the "items" in a navigation structure <i>should</i> have "meaningfull" structure: in this case, a list. The title for a module is a heading, so Zen uses an &lt;h2&gt; tag. It uses &lt;h2&gt; rather than &lt;h1&gt;, since &lt;h1&gt; is used
+				for the Portal Title at the top of page, thus maintaining "semantic meaning" throughout the whole page.</p>
+				<p>This applies the other way around as well: one often sees HTML pages using &lt;p&gt; tags with CSS styling (e.g. bold, 16pt Arial) to "create" headings. This is incorrect semantics: a heading is 
+				a heading and should not be marked up as a paragraph, even if the CSS makes it look like a heading.</p>
+				<p>The "rule of thumb" should be that if you remove all the CSS styling from a page, it should still be <b>100%</b> readable and useable. Zen achieves this goal: if you
+				select the ZenZero Theme you can see a page without any styling applied to it. It is still readable, useable and useful. Most importantly, two particular categories of "users"
+				will see the page as useable and useful: search engine spiders will see "pure, clean content" and text-only browsers (including screen-readers) will see "clean, meaningful content". Furthermore, if you
+				stick to these rules, when you come to re-use the page content (for example, you want to create a PDF from the HTML content) you'll have a much easier, smoother time.</p>
+				<p>The final "tactic" which Zen encourages is the "use of context" when marking up content. Take, for example, the content of a particular module which is made up of parapraphs of text. Let's say you want those paragraphs to be red
+				text on a silver background. The temptation would be to create a CSS class called, say, "MyStyle" and apply this class to all the paragraphs in the module content: <code>&lt;p class="MyStyle"&gt;...&lt;/p&gt;</code>. Whilst this may achieve the appearance that 
+				you wanted, it is ignoring the much simpler and easier option of using the context to do the job. Let's say the module type is "MyStockReportModule". Zen always "marks" the module with an outer &lt;div&gt; with a class
+				which indicates the module type: <code>&lt;div class="MyStockReportModule_ascx"&gt;...&lt;/div&gt;</code>. Create a CSS rule like:</p>
+				<codeblock>.MyStockReportModule_ascx p {
+color: Red;
+background: Silver
+}
+</codeblock>
+				<p>In plain language, this means "whenever you see a paragraph inside a MyStockReport Module, make the text Red and the background Silver". It achieves what you want without needing to place specific class tags in every paragraph. This technique should be used
+				 whenever and wherever possible: it produces shorter, tighter, more re-useable content and makes it much easier to control/change the appearance. Zen provides "markers" to enable this "trick" in any specific area of the page layout (Header, Footer, Left Column, etc), in any
+				 module type (e.g. all HtmlModule instances) and in any Module instance (e.g. in a Module with a specific ID). Get into the habit of thinking "contextually" - it pays off!!</p>
+				 <p>Last but not least, let me touch on the issue of case sensitivity. CSS selectors are not, by definition, case-sensitive. However, if the page language within which they are used <i>is</i> case-sensitive, then they become case-sensitive. HTML is not
+				 case-sensitive, so CSS is not when used within it. But XHTML and XML <i>are</i> case-sensitive and so, therefore, is any CSS used within it. Given this, <b>the only sensible choice is to regard <i>all</i> CSS as case-sensitive</b>: this will save you from
+				 considerable pain in the future.</p>
+			</section>
+			<section id="designing_with_zen">
+				<title>Designing with Zen</title>
+				<p>The general process of designing a Zen site (from scratch) starts off the same as Classic, but gets very different towards the end. In both 
+				cases the production of a Layout file is similar, with the aim of simply specifying the controls to use on the page and their 
+				approximate arrangement relative to each other. In both cases you then produce a Photoshop (or similar) "design". In both cases you will
+				then "slice up" the graphics and produce individual .gif or .jpg files of the various design elements. From that point on, the process differs. 
+				In Classic Rainbow, you would then "distribute" those graphic elements throughout the Layout and Theme files, wrapping them 
+				in regular HTML. In the Zen environment, all of the design elements will be specified as background images by using CSS tags. The "trick" with Zen is understanding
+				the &lt;div&gt; structure of the overall page and of the modules, and therefore knowing &lt;where&gt; to place those graphic elements.</p>
+				<p>I should talk for moment about the popular conception that CSS-based design always produces similar-looking, "blocky" designs. If you believe that, then go and 
+				take a look at <a href="http://www.csszengarden.com">The CSS Zen Garden</a>. If there is any truth at all in this idea, it is because many people
+				approach the task of CSS-based design incorrectly. Specifically, they <i>start</i> the whole design process in a CSS editor. This results in the limitation of their thinking to 
+				changing the background/foreground colours of elements, and adding thick, ugly borders. The key to success is to create your design within a tool like Photoshop and then, 
+				and <i>only then</i>, start working with the CSS in order to translate that design into reality.</p>
+				<p>One of the features of Zen is the modular nature of the CSS that it uses. The ZenStarter Theme, for example, has nine CSS files. "Zen.css" is the "parent" file, containg eight <code>@import</code>
+				commands which bring in the actual CSS. The eight CSS files each contain a different part of the total puzzle. In reality, when designing a Zen site, you won't normally start with an absolutely blank sheet of 
+				paper: you will make a copy of the ZenStarter theme and start modifying the various parts of it. The division of the whole CSS into eight distinct parts makes this process much easier: each part covers a different
+				specific area of the overall task. Of course, once these eight parts are digested by the browser they all get lumped togther. Remember, though, one of the fundamental aspects of CSS: order matters! This also means that when considering 
+				where to place a particular CSS tag and assuming you want an easy life: there is one correct position for it and seven incorrect ones!</p>
+				<p>When modifying the CSS in ZenStarter in order to create your own design, there is a "system" that you should follow. Remembering that CSS is a programming language, treat the exercise in the 
+				same way as you might if you were modifying a C# program: make a small change, test, make another small change, test again, etc. If a change that you make doesn't yield the result you expected, don't continue changing other things
+				to try to make it work: undo the change you just made then <b>stop and think</b>. Keep regular "snapshots", i.e. make a security copy of the whole theme directory 
+				every time you reach a "milestone". If you get into a tangle, junk the current version and roll-back to a milestone. CSS can be unforgiving as a programming language: a seemingly innocent change can have unexpected consequences that ripple through
+				and affect other areas. Having said that, once you become familiar with CSS as a language, and with <a href="http://www.w3.org/TR/REC-CSS2/box.html">the CSS box model</a>, you'll acquire a "sense" of what is going on: when something doesn't 
+				work as expected, you'll be able to diagnose the problem in "CSS terms". For example, if you move one element and another element also moves unexpectedly, you'll easily reach the conclusion that the positioning on the second element must be relative 
+				to that of the first: the cure is now simple. As with any other programming task: never "just guess"!</p>
+				<p>The ZenStarter theme makes extensive use of the "em" unit. The "em" is a kind of pseudo-unit, expressing a measurement that is relative to the font-size of the current element. Most measurements
+				in CSS can be, and should be, expressed in "ems". Be aware of the "relative" nature of "ems": if you have one &lt;div&gt; nested inside another (a common occurrence in Zen), and the outer &lt;div&gt; has a font-size set to
+				"0.8em" and the inner &lt;div&gt; has a font-size set to "0.5em", then any text in the inner &lt;div&gt; will have an "actual" font-size of "0.4em" (i.e. half of 0.8). If that makes sense to you, you're okay: otherwise, go do some reading!  Understanding the "em" is another crucial step in making Zen do you want it to do. Make sure you do some homework on the "em" unit!</p>
+			</section>
+			<section id="use_of_ie7">
+				<title>The use of IE7</title>
+					<p>Zen makes use of an Open Source product called IE7 in order to overcome the known problems that IE has with CSS. IE7 is a big bunch of Javascript which manipulates your CSS <i>in the browser</i>, thus altering IE's 
+					native behaviour and bringing it closer to "the standard". Zen code detects that the theme in use "is Zen", and automatically adds the relevant lines into the page &lt;head&gt; element to load IE7 (which resides 
+					in the <code>Rainbow/aspnet_client</code> folder). One of the most important things that IE7 changes is Internet Explorer's use of the <code>:hover</code> pseudo-class. Native IE only recognises <code>:hover</code> on anchors (i.e. the &lt;a&gt; element). The CSS standard allows
+					<code>:hover</code> on any element: IE7 makes this happen. Without this, Zen's drop-down menus would not be possible at all. See the <a href="http://dean.edwards.name/IE7/">IE7 web site</a> for a full explanantion of what it changes and how.</p>
+					<p>One of the big problems in CSS-based design, indeed one of the reasons for its slow adoption by the HTML community, has always been the differences in CSS behaviour between Internet Explorer and the
+					"standards compliant" browsers like Mozilla, FireFox, etc. The IE7 product effectively, but not completely, eradicates these differences. Thus you can ignore, in theory, the usual need for "hacks" and "work-arounds" and just
+					produce a single set of clean, logical CSS which will work on all browser platforms.</p>
+					<p>Nice idea, but unfortunately it is not quite the reality. There are still differences in behaviour, even though Dean Edwards is doing a splendid job in reducing the list. For the purposes of this discussion, there
+					are three browsers which should be regarded as your "targets": Internet Explorer 6, FireFox and Opera 7. Of these, the one that is like to give you the most trouble is actually Opera 7, in my experience. Opera 7 claims to be 
+					"standards compliant" but it really isn't. Personally, I ignore it: it represents such a tiny proportion of the market that the time needed to make a design look identical across all three browsers in uneconomical. Thanks to
+					IE7, getting your design to look (almost) the same on IE6 and FireFox is achievable and relatively easy. When working with Zen, have both browsers open and test each change against both platforms: if you allow them to diverge you'll 
+					get into a big mess later when you try to bring them back together.</p>
+					<p>Another platform that is known to give trouble is IE5, particularly on the Mac. My advice: ignore it. Take a look at the browser statistics (and the accompanying explanations/cautions) <a href="http://www.upsdell.com/BrowserNews/stat.htm">here</a> 
+					and <a href="http://www.mywebsite.force9.co.uk/">here</a>, then make your own decision.</p>
+					<p>The "down-side" to using the IE7 product to correct Internet Explorer's behaviour is speed. When a Zen page loads in an IE browser, IE7 reads, manipulates and re-writes parts of the CSS for that page. This creates a small, but noticeable, delay. The delay is
+					proportional to 1) the quantity of CSS used, 2) the amount of "IE incompatible" CSS used and 3) the speed of the client computer. Of course, load the same page in FireFox and there is no delay: only IE browsers are affected
+					by IE7.</p>
+					<p>Looked at realistically, this delay is a small price to pay for the advantages that IE7 grants you. Furthermore, since, at the time of writing, the IE7 product stands at version 0.73 Alpha, we can hope that
+					future versions will improve this aspect. I say "hope" because Dean Edwards quite rightly states on his website that speed is not a priority for IE7 development. There are other ways to achieve at least some of the advantages that IE7 has
+					brought to the table, but overall IE7 has to be considered the best option for the logical correctness of its approach and the completeness of its aims.</p>
+					<p>Another aspect you should be aware of here is that Zen forces all browsers into "standards compliance mode" using a suitable DOCTYPE declaration at the top of the output page. If you change the DOCTYPE declaration, <a href="http://gutfeldt.ch/matthias/articles/doctypeswitch/table.html">make sure</a> it is one that
+					forces "standards compliance mode" in all browsers.</p>
+			</section>
+			<section id="where_to_go_next">
+				<title>Where to go next</title>
+				<p>My strong suggestion is that you read <i>all</i> of the Zen documentation, from start to finish, at least once before you attempt to start creating your first Zen design. Such is the nature of Zen
+				and CSS that understanding the principles is vital to success. Also, unless you are already comfortable with adanvced CSS, use some of the links below to find and follow some online CSS learning paths. I say "advanced" 
+				because many HTML coders think they "know" CSS because they can add a class to an HTML tag and set the font-size. I wouldn't call that a sufficient level of knowledge or 
+				experience to guarantee successful use of a tool like Zen. It's not that the subject is difficult, but it <i>is</i> complex and there are <i>many</i> obstacles, many "gotchas" and a rich collection of "tips &amp; tricks" and "best practices". "Thinking in CSS" requires a shift of mind-set similar to that which is needed to convert from
+				"relational thinking" (SQL) to "hierarchical thinking" (XML). To a certain extent you have to be humble, discard all that you think you know, and start fresh. To repeat what I said at the
+				top of this article: Zen does not necessarily make Rainbow site design <i>easier</i>. If you over-estimate your CSS expertise it will almost certainly make it more difficult! But with the right level of 
+				knowledge and understanding of what you're trying to achieve and of the "peculiarities" of the CSS mechanism, Zen will get you further than Classic Rainbow ever could.</p>
+			</section>
+			<section id="credits">
+				<title>Credits</title>
+				<p>I can't claim credit for all the clever stuff in Zen: many other sources provided me with useful CSS code, tools, hints and general inspiration. They are too numerous to list, but here are the truly significant ones (links are in the See Also section below):
+				</p>
+				<ul>
+					<li>The CSS Zen Garden - for starting me in this direction</li>
+					<li>A List Apart - a constant source of inspiration and information</li>
+					<li>Dean Edwards - for providing IE7, the tool which makes cross-browser Zen possible</li>
+					<li>Tonico Strasser - for providing his Flexible Layout, the basis for Zen's page layout</li>
+					<li>and many, many more...</li>					
+				</ul>
+			</section>
+		</body>
+		<related-links>
+			<linklist>
+				<link href="http://www.w3.org/TR/REC-CSS2/cover.html">
+					<linktext>CSS2 Specification</linktext>
+				</link>
+				<link href="http://www.w3.org/TR/REC-CSS2/box.html">
+					<linktext>The CSS Box Model</linktext>
+				</link>
+				<link href="http://dean.edwards.name/IE7/">
+					<linktext>Dean Edwards' IE7 web site</linktext>
+				</link>
+				<link href="http://www.csszengarden.com">
+					<linktext>The CSS Zen Garden - the inspiration for the whole Zen thing</linktext>
+				</link>
+				<link href="http://www.dezwozhere.com/links.html">
+					<linktext>Holy CSS Zeldman! - a great starting point for CSS learning</linktext>
+				</link>
+				<link href="http://www.mezzoblue.com/zengarden/resources/">
+					<linktext>Mezzo Blue CSS Resource - a great starting point for CSS learning</linktext>
+				</link>
+				<link href="http://www.alistapart.com/topics/css/">
+					<linktext>A List Apart - one of the best general CSS sites</linktext>
+				</link>
+				<link href="http://webstandards.org/">
+					<linktext>The Web Standards Project - a good place to start learning about "standards-based" and "accessible" development</linktext>
+				</link>
+				<link href="http://gutfeldt.ch/matthias/articles/doctypeswitch.html">
+					<linktext>Doctype switching and standards compliance: An overview</linktext>
+				</link>
+				<link href="http://gutfeldt.ch/matthias/articles/doctypeswitch/table.html">
+					<linktext>Doctypes and their respective layout mode</linktext>
+				</link>
+				<link href="http://www.upsdell.com/BrowserNews/stat.htm">
+					<linktext>Browser News (statistics)</linktext>
+				</link>
+				<link href="http://www.mywebsite.force9.co.uk/">
+					<linktext>Browser Statistics</linktext>
+				</link>
+				<link href="http://www.webproducer.at/flexible-layout">
+					<linktext>Tonico Strasser's Flexible Layout - the basis for Zen's page layout</linktext>
+				</link>
+			</linklist>
+		</related-links>
+	</topic>
+</dita>

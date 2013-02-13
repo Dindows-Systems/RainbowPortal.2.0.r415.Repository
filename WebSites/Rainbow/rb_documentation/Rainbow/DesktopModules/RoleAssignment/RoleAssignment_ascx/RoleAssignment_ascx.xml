@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlspysps http://www.altova.com/sps/template/dita/dita.sps?>
+<dita xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<topic id="RoleAssigment" xml:lang="en">
+		<title>Role Assignment - An Introduction</title>
+		<titlealts>
+			<navtitle>Role Assignment Module</navtitle>
+			<searchtitle>Role Assignment Module</searchtitle>
+		</titlealts>
+		<shortdesc>Allows administrators to easily add/remove one or more users from a role.</shortdesc>
+		<prolog>
+			<author type="creator" href="http://weblogs.asp.net/jmandia/">John Mandia</author>
+			<critdates>
+				<created date="2004-10-14"/>
+				<revised modified="2004-10-14"/>
+			</critdates>
+			<metadata>
+				<audience type="administrator" job="administratoring" experiencelevel="expert"/>
+				<category>Admin Modules</category>
+				<keywords>
+					<keyword>Role</keyword>
+					<keyword>Roles</keyword>
+					<keyword>Management</keyword>
+					<keyword>Assignment</keyword>
+					<keyword>Adding</keyword>
+					<keyword>Removing</keyword>
+					<keyword>Admin</keyword>
+					<keyword>Adminstration</keyword>
+					<keyword>Users</keyword>
+					<keyword>User</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<vrmlist>
+						<vrm version="1.0" release="2004-10-13" modification="0"/>
+					</vrmlist>
+					<component>/DesktopModules/RoleAssignment/RoleAssignment.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<p/>
+			<p>The &quot;Role Assignment&quot; module was built to allow administrators to easily add / remove one or more users from a role. This allows you to: <ul>
+					<li>Select users who are not in a particular role (e.g. Admins) and then add one or more of those users to that role.</li>
+					<li>Select users who are in a particular role (e.g. Admins) and then remove one or more of  those users from that role.</li>
+					<li>Select users who do not belong to any role (i.e Select &quot;Users Not In Role&quot; from the 1st dropdown menu and then &quot;Not In Any Role&quot; from the 3rd dropdown menu) and then assign them to a role.</li>
+					<li>Show user information either as their Name or Email Address to help with making a decision on what role that user or group of users belong to.</li>
+				</ul>
+			</p>
+			<p>
+				<image alt="An example of what the Role Assignment Module looks like" href="images/example.gif"/>
+			</p>
+		</body>
+	</topic>
+</dita>

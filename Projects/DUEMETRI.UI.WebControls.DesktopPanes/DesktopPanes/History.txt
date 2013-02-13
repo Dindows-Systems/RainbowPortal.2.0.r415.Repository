@@ -1,0 +1,15 @@
+Releases HISTORY
+
+1.0.0.1329 - 29/04/2003
+- Added DesktopPanesTest folde (web app test)
+- Fixed panes behavior when a menu is placed inside.
+
+1.1.0.1316 - 28/04/2003
+- Fixed visibility of panes. Now if a pane has not content is correctly hidden. You MUST not define any template if you want hide the pane.
+ 
+1.1.0.1308 - 08/01/2003
+- Fixed an issue with default values in pane style
+
+1.1.0.1118 - 16/12/2002
+- First public release
+Manu 

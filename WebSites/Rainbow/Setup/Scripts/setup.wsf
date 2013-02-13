@@ -1,0 +1,192 @@
+<job id="Rainbow_Setup">
+	<script language="VBScript">
+
+    dim DB_Server_Name, DB_Name
+    dim WshShell, WshSysEnv, FWver
+    Set WshShell = WScript.CreateObject("WScript.Shell")
+    Set WshSysEnv = WshShell.Environment("Process")
+    
+    FWver = GetDotNetFrameworkVersion()
+    Main
+    
+    Sub Main()
+      dim goUrl
+  
+      if msgbox(_
+        "------------------------------------------------------------" & vbCrLf & _
+        "Welcome to Rainbow DB Installation." & vbCrLf & _
+        "For support please visit http://www.rainbowportal.net" & vbCrLf & _
+        "Please report any error on rainbowportal forum." & vbCrLf & _
+        "http://www.rainbowportal.net/ASPNetForums" & vbCrLf & _
+        "------------------------------------------------------------" & vbCrLf & _
+        vbCrLf & _
+        "------------------------------------------------------------" & vbCrLf & _
+        "In addition, this script will give the local ASPNET account " & vbCrLf & _
+        "rights for the Rainbow database." & vbCrLf & _
+        "------------------------------------------------------------" & vbCrLf & _
+        "MS.Net Framework Version " & FWver & vbCrLf, _
+        vbOKCancel, "RAINBOW Installer 1.0 - by uTILLIty - tilli@weissenberger.at") <> vbOK then WScript.Quit()
+        
+      do while DB_Server_Name = ""
+        DB_Server_Name = InputBox("Please enter the name of your database server, or leave 'localhost', if the db server is this machine", "Name of SQL-Server", "localhost")
+        if DB_Server_Name = "" then
+          if msgbox("Are you sure you wish to quit?", vbYesNo or vbExclamation) = vbYes then WScript.Quit(1)
+        end if
+        if msgbox("You chose " & DB_Server_Name & " as your Database-Server", vbOKCancel) <> vbOK then DB_Server_Name = ""
+      loop
+
+      do while DB_Name = ""
+        DB_Name = InputBox("Please enter the name of your database. The default name is RAINBOW", "Name of Database", "Rainbow")
+        if DB_Name = "" then
+          if msgbox("Are you sure you wish to quit?", vbYesNo or vbExclamation) = vbYes then WScript.Quit(1)
+        end if
+        if msgbox("You chose " & DB_Name & " as your Database. If this database already exists, it will be DELETED! Are you sure you wish to continue?", vbYesNo) <> vbYes then DB_Name = ""
+      loop
+      
+      ExecSqlCmd "createdb.sql", DB_Server_Name, "", "The Database will now be created."
+      ExecSqlCmd "aspnetusr.sql", DB_Server_Name, DB_Name, "The ASPNET User will now be granted access."
+      if FWver > 1.0 and IsWin2003 then
+        ExecSqlCmd "webserverusr.sql", DB_Server_Name, DB_Name, "Framework 1.1 on win server 2003 specific SQL commands are being executed now (if you get error on other systems it is normal, just ignore it)."
+      end if
+      
+      if msgbox("Should I try to update your web.config file with the new database-information?", vbYesNo) = vbYes then
+        if ParseSQLScript("..\..\web.config") = false then
+          msgbox "The web.config file could not be found or updated. Please update it manually!", vbExclamation
+        end if
+      end if
+      goUrl = "http://localhost/rainbow/"
+      msgbox "All Done! Your RAINBOW installation Phase-1 is complete. Please point your browser to '" & goUrl & "' to complete the setup - assuming that the location to your RAINBOW web is " & goUrl & ". If not, please point your browser to the correct location!"
+    end sub
+
+    function ExecSqlCmd(FName, DB_Server_Name, DB_Name, StepDesc)
+      Dim oExec
+      dim cmdString
+      
+      on error resume next
+      
+      if ParseSQLScript(fName) = false then
+        msgbox("The SQL Script "&fName&" or "&fName&".tpl is missing or could not be parsed! Aborting setup. Please fix and run setup again!")
+        WScript.Quit(1)
+      end if
+      
+      cmdString = "osql -S " & DB_Server_Name
+      if DB_Name > "" then cmdString = cmdString & " -d " & DB_Name
+      cmdString = cmdString & " -E -n -i " & fName
+      msgbox StepDesc & vbCrLF & vbCrLF & "To start the process, hit OK below."
+      Set oExec = WshShell.Exec(cmdString)
+      Do While oExec.Status = 0
+        WScript.Sleep 100
+      Loop
+      
+      dim stdOut, stdErr
+      if not oExec.StdOut.AtEndOfStream then stdOut = oExec.StdOut.ReadAll else stdOut = "-nothing-" end if
+      'if not oExec.StdErr.AtEndOfStream then StdErr = oExec.StdErr.ReadAll else StdErr = "-nothing-" end if
+      'OSQL doesn't fill StdErr and also only returns 0 on exit, even if error (crap)
+      
+      if err.number > 0 or oExec.ExitCode <> 0 then
+        if err then
+          stdOut = stdOut & vbCrLf & err.number & " " & err.description
+          err.clear
+        end if
+        msgbox "An error occured applying '"&fName&"' ("&cmdString&")" & vbCrLf & vbCrLf & stdOut & vbCrLf & vbCrLf & _
+          "Aborting setup. Please fix and restart setup!"
+        WScript.Quit
+      end if
+
+      if MsgBox(fName & " returned " & oExec.ExitCode & ". Please see below if any error message has appeared." & vbCrLf & vbCrLf & _
+        stdOut & vbCrLf & vbCrLf & _
+        "Is there an error message above?", vbYesNo, "Database interaction result") = vbYes then
+
+        msgbox "You specified that an error occured applying '"&fName&"' ("&cmdString&")" & vbCrLf & vbCrLf & stdOut & vbCrLf & vbCrLf & _
+          "Aborting setup. Please fix and restart setup!"
+        WScript.Quit
+      end if
+    end function
+    
+    function ParseSQLScript(fName)
+      dim fso, outFile, inFile, curLine
+      Const ForReading = 1, ForWriting = 2
+
+      Set fso = CreateObject("Scripting.FileSystemObject")
+      
+      'either a template or the original file must exist
+      if fso.FileExists(fName) = false and fso.FileExists(fName&".tpl") = false then 
+        ParseSQLScript = false
+        exit function
+      end if
+      
+      'Create Template from SQL script
+      if fso.FileExists(fName&".tpl") = false and fso.FileExists(fName) = true then
+        fso.CopyFile fName, fName&".tpl"
+      end if
+      
+      set inFile = fso.OpenTextFile(fName&".tpl", ForReading)
+      set outFile = fso.CreateTextFile(fName, true)
+      do while not inFile.AtEndOfStream
+        curLine = inFile.ReadLine
+        outFile.WriteLine ParseLine(curLine)
+      loop
+      inFile.Close
+      outFile.Close
+      ParseSQLScript = true
+    end function
+    
+    function ParseLine(curLine)
+      curLine = Replace(curLine, "%%DBNAME%%", DB_Name)
+      curLine = Replace(curLine, "%%DBSERVER%%", DB_Server_Name)
+      curLine = Replace(curLine, "%%COMPUTERNAME%%", WshSysEnv("COMPUTERNAME"))
+      curLine = Replace(curLine, "database=Rainbow;", "database="&DB_Name&";")
+      curLine = Replace(curLine, "server=localhost;", "server="&DB_Server_Name&";")
+      ParseLine = curLine
+    end function
+    
+    function GetDotNetFrameworkVersion()
+      dim FWver
+      on error resume next
+      FWver = WshShell.RegRead("HKLM\SOFTWARE\Microsoft\.NETFramework\policy\v1.2\1111")
+      if err then
+        err.clear
+        FWver = WshShell.RegRead("HKLM\SOFTWARE\Microsoft\.NETFramework\policy\v1.1\4322")
+        if err then
+          err.clear
+          FWver = WshShell.RegRead("HKLM\SOFTWARE\Microsoft\.NETFramework\policy\v1.0\3705")
+          if FWver = "" then
+            FWver = 0
+          else
+            FWver = 1.0
+          end if
+        else
+          FWver = 1.1
+        end if
+      else
+        FWver = 1.2
+      end if
+      err.clear
+      GetDotNetFrameworkVersion = FWver
+    end function
+
+	Function IsWin2003
+	'Returns True if OsVersion is win2003 false otherwise
+	'Could be used to check if IsWinXP also 
+	'simply put for if statement if sOSversion='5.1'
+ 
+		set environment = WshShell.Environment
+
+		On Error Resume Next 
+		sOSversion = WshShell.RegRead(_
+			"HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT" & _ 
+			"\CurrentVersion\CurrentVersion") 
+ 
+		'for your debugging - uncomment this...
+		'Wscript.echo "Path: " & environment("PATH") & vbCRLF _
+		'& "Processor: " & environment("PROCESSOR_ARCHITECTURE") & vbCRLF  _
+		'& "Operating system: " & environment("OS ") & sOSversion
+
+		If sOSversion = "5.2" Then 
+			IsWin2003 = True 
+		Else 
+			IsWin2003 = False 
+		End If 
+	end function
+	</script>
+</job>

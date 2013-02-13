@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rainbow.Modules.Version</name>
+    </assembly>
+    <members>
+        <member name="T:Rainbow.Content.Web.ModulesRainbowVersion">
+            <summary>
+            Rainbow Version
+            </summary>
+        </member>
+        <member name="F:Rainbow.Content.Web.ModulesRainbowVersion.currentLanguage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.Content.Web.ModulesRainbowVersion.currentUILanguage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.Content.Web.ModulesRainbowVersion.VersionLabel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesRainbowVersion.OnInit(System.EventArgs)">
+            <summary>
+            Raises Init event
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesRainbowVersion.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Rainbow.Content.Web.ModulesRainbowVersion.GuidID">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Rainbow.Content.Web.ModulesVersion.RbVersion">
+            <summary>
+            Summary description for RbVersion.
+            </summary>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesVersion.RbVersion.OnInit(System.EventArgs)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rainbow.Content.Web.ModulesVersion.RbVersion.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

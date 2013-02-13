@@ -1,0 +1,6 @@
+1) Removed Rainbow.Settings
+2) Removed Rainbow.Provideer
+3) Removed Rainbow.Provider.Implementation
+4) Removed System.Configuration.Implementation
+5) Removed RewriteRules
+6) Removed RainbowScheuler

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\RainbowCVS\CVSROOT\Rainbow\rb_documentation\Style\Default.xsl"?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Documents and Settings\Jeremy\Desktop\dita13\dita13\schema\ditabase.xsd">
+	<topic id="core-page-en" xml:lang="en">
+		<title>The Rainbow 'Page' Class</title>
+		<titlealts>
+			<navtitle>Page Class</navtitle>
+			<searchtitle>Page Class</searchtitle>
+		</titlealts>
+		<shortdesc>The Rainbow Page Class inherits from System.Web.UI.Page and extends the class to support Rainbow functionality.</shortdesc>
+		<prolog>
+			<author type="creator">Jeremy Esland</author>
+			<critdates>
+				<created date="2004-09-11"/>
+			</critdates>
+			<metadata>
+				<audience type="programmer" job="programming" experiencelevel="expert"/>
+				<category>Core Classes</category>
+				<keywords>
+					<keyword>Core</keyword>
+					<keyword>Class</keyword>
+					<keyword>UI</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<vrmlist>
+						<vrm modification="1" release="2004-09-11" version="1.0"/>
+					</vrmlist>
+					<component>/UI/Page.cs</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<section>
+				<title>Purpose</title>
+				<p>The Rainbow.Framework.Web.UI.Page class inherits from System.UI.Page, extending it's functionality and features. The class is 
+				the "pivot point" for Rainbow pages: the code-behind for DesktopDefault.aspx (the main Rainbow page) inherits from 
+				Rainbow.Framework.Web.UI.Page and is therefore provided with the full range of security, content and other functionality. The "higher 
+				level" pages (used for some admin functions, etc.) themselves inherit from Rainbow.Framework.Web.UI.Page to add more specific security 
+				features. This class is responsible for building the actual HTML output markup outside of the &lt;form&gt;, i.e. the 
+				&lt;head&gt; element, including page title, all CSS references, any Javascript blocks or imports, the page meta elements, etc.</p>
+			</section>
+			<section>
+				<title>Features</title>
+				<p>On top of the functionality inherited from the System.UI.Page class, the Rainbow.Framework.Web.UI.Page class adds the following:</p>
+				<ul>
+					<li>Standard "in-module" buttons for Update, Delete and Cancel with overridable Click event handlers and role-based authorization. 
+					The Add and Delete buttons automatically flush the module content from cache if it is there. The Delete button provides an automatic client-side confirmation dialog to prevent unintended deletions.</li>
+					<li>Easy access to appropriate Portal, Tab, Module, Theme and Item properties.</li>
+					<li>Properties for the storage and control of:
+					<ul>
+							<li>Page Title (with localization support)</li>
+							<li>standard META elements: keywords, description, encoding</li>
+							<li>a site-wide additional META entry which can be overriden per tab from admin settings screens</li>
+							<li>a META element collection, enabling module code to add additional META elements to the page output as needed</li>
+							<li>a CSS file collection, enabling module code to add additional CSS file references to the page output as needed</li>
+							<li>a CSS style collection, enabling module code to add embedded CSS rule-sets to the page output as needed</li>
+							<li>a Client Script collection, enabling module code to add Javascript file references to the page output as needed (as distinct from the .NET standard Client Script Block functionality)</li>
+							<li>a &lt;body&gt; onload function call collection, enabling module code to add onload script triggers to the page output as needed</li>
+							<li>a &lt;body&gt; attributes string, enabling other attributes to be added to the &lt;body&gt; element from Site Settings</li>
+							<li>a DOCTYPE string, enabling the page DOCTYPE to be specified from Site Settings</li>
+							<li>a standardised Pop-Up helper, enabling easy control of child window launching from module buttons (with full cross-browser support and specific accessibility features)</li>
+						</ul>
+					</li>
+					<li>Helper methods: Is...Registered(...) and Register...(...) for:
+					<ul>
+							<li>CSS files references</li>
+							<li>CSS embedded styles</li>
+							<li>Client Scripts</li>
+							<li>&lt;body&gt; onload function calls</li>
+							<li>Additional META elements</li>
+							<li>named pop-up windows</li>
+						</ul>
+					</li>
+					<li>Full support for Rainbow's role-based security.</li>
+					<li>An overriden Render method (see details below).</li>
+				</ul>
+			</section>
+			<section>
+				<title>The Render method</title>
+				<p>Rainbow.Framework.Web.UI.Page has an overriden Render method which completely controls the final HTML markup of the page outside of the &lt;form&gt; element itself. Any .aspx page which inherits directly or indirectly from Rainbow.Framework.Web.UI.Page is effectively stripped of all content above and below
+				the &lt;form&gt; element. This is then replaced with markup built from the various properties stored in the Page class (see above). Thus whatever markup exists outside the &lt;form&gt; element never makes into into the final output page and is there only to support the origination
+				and maintenance of that .aspx file by developers. </p>
+				<p>The Render method builds the &lt;html&gt;, &lt;head&gt; and &lt;body&gt; elements. It populates the &lt;head&gt; element with &lt;title&gt;, &lt;meta&gt;,&lt;link&gt;, &lt;style&gt; and &lt;script&gt; elements as approriate. It adds any required attributes to the &lt;body&gt; element.</p>
+				<note type="attention">Since this new method replaces any &lt;head&gt; element specified in the source .aspx file, it is no longer necessary to use &lt;head id="htmlHead" runat="server"&gt;, which supported the old way of building the &lt;head&gt; element. Nevertheless, it won't do any harm if it is present.</note>
+			</section>
+		</body>
+		<related-links>
+			<linklist  scope="peer" format="dita">
+				<title>Related Topics</title>
+				<link href="/rb_documentation/DesktopDefault.aspx/DesktopDefault.aspx.resx">
+					<linktext>DesktopDefault.aspx</linktext>
+				</link>
+				<link href="/rb_documentation/UI/WebControls/PortalModuleControl.cs/PortalModuleControl.cs.resx">
+					<linktext>PortalModuleControl class</linktext>
+				</link>
+				<link href="/rb_documentation/UI/WebControls/ModuleButton.cs/ModuleButton.cs.resx">
+					<linktext>ModuleButton class</linktext>
+				</link>
+				<link href="/rb_documentation/DesktopModules/SiteSettings/SiteSettings.ascx/SiteSettings.ascx.resx">
+					<linktext>Site Settings</linktext>
+				</link>
+			</linklist>
+		</related-links>
+	</topic>
+</dita>

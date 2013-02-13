@@ -1,0 +1,126 @@
+/* Rainbow.Zen - horizontal navigation Base File - Jes1111 */
+/* outer menu container */
+div.mainmenu{
+position:absolute;
+top:140px;
+left:0px;
+background-color:#660000;
+border-color:Black;
+border-width:1px 0px 1px 0px;
+border-style:solid;
+font-size:11px;
+padding:0px 0px 0px 0px;
+}
+/* all menu blocks */
+div.mainmenu ul{
+float:left;
+list-style:none;
+line-height:2;
+padding:0px;
+margin:0px;
+}
+/* all menu containers */
+div.mainmenu li{
+list-style:none;
+float:left;
+padding:0px 5px 0px 0px;
+margin:0;
+text-align:center;
+}
+/* all menu items */
+div.mainmenu li a{
+display:block;
+min-height:22px;
+width:1%;
+white-space:nowrap;
+padding:0px 0.5em 0px 19px;
+margin:0px;
+background-color:#660000;
+background-image: url(img/mainmenu-1.gif);
+background-repeat:no-repeat;
+color:#fff;
+text-decoration:none;
+border:1px none #3c78b5;
+}
+/* placeholder */
+div.mainmenu div.nav-ph{
+min-height:22px;
+margin:0px;
+padding:0px 5px;
+line-height:2;
+cursor:default;
+}
+/* all menu items - hover */
+div.mainmenu li a:hover{
+color:White;
+background-image: url(img/mainmenu-1-over.gif);
+background-repeat:no-repeat;
+background-color:#a06c56;
+}
+/* child menu items */
+div.mainmenu li ul a{
+min-height:22px;
+color:#000000;
+background:#a99383;
+width:130px;
+padding:0px 5px;
+text-decoration:none;
+border:none;
+white-space: normal;
+}
+div.mainmenu li ul li{
+background-color:White;
+}
+/* child menu items - hover */
+div.mainmenu li ul a:hover,div.mainmenu li ul li:hover{
+color:White;
+background-color:#a06c56;
+background-image: none;
+}
+/* child menu blocks */
+div.mainmenu li ul{
+position:absolute;
+left:-999em;/* send them off the screen */
+width:140px;
+/*margin-top:-1px;*//* up 1px to overlap parent's border */
+margin-top:0px;
+border:1px solid #000;
+}
+/* child menu item containers */
+div.mainmenu li li{
+padding:0px 0px 0px 0em;
+text-align:left;
+width:100%;
+border-top:1px solid #000;
+}
+div.mainmenu li li:first-child{
+border-top:1px none;
+}
+/* child items with children */
+div.mainmenu li ul a.daddy,div.mainmenu li ul li.daddy{
+background-image:url(icon/menu_arrow.gif);
+background-repeat:no-repeat;
+background-position:right center;
+}
+/* child menu blocks (level 3+) */
+div.mainmenu li ul ul{
+margin-top:-23px;/* shift up in line with parent */
+margin-left:140px;
+}
+/* hide child menu blocks 2 or more levels below - add more as needed */
+div.mainmenu li:hover ul ul,
+div.mainmenu li:hover ul ul ul,
+div.mainmenu li:hover ul ul ul ul,
+div.mainmenu li:hover ul ul ul ul ul
+div.mainmenu li:hover ul ul ul ul ul ul{
+left:-999em;
+}
+/* reveal immediate child menu blocks as needed */
+div.mainmenu li:hover ul,
+div.mainmenu li li:hover ul,
+div.mainmenu li li li:hover ul,
+div.mainmenu li li li li:hover ul,
+div.mainmenu li li li li li:hover ul,
+div.mainmenu li li li li li li:hover ul{
+left:auto;
+}

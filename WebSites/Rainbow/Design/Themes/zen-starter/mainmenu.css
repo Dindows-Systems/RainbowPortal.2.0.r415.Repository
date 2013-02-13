@@ -1,0 +1,141 @@
+/* 
+	Main Menu CSS 
+	The main menu is built using standard HTML UL and LI making it downgradable as a list for really
+	old browsers.
+	This CSS was tests for i.e. 5.5, 6.0, netscape, and firefox
+*/
+
+
+/* outer menu container */
+.mainmenu
+{
+	position: absolute;
+	top: 70px;
+	left: 10px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+
+	font-size: 13px;
+	background:transparent;
+	z-index: 90;
+}
+
+/* Outermost UL (horizontal bar) */
+ul.xmBar {
+  position:absolute; visibility:hidden;
+  margin:0; padding:4px;
+  background:transparent;
+  overflow:visible; cursor:default;
+  z-index: 91;
+}
+/* All LIs in ul.xmBar */
+ul.xmBar li {
+  list-style:none;
+  display:inline;
+  width:70px;
+  margin:0 8px 0 0; padding:2px 6px;
+}
+/* 
+Bar label 
+Top level menu items with children
+*/
+li.xmBarLbl {
+  color:#802000; 
+  background:white;
+  border:1px solid black;
+}
+li.xmBarLblHvr {
+  color:#802000; 
+  background:black;
+  border:1px solid black;
+ }
+ 
+/* Bar item 
+Top level menu with no children
+*/
+li.xmBarItm {
+  color:#802000; 
+  background:white;
+  border:1px solid black;
+  white-space:nowrap;
+}
+li.xmBarItmHvr {
+  color:#802000; 
+  background:black;
+  border:1px solid black;
+  white-space:nowrap;
+}
+
+/* Box */
+
+/* All ULs except outermost (child menu's)*/
+ul.xmBox {
+  position:absolute; visibility:hidden;
+  display:block; width:124px;
+  margin:0; padding:4px;
+  overflow:visible; cursor:default;
+  background:white;
+  border:1px solid black;
+  	z-index: 92;
+}
+/* All LIs in ul.xmBox */
+ul.xmBox li {
+  display:block; margin:6px 0; padding:0;
+  width:124px; height:auto /* 16px; */
+}
+/* Box label */
+li.xmBoxLbl {
+  color:#802000; background:transparent;
+  border-right:1px solid #333;
+}
+li.xmBoxLblHvr {
+  color:#fff; background:#596380;
+  border-right:1px solid #333;
+}
+/* Box item */
+li.xmBoxItm {
+  color:#802000; background:transparent;
+}
+li.xmBoxItmHvr {
+  color:#fff; background:#596380;
+}
+
+/* A element over-rides so we don't inherit unwanted styles */
+
+ul.xmBar li a:link, ul.xmBar li a:visited, ul.xmBar li a:active { /* for all As in ul.xmBar */
+  display:inline;
+  margin:0; padding:0; border:none;
+  text-decoration:none;
+  color:#802000; background:transparent;
+  font-size: 13px;
+  font-weight:bold;
+}
+ul.xmBar li a:hover { /* for all As in ul.xmBar */
+  display:inline;
+  margin:0; padding:0; border:none;
+  text-decoration:none;
+  color:#fff; background:transparent;
+  font-size: 13px;
+  font-weight:bold;
+}
+
+ul.xmBox li a:link, ul.xmBox li a:visited, ul.xmBox li a:active { /* for all As in ul.xmBox */
+  display:block; /* width:100%; height:100%; */
+  margin:0; padding:4; border:none;
+  text-decoration:none;
+  color:#802000; background:transparent;
+  font-size: 13px;
+  font-weight:bold;
+}
+ul.xmBox li a:hover { /* for all As in ul.xmBox */
+  display:block; /* width:100%; height:100%; */
+  margin:0; padding:4; border:none;
+  text-decoration:none;
+  color:#fff; background:transparent;
+  font-size: 13px;
+  font-weight:bold;
+}
+
+/* Misc */
+

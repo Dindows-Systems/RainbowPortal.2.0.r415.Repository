@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<topic id="PageManager-en" xml:lang="en">
+		<title>PageManager</title>
+		<titlealts>
+			<navtitle>PageManager</navtitle>
+			<searchtitle>PageManager</searchtitle>
+		</titlealts>
+		<shortdesc>Allows you to reorder and control the pages in your site.</shortdesc>
+		<prolog>
+			<author type="creator" href="http://www.jonavi.com">Jonathan F. Minond</author>
+			<critdates>
+				<created date="2005-04-08"/>
+				<revised modified="2005-04-08"/>
+			</critdates>
+			<metadata>
+				<audience type="user" job="using" experiencelevel="general"/>
+				<category>UserModules</category>
+				<keywords>
+					<keyword>PageManager Module</keyword>
+					<keyword>Pages</keyword>
+					<keyword>Tabs</keyword>
+					<keyword>Modules</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<component>/DesktopModules/EnhancedHtml/EnhancedHtml.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<section>
+				<title>Introduction</title>
+				<p>This module provides all the functionaility to manage the pages in your site.<br/>Features include:
+				<ul>
+					<li>Sorting your site tree</li>
+					<li>Adding new page with several configuration options</li>
+					<li>Delete page</li>
+					<li>Edit page properties</li>
+				</ul>
+				</p>
+			</section>
+			<section>
+				<title>Module Properties</title>
+				<image alt="An example of Module Settings" href="/images/EnhancedHTML_properties.gif"/>
+				<p>Remarks:</p>
+				<ul>
+					<li>Topic: List of words for internal portal search use</li>
+					<li>Add Invariant Culture: If this option is selected, then the marked pages as invariant culture is always seen.</li>
+					<li>Show Multimode icon: This option show a litle icon for change between multipage mode and page mode.  </li>
+				</ul>
+			</section>
+			<section>
+				<title>Ordering your site tree</title>
+				<image alt="An example of Edit Mode" href="/images/EnhancedHTML_edition1.gif"/>
+				<p>You can select in this section create a new page or select a existing page for modify or delete</p>
+				<image alt="An example of Edit Mode" href="/images/EnhancedHTML_edition2.gif"/>
+			</section>
+			<section>
+				<title>Page Actions</title>
+				<image alt="An example of Edit Mode" href="/images/EnhancedHTML_edition1.gif"/>
+				<p>You can select in this section create a new page or select a existing page for modify or delete</p>
+				<image alt="An example of Edit Mode" href="/images/EnhancedHTML_edition2.gif"/>
+			</section>
+			<section>
+				<title>Known Issues</title>
+				<p>
+					<ul>
+						<li>Client script need to limit your motion within a parent node.</li>
+						<li>Multi Delete will not be included until recycler is in core</li>
+					</ul>
+				</p>
+			</section>
+		</body>
+	</topic>
+</dita>

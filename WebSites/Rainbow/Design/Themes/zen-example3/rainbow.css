@@ -1,0 +1,98 @@
+/* Rainbow.Zen Module Content and Legacy CSS File - Jes1111 */
+.Head{font-size:1.5em;font-weight:bold;}
+.SubHead{font-size:1em;}
+.NormalTextBox{width:90%;font-size:1em;}
+.Normal{font-size:1em;}
+.NormalBold{font-size:1em;font-weight:bold;}
+.NormalRed{color:Red;font-size:1em;}
+.NormalItalic{font-size:1em;font-style:italic;}
+.NormalDim{color:Silver;font-size:1em;font-style:italic;}
+.normalTextSmallBold{font-size:0.9em;font-weight:bold;}
+.bc_Row,.BreadCrumbs{}
+.bc_Text,.BreadCrumbsText{font-size:0.8em;}
+.bc_Link,.bc_Link:link,.bc_Link:visited,.BreadCrumbsLink,.BreadCrumbsLink:link,.BreadCrumbsLink:visited{color:Black;font-size:0.8em;font-weight:bold;text-decoration:none;}
+.bc_Link:hover,.BreadCrumbsLink:hover{text-decoration:underline;}
+.Error{color:Red;}
+.SubSubHead{font-size:1em;font-weight:bold;}
+.ItemTitle{font-size:1em;font-weight:bold;}
+.ItemDate{font-weight:bold;font-size:1em;}
+.CommandButton{
+	width:120px;
+	padding:1px 1em 1px 1em;
+	margin:0.5em 0.5em;
+	border-width:3px;
+	border-style:solid;
+	border-color:#a06c56 #7d5443 #7d5443 #a06c56;
+	display:block;
+	background:#d1c6bf;
+	color:#660000;
+	font-size:1em;
+	font-weight:bold;
+	text-align:center;
+	min-height:1em;
+	cursor:pointer;
+}
+.CommandButton:hover{
+	color:#d1c6bf;
+	background-color:#660000;
+}
+a.CommandButton:link{
+/*	display:block;*/
+	color:#660000;
+	background:#d1c6bf;
+	text-decoration:none;
+}
+a.CommandButton:visited{
+	color:#660000;
+	text-decoration:none;
+}
+a.CommandButton:hover{
+	color:#660000;
+	background-color:#d1c6bf;
+	text-decoration:none;
+}
+a.CommandButton:active{
+	color:Red;
+	text-decoration:none;
+}
+.Grid_Header{color:White;background-color:Gray;}
+.Grid_Footer{}
+.Grid_Item{}
+.Grid_AlternatingItem{background-color:Silver;}
+.Grid_SelectedItem{}
+.Grid_Pager{}
+.EventCalendar{}
+.BlogTitle{}
+.BlogFooter{}
+.BlogArchiveLink{}
+.SurveyQuestion{color:DarkRed;}
+.SurveyPanel{color:Silver;background-color:Silver;}
+.SurveyOption{color:Black;}
+.SurveyButton{color:DarkRed;font-weight:bold;}
+.rb_PageKeyPhrase{font-size:1em;}
+.EnhancedHtmlTitlePage{color:Black;font-size:1.2em;}
+.EnhancedHtmlLink{color:Black;font-size:1em;font-weight:bold;}
+A.EnhancedHtmlLink:link{color:Black;text-decoration:none;}
+A.EnhancedHtmlLink:visited{color:Black;text-decoration:none;}
+A.EnhancedHtmlLink:active{color:Black;text-decoration:none;}
+A.EnhancedHtmlLink:hover{color:Black;text-decoration:underline;}
+.MessageTitle{color:Black;font-size:1.2em;}
+.MessageAuthor{color:Black;font-size:1em;}
+.MessageBody{color:Black;font-size:1em;}
+DIV.edmenuback{border-color:Gray;border-style:solid;border-width:1px 1px 0px 1px;width:100%;background-color:Silver;}
+TD.edmenuStyle{width:75px;padding-top:2px;padding-left:2px;text-align:right;}
+TD.edmenuEditor{}
+TD.edmenuHTML{width:35px;text-align:right;}
+.ArticleHead{color:Black;font-size:1.2em;font-weight:bold;}
+.Error{color:Red;font-weight:bold;}
+SMALL{font-size:0.9em;}
+BIG{font-size:1.1em;}
+.ItemTitle{color:Black;font-size:1em;font-weight:bold;}
+.Message,.message{background-color:Silver;font-size:1em;}
+.rb_PageKeyPhrase{color:Black;font-size:1em;}
+/* styling non-default .aspx pages */
+div.rb_DefaultLayoutDiv,div.rb_AlternateLayoutDiv{width:770px;margin:0px auto;padding:0px;}
+table.rb_DefaultLayoutTable,table.rb_AlternateLayoutTable{width:770px;margin:0px;padding:0px;background:White;border-collapse:collapse;text-align:left;}
+td.rb_DefaultPortalFooter,td.rb_AlternatePortalFooter{padding:0px;margin:0px;}
+td.rb_DefaultPortalHeader,td.rb_AlternatePortalHeader{padding:0px 0px 30px 0px;margin:0px;}
+div.rb_DefaultLayoutDiv div.zm td{text-align:left;}

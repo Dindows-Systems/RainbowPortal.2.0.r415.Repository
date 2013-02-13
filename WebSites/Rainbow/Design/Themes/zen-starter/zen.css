@@ -1,0 +1,17 @@
+/*
+This is the file that is included by automatically in all your portal pages.
+included are all the main pages needed to cover your site and all that is output.
+
+You may want to use forms.css, and raibow.css to fill in the blanks. 
+Rainbow.css is filled with standard classes used in the rainbow modules
+for fonts and other items. If you do not include them, elements will recieve there design
+from elements.css and presentation.css and modules.css
+*/
+@import url(rainbow.css);
+@import url(elements.css);
+@import url(layout.css);
+@import url(mainmenu.css);
+@import url(headermenu.css);
+@import url(presentation.css);
+@import url(modules.css);
+@import url(forms.css);

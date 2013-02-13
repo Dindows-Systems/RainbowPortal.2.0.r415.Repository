@@ -1,0 +1,116 @@
+/* ZenWorks.Zen - Admin area */
+/* styling the SettingsTable */
+fieldset.SettingsTableGroup{
+margin:2em 0 1.5em 0;
+padding:0 0.5em 1em 0.5em;
+border:1px solid Gray;
+background-color:WhiteSmoke;
+position:relative;
+}
+fieldset.SettingsTableGroup .SubHead{
+font-size:0.85em;
+}
+legend.SubSubHead{
+padding:0.2em 0.4em;
+border:1px solid #000066;
+background-color:Gray;
+color:White;
+font-weight:bold;
+position:relative;
+top:-1em;
+}
+/* styling the ModuleSettings page */
+div.ModuleSettings{
+background:White;
+}
+.cbl-vertical td{
+font-size:0.8em;
+text-align:right;
+position:relative;
+}
+.cbl-vertical input{
+width:2em;
+display:block;
+position:relative;
+top:0px;
+}
+.cbl-vertical label{
+padding:0em 0px 0em 0px;
+width:2em;
+clear:both;
+display:block;
+line-height:2;
+text-align:right;
+position:absolute;
+bottom:2em;
+left:0px;
+height:14em;
+vertical-align:middle;
+writing-mode:tb-rl;
+}
+.ModuleSettings .SubHead{
+width:30%;
+font-size:0.85em;
+text-align:right;
+}
+div.ModuleSettings fieldset.SettingsTableGroup{
+margin:3em 0px;
+}
+.rb_AlternateLayoutDiv{
+margin:0px 0px 0px 0px;
+padding:0px 130px;
+width:800px;
+text-align:center;
+}
+.rb_AlternateLayoutTable{
+width:100%;
+margin:0px 0px 0px 0px;
+padding:0px 0px 0px 0px;
+border-collapse:collapse;
+text-align:left;
+}
+table.vert-spc{
+margin:9em 0px 0em 0px;
+}
+
+/* styling the DevelopmentHistory */
+div.DevelHistory table{
+padding:0 0.5em 0 0.5em;
+}
+div.DevelHistory th{
+background-color: #ffe1ff;
+text-align: right;
+font-family: Tahoma, sans-serif;
+font-size: 1em;
+color: navy;
+text-decoration: none;
+vertical-align: top;
+}
+div.DevelHistory tr{
+text-align: left;
+font-family: Tahoma, sans-serif;
+font-size: 0.8em;
+color: black;
+text-decoration: none;
+background-color: white;
+}
+div.DevelHistory h3{
+	font-family: Tahoma, sans-serif;
+	font-size: 1.8em;
+	font-style: italic;
+	font-weight: bold;
+	color: Olive;
+	text-decoration: underline;
+	text-align: left;
+}
+div.DevelHistory h4{
+	font-family: Tahoma, sans-serif;
+	font-size: 1.2em;
+	font-style: italic;
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	text-align: left;
+	background-color: Green;
+	margin: 0.5em 0 0em 0;
+}

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xmlspysps http://www.altova.com/sps/template/dita/dita.sps?>
+<dita xmlns:fo="http://www.w3.org/1999/XSL/Format">
+	<topic id="SignInLdapModule" xml:lang="en">
+		<title>SignInLdap - An Introduction</title>
+		<titlealts>
+			<navtitle>SignInLdap Module</navtitle>
+			<searchtitle>SignInLdap Module</searchtitle>
+		</titlealts>
+		<shortdesc/>
+		<prolog>
+			<author type="creator">???</author>
+			<critdates>
+				<created date="2004-10-14"/>
+				<revised modified="2004-10-14"/>
+			</critdates>
+			<metadata>
+				<audience type="administrator" job="administratoring" experiencelevel="expert"/>
+				<category>Modules</category>
+				<keywords>
+					<keyword>LDAP</keyword>
+					<keyword>Sign In</keyword>
+					<keyword>SignIn</keyword>
+					<keyword>Log In</keyword>
+					<keyword>LogIn</keyword>
+					<keyword>Security</keyword>
+					<keyword>Authority</keyword>
+					<keyword>Authorization</keyword>
+					<keyword>Authorisation</keyword>
+					<keyword>Users</keyword>
+					<keyword>User</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<vrmlist>
+						<vrm version="1.0" release="2004-10-13" modification="0"/>
+					</vrmlist>
+					<component>/DesktopModules/SignInLdap/SignInLdap.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<p>The SignInLDAP module has followed the implementation of the SignIn module. A LDAP signin is done with the help of the LDAPHelper class which stores the user information into a cookie by using FormsAuthentication.SetAuthCookie().</p>
+			<codeblock><![CDATA[// LDAPHelper.cs line # 151
+Rainbow.Security.User usr = LDAPHelper.Login(dn, password);
+if (usr != null){  ...  FormsAuthentication.SetAuthCookie(usr.ToString(), persistent);   ...  ]]>
+</codeblock>
+			<p>When the application authentication is requested, a RainbowPrincipal and a User are created and reassigned to the Context.User with indicating as a “LDAP” authentication type. The user roles are also assigned to the user object with the help of the LDAPHelper.</p>
+			<codeblock><![CDATA[// Global.asax.cs line # 395
+string[] names = Context.User.Identity.Name.Split("|".ToCharArray());  
+if (names.Length == 3 && names[2].StartsWith("cn="))  
+  { 
+    Context.User = new RainbowPrincipal(new Rainbow.Security.User(Context.User.Identity.Name, "LDAP"), Helpers.LDAPHelper.GetRoles(names[2]));
+  }   
+else  ...]]></codeblock>
+			<p>The determination of the presentation of LDAP user profile is conducted in the Admin\Register.aspx.cs which has acted the same way as the original code with additional condition statement. The LDAPUserProfile module is loaded dynamically in runtime by Page.LoadControl() which as the way as the Register module is created in the original code.</p>
+			<codeblock><![CDATA[// Admin\Register.aspx.cs line # 88 
+RainbowPrincipal user = HttpContext.Current.User as RainbowPrincipal;  
+if (user != null && user.Identity.AuthenticationType == "LDAP")
+{
+  RegisterPage = "LDAPUserProfile.ascx";  
+  PortalSettings portalSettings = (PortalSettings) HttpContext.Current.Items["PortalSettings"];
+  Page x = new Page();  
+  Control myControl = x.LoadControl(HttpUrlBuilder.WebPathCombine(PortalSettings.ApplicationPath, "DesktopModules/LDAPUserProfile", RegisterPage));
+  Rainbow.Framework.Web.UI.WebControls.PortalModuleControl p = ((Rainbow.Framework.Web.UI.WebControls.PortalModuleControl) myControl);  
+  p.ModuleID = int.Parse(portalSettings.CustomSettings["SITESETTINGS_REGISTER_MODULEID"].ToString());
+  return ((Control) p);
+}]]>  
+</codeblock>
+			<p>The removal of the SignInLDAP will not cause any sequentially problem in the displaying of the user profile. It also should not affect the other authentication types. The LDAP authentication type specific in the user object allows the separation of the other authentications. Unless, there is a user id start with “cn=” but it should be very rare.</p>
+		</body>
+	</topic>
+</dita>

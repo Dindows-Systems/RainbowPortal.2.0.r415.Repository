@@ -1,0 +1,6 @@
+10/24/2004 Notes on rebuild with Rainbow latest version.
+-uninstall is broken.
+
+Steps for Rainbow install.
+
+1:  Install module using rainbow installer in Admin All.

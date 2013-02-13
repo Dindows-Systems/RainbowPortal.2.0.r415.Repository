@@ -1,0 +1,70 @@
+/* Rainbow.Zen HeaderMenu Base File - Jes1111 */
+/* buttons */
+div.headermenu{
+position: absolute;
+top: 0px;
+right: -2px;
+font-size:10px;
+}
+div.headermenu ul{
+float:left;
+list-style:none;
+line-height:2;
+padding:0px;
+margin:0px;
+}
+/* all menu containers */
+div.headermenu li{
+list-style:none;
+float:left;
+padding:0px 2px 0px 0px;
+margin:0;
+text-align:center;
+}
+/* all menu items */
+div.headermenu li a{
+display:block;
+min-height:22px;
+width:1%;
+padding:0px 8px;
+margin:0px;
+/*background-color: #660000;*/
+background-image:url(img/tab-corner-1.gif);
+background-repeat:no-repeat;
+background-position: bottom left;
+color:#fff;
+text-decoration:none;
+border:1px none #3c78b5;
+text-transform:uppercase;
+font-weight:bold;
+white-space:nowrap;
+}
+div.headermenu li a:hover{
+color: White;
+/*background-color: #a06c56;*/
+background-image:url(img/tab-corner-1-over.gif);
+background-repeat:no-repeat;
+background-position: bottom left;
+
+}
+/* labels */
+div.headerlabels{
+position:absolute;
+top:115px;
+right:0px;
+padding:0px 5px 0px 0px;
+margin:0;
+font-size:9px;
+background-color:#660000;
+color:White;
+}
+div.headerlabels ul{
+padding:0;
+margin:0;
+}
+div.headerlabels li{
+list-style:none;
+padding:0px;
+margin:0px;
+margin-left:5px;
+}

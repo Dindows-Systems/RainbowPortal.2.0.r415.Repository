@@ -1,0 +1,2 @@
+<%@ Control Language="c#" AutoEventWireup="false" Src="DesktopFooter.ascx.cs" Inherits="Rainbow.Content.Web.Modules.DesktopFooter" TargetSchema="http://schemas.microsoft.com/intellisense/ie5" %>
+<asp:PlaceHolder id="LayoutPlaceHolder" runat="server"></asp:PlaceHolder>

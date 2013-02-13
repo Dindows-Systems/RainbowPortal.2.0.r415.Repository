@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rainbow.Modules.GoogleSearch</name>
+    </assembly>
+    <members>
+        <member name="T:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.#ctor">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.doGetCachedPage(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.BegindoGetCachedPage(System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.EnddoGetCachedPage(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.doSpellingSuggestion(System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.BegindoSpellingSuggestion(System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.EnddoSpellingSuggestion(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.doGoogleSearch(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.String,System.Boolean,System.String,System.String,System.String)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.BegindoGoogleSearch(System.String,System.String,System.Int32,System.Int32,System.Boolean,System.String,System.Boolean,System.String,System.String,System.String,System.AsyncCallback,System.Object)">
+            <remarks/>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchService.EnddoGoogleSearch(System.IAsyncResult)">
+            <remarks/>
+        </member>
+        <member name="T:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.documentFiltering">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.searchComments">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.estimatedTotalResultsCount">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.estimateIsExact">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.resultElements">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.searchQuery">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.startIndex">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.endIndex">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.searchTips">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.directoryCategories">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.GoogleSearchResult.searchTime">
+            <remarks/>
+        </member>
+        <member name="T:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.summary">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.URL">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.snippet">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.title">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.cachedSize">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.relatedInformationPresent">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.hostName">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.directoryCategory">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.ResultElement.directoryTitle">
+            <remarks/>
+        </member>
+        <member name="T:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.DirectoryCategory">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.DirectoryCategory.fullViewableName">
+            <remarks/>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearchWebservice.com.google.api.DirectoryCategory.specialEncoding">
+            <remarks/>
+        </member>
+        <member name="T:Rainbow.DesktopModules.GoogleSearch">
+            <summary>
+            GoogleSearch module
+            Written by: James Melvin, james@commercechain.co.za,
+            http://www.commercechain.co.za
+            Moved into Rainbow by Jakob Hansen, hansen3000@hotmail.com
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.DataGrid1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.txtSearchString">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.lblHits">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.TextBox2">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.maxResults">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.licKey">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.restrictToThisDomain">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.showSnippet">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.showSummary">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.showURL">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.searchThisSiteOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.Label1">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.Search">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Rainbow.DesktopModules.GoogleSearch.Target">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearch.#ctor">
+            <summary>
+            Constructor - set the module settings
+            <list type="">
+            <item>MaxResults</item>
+            <item>licKey</item>
+            <item>showSnippet</item>
+            <item>showSummary</item>
+            <item>showURL</item>
+            <item>restrictToThisDomain</item>
+            <item>searchThisSiteOnly</item>
+            <item>setTarget</item>
+            </list>
+            </summary>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearch.OnInit(System.EventArgs)">
+            <summary>
+            OnInit
+            </summary>
+            <param name="e"></param>
+        </member>
+        <member name="M:Rainbow.DesktopModules.GoogleSearch.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:Rainbow.DesktopModules.GoogleSearch.Cacheable">
+            <summary>
+            Overrides ModuleSetting to render this module type un-cacheable
+            </summary>
+        </member>
+        <member name="P:Rainbow.DesktopModules.GoogleSearch.GuidID">
+            <summary>
+            General Module Def GUID
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,537 @@
+/* ================================
+    CSS STYLES FOR IBUYSPY PORTAL 
+    v1.0, 01/2001
+   ================================
+*/
+
+
+/* PAGE BACKGROUND */
+/* background color for the header at the top of the page  */
+.HeadBg
+{
+    background-color: #0066ff;
+}
+
+/* background color for the content part of the pages */
+Body
+{
+    background-color: #FFFFFF;
+}
+
+
+/* PAGE BANNER */
+/* NOTE: Site Title, Site Links and Tabs are rendered by MobilePortalBanner.ascx
+/* style for the text of the site title */
+.SiteTitle
+{
+    font-weight: bold;
+    font-size: 24px;
+    color: #0066ff;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+/* background/border colors for the selected tab */
+.TabBg
+{
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+/* background/border colors for the unselected tabs */
+.OtherTabsBg
+{
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+/* text style for the selected tab */
+.SelectedTab
+{
+    font-size: 11px;
+    font-family: Tahoma, Helvetica, sans-serif;
+}
+
+/* text style for the unselected tabs */
+.OtherTabs
+{
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Tahoma, Helvetica, sans-serif;
+    
+}
+
+/* hyperlink styles of the unselected tabs */
+A.OtherTabs:link
+{
+    color: #FFFFFF;
+}
+
+A.OtherTabs:visited
+{
+    color: #FFFFFF;
+}
+
+A.OtherTabs:active
+{
+    color: #FFFFFF;
+}
+
+A.OtherTabs:hover
+{
+    
+    color: #FFFFFF;
+}
+
+/* text style for the unselected tabs */
+.OtherSubTabs
+{
+    font-weight: bold;
+    font-size: 11px;
+    font-family: Tahoma, Helvetica, sans-serif;
+    
+}
+
+/* hyperlink styles of the unselected tabs */
+A.OtherSubTabs:link
+{
+    
+    color: #000000;
+}
+
+A.OtherSubTabs:visited
+{
+    
+    color: #000000;
+}
+
+A.OtherSubTabs:active
+{
+    
+    color: #000000;
+}
+
+A.OtherSubTabs:hover
+{
+    
+    color: #000000;
+}
+
+/* text style for the site links (at extreme top-right of header) */
+.SiteLink
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #999999;
+}
+
+/* hyperlink style for the site links */
+.SiteLink A:link
+{
+    
+    color: #999999;
+}
+
+.SiteLink A:visited
+{
+    
+    color: #999999;
+}
+
+.SiteLink A:active
+{
+    color: #999999;
+    
+}
+
+.SiteLink A:hover
+{
+    
+    color: #000000;
+}
+
+/* style for separator between site links */
+.Accent
+{
+    color:#999999;
+    font-weight: bold;
+}
+
+/* MODULE-SPECIFIC */
+/* text style for reading messages in Discussion */
+.Message
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    font-size: 11px;
+    background-color: #0066ff;
+}
+
+/* style of item titles by Announcements and events */
+.ItemTitle
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #0066ff;
+}
+
+/* style of item dates by Announcements and events */
+.ItemDate
+{
+    font-weight: bold;
+    font-size: 11px;
+    color: #000000;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+/* GENERAL */
+/* style for module titles */
+.Head
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* style of item titles on edit and admin pages */
+.SubHead
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* style of item titles on edit and admin pages */
+.TitleHead
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* module title style used instead of Head for compact rendering by QuickLinks and Signin modules */
+.SubSubHead
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* text style used for most text rendered by modules */
+.Normal
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    color: #000000;
+}
+
+/* text style used for textboxes in the admin and edit pages, for Nav compatibility */
+.NormalTextBox
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+}
+
+.NormalRed
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #0066ff;
+}
+
+.NormalBold
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.NormalItalic
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-style: italic;
+}
+
+/* text style for buttons and link buttons used in the portal admin pages */
+.CommandButton
+{
+    border-right: black thin solid;
+    padding-right: 20px;
+    border-top: silver thin solid;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 11px;
+    background: #6699ff;
+    padding-bottom: 2px;
+    margin: 3px;
+    overflow: visible;
+    border-left: silver thin solid;
+    color: white;
+    line-height: 25px;
+    padding-top: 2px;
+    border-bottom: black thin solid;
+    font-family: Verdana, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/* hyperlink style for buttons and link buttons used in the portal admin pages */
+A.CommandButton:link
+{
+    text-decoration: underline;
+    color: #000000;
+}
+
+A.CommandButton:visited
+{
+    text-decoration: underline;
+    color: #000000;
+}
+
+A.CommandButton:active
+{
+    text-decoration: underline;
+    color: #000000;
+}
+
+A.CommandButton:hover
+{
+    text-decoration: underline;
+    color: #000000;
+}
+
+.LeftPane
+{
+    background-color: lightcyan;
+}
+.RightPane
+{
+    background-color: lightcyan;
+}
+
+
+/* GENERIC */
+H1
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+}
+
+H2
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    color: #000000;
+}
+
+H3
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+}
+
+H4
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+    color: #000000;
+}
+
+H5, DT
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+H6
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+    color: #000000;
+}
+
+TFOOT, THEAD
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+}
+
+TH
+{
+    vertical-align: baseline;
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+}
+
+A:link
+{
+    color: #0066ff;
+    
+}
+
+A:visited
+{
+    
+    color: #0066ff;
+}
+
+A:active
+{
+    
+    color: #0066ff;
+}
+
+A:hover
+{
+    text-decoration: underline;
+    color: #0066ff;
+}
+
+SMALL
+{
+    font-size: 8px;
+}
+
+BIG
+{
+    font-size: 14px;
+}
+
+BLOCKQUOTE, PRE
+{
+    font-family: Lucida Console, monospace;
+}
+
+
+UL LI
+{
+    list-style-type: square;
+}
+
+UL LI LI
+{
+    list-style-type: disc;
+}
+
+UL LI LI LI
+{
+    list-style-type: circle;
+}
+
+OL LI
+{
+    list-style-type: decimal;
+}
+
+OL OL LI
+{
+    list-style-type: lower-alpha;
+}
+
+OL OL OL LI
+{
+    list-style-type: lower-roman;
+}
+
+HR
+{
+    color: #0066ff;
+    height: 1pt;
+    text-align: left;
+}
+
+/* Articles */
+/* style for Articles titles */
+.ArticleHead
+{
+    font-family: Verdana, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: #0066ff;
+}
+
+.module
+{
+    background-color: #000000;
+    padding: 10;
+}
+
+.Error
+{
+    font-weight: bold;
+    color: #FF0000;
+    font-size: 11px;
+}
+
+
+/* ================================
+   HtmlEditor
+   ================================ */
+
+DIV.edmenuback{
+	background-color: #cccccc;
+	border-bottom: 0px solid #929292;
+	border-left: 1px solid #929292;
+	border-right: 1px solid #929292;
+	border-top: 1px solid #929292;
+	width: 100%
+}
+
+TD.edmenuStyle{
+	width: 75px;
+	padding-top: 2px;
+	padding-left: 2px;
+	text-align: right;
+}
+
+TD.edmenuEditor{
+}
+
+TD.edmenuHTML{
+	text-align: right;
+	width: 35px;	
+}
+P
+{
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+.Border-Right
+{
+	border-right: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+.Border-Left
+{
+	border-left: 1px solid #000000;
+	border-bottom: 1px solid #000000;
+}
+.Border-Top
+{
+	border-top: 1px solid #000000;
+}
+A.InfoLink
+{
+	
+	color: #000000;
+}

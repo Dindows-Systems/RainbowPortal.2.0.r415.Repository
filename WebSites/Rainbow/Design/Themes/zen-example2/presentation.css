@@ -1,0 +1,90 @@
+/* Rainbow.Zen Presentation Base File - Jes1111 */
+body{
+font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+font-size:11px;
+line-height:16px;
+background:#dbd7cc;
+}
+#zenpanes{
+color:Black;
+border-color:#660000;
+border-width:5px;
+border-style:solid;
+}
+/* HEADER */
+div.zen-hdr{
+height:140px;
+background-color:#a99383;
+}
+/* Title Image Replacement */
+h1.portaltitle{
+height:140px;
+width:600px;
+font:30px/140px Impact,Arial,Helvetica,sans-serif;
+color:#003366;
+margin:0px;
+padding:0px;
+white-space:nowrap;
+}
+#portaltitle span{
+display:block;
+position:absolute;
+top:0px;
+left:0px;
+height:140px;
+width:600px;
+background-image:url(img/RainbowPortal-3.gif);
+background-repeat:no-repeat;
+background-position:left;
+}
+div.header-image{
+position:absolute;
+top:0px;
+right:0px;
+height:140px;
+width:210px;
+background-image:url(img/cat1.gif);
+background-position:right bottom;
+background-repeat:no-repeat;
+}
+/* FOOTER */
+div.zen-footer{
+border-width:1px;
+border-color:#660000;
+border-style:solid none none none;
+background-color:#a99383;
+padding:10px 0px;
+text-align:center;
+color:#666666;
+}
+/* COLUMNS */
+div.zen-cols{
+border-left:0px none;
+border-right:0px none;
+padding-top:23px;
+background:#d6c5b4 url(img/cat2.jpg) 50% 0% repeat-y;
+}
+div.zen-col-center{
+margin:0 0em;
+}
+div.zen-cols-wrapper{
+border-width:0px;
+}
+div.zen-hide-left div.zen-cols-wrapper{
+border-left:none;
+margin-left:0;
+}
+div.zen-hide-right div.zen-cols-wrapper{
+border-right:none;
+margin-right:0;
+}
+div.zen-hide-both div.zen-cols-wrapper{
+border-style:none none none none;
+margin:0;
+}
+div.div_ev_Table{
+border:1px solid transparent;
+margin:0px 0px 0px 0px;
+padding:23px 0px 0px 0px;
+background:#d6c5b4 url(img/cat2.jpg) 50% 0% repeat-y;
+}

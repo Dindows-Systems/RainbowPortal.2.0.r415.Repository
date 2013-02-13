@@ -1,0 +1,82 @@
+/* Rainbow.Zen Presentation Base File - Jes1111 */
+body{
+font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+font-size:11px;
+line-height:16px;
+background:#ffffff;
+}
+#zenpanes{
+color:Black;
+border-top: 10px solid #003366;
+
+}
+/* HEADER */
+div.zen-hdr{
+height:90px;
+background-color: White;
+}
+/* Title Image Replacement */
+h1.portaltitle{
+height:60px;
+width:300px;
+font:31px/41px Impact,Arial,Helvetica;
+font-weight:100;
+color:#999999;
+margin:0px;
+padding:0px
+}
+#portaltitle{
+height:60px;
+width:300px;
+position:absolute;
+top:0px;
+left:0px;
+}
+#portaltitle span{
+display:block;
+height:60px;
+width:300px;
+/*height:100%;
+width:100%;*/
+position:absolute;
+top:0px;
+left:0px;
+background: url(img/RainbowPortal-2.gif) no-repeat;
+}
+/* FOOTER */
+div.zen-footer{
+border-width:1px;
+border-color: #3c78b5;
+border-style:solid none none none;
+background-color: White;
+padding:10px 0px;
+text-align:center;
+color: #666666;
+}
+/* COLUMNS */
+div.zen-cols{
+background:White;
+border-left:0px none;
+border-right:0px none;
+padding-top:3px
+}
+div.zen-col-middle{
+}
+div.zen-col-center{
+margin:0 0em
+}
+div.zen-cols-wrapper{
+border-width:0px;
+}
+div.zen-hide-left div.zen-cols-wrapper{
+border-left:none;
+margin-left:0
+}
+div.zen-hide-right div.zen-cols-wrapper{
+border-right:none;
+margin-right:0
+}
+div.zen-hide-both div.zen-cols-wrapper{
+border-style:none none none none;
+margin:0
+}

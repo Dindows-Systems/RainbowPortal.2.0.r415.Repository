@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<topic id="Announcements-en" xml:lang="en">
+		<title>Announcements</title>
+		<titlealts>
+			<navtitle>Announcements</navtitle>
+			<searchtitle>Announcements</searchtitle>
+		</titlealts>
+		<shortdesc>Allows you to quickly add annnouncements to your webpages.</shortdesc>
+		<prolog>
+			<author type="creator">Jason Kergosien</author>
+			<author type="contributor" href="http://www.whitelightsolutions.com">John Mandia</author>
+			<critdates>
+				<created date="2005-02-12"/>
+				<revised modified="2005-02-12"/>
+			</critdates>
+			<metadata>
+				<audience type="user" job="managing" experiencelevel="general"/>
+				<category>User Modules</category>
+				<keywords>
+					<keyword>Announcements Module</keyword>
+					<keyword>Editor</keyword>
+					<keyword>Contents</keyword>
+					<keyword>Tabs</keyword>
+					<keyword>Modules</keyword>
+					<keyword>Edition</keyword>
+					<keyword>Workflow</keyword>
+					<keyword>Search</keyword>
+					<keyword>User Modules</keyword>
+				</keywords>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<component>/DesktopModules/Announcements/Announcements.ascx</component>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+		
+			<p>Welcome to the &quot;Announcements&quot; help file.</p>
+			<p>The Announcements module can be used to highlight special 
+events or information.  The most valuable feature this module offers is its 
+ability to automatically expire.  No more sorting through text, deleting old 
+information!  You control how long an announcement is displayed by setting the 
+module's Expiration Date. </p>
+<p>You can add multiple articles, whose HTML description are displayed fully in 
+the module.  You also have an option for a Read More link, for more 
+information.</p><p>Uses:</p>
+			<ul>
+				<li>The contents of your weekly bulletin</li>
+				<li>Special Events information</li>
+				<li>Time sensitive data</li>
+			</ul>
+		</body>
+	</topic>
+</dita>

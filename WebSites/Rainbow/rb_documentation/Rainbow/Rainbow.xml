@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="C:\RainbowCVS\CVSROOT\Rainbow\rb_documentation\Style\Default.xsl"?>
+<dita xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="C:\Documents and Settings\Jeremy\Desktop\dita13\dita13\schema\ditabase.xsd">
+	<topic id="Rainbow" xml:lang="en">
+		<title>Welcome to Rainbow Portal</title>
+		<titlealts>
+			<navtitle>Welcome to Rainbow Portal</navtitle>
+			<searchtitle>Rainbow Portal - Welcome</searchtitle>
+		</titlealts>
+		<shortdesc>
+		The Rainbow project is an open source initiative to build a comprehensive content management system using Microsoft's ASP.NET and C# technology.
+		Rainbow, available today in 14 languages, allows content authoring to be safely delegated to role-based team members who need little or no knowlege 
+		of HTML.  Rainbow optionally supports a two-step approval-publish process.  45 plug-in modules are now included in the standard release, including 
+		support for an e-store, XML news feeds, Flash, Maps, Newsletter, Surveys, Forums, Document Management, Custom Lists, and more.
+		</shortdesc>
+		<prolog>
+			<critdates>
+				<created date="2004-09-12"/>
+			</critdates>
+			<metadata>
+				<audience type="administrator" job="administratoring" experiencelevel="expert"/>
+				<prodinfo>
+					<prodname>Rainbow Portal</prodname>
+					<vrmlist>
+						<vrm version="1.0" modification="1" release="2004-09-12"/>
+					</vrmlist>
+				</prodinfo>
+			</metadata>
+		</prolog>
+		<body>
+			<section id="work_in_progress">
+			<title>Note:</title>
+			<p>The Rainbow Help System is a work-in-progress. In the menu, documents that are planned but not yet present are shown in <i>italic</i>. Note that sub-documents of absent documents <b>may</b> exist.</p>
+			<p>If you would like to contribute to this resource, either writing original documents or translating existing documents into another language, please contact one
+			of the <a href="http://www.rainbowportal.net/go/rainbow/3363/en-US/Default.aspx">core development team</a>.</p>
+			</section>
+		</body>
+	</topic>
+</dita>

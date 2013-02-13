@@ -1,0 +1,222 @@
+/* Rainbow.Zen Module Content and Legacy CSS File - Joel */
+.head, .Head
+{
+	font-size: 15px;
+	font-weight: bold;
+}
+.Subhead, .subhead, .SubHead
+{
+	font-size: 12px;
+}
+.NormalTextBox, .NormaltextBox, .Normaltextbox, .normaltextbox
+{
+	/*width: 100%;*/
+	font-size: 12px;
+}
+.Normal, .normal
+{
+	font-size: 12px;
+}
+.NormalBold, .normalbold, .normalBold
+{
+	font-size: 12px;
+	font-weight: bold;
+}
+.NormalRed, .normalRed, .normalred
+{
+	color: Red;
+	font-size: 12px;
+}
+.NormalItalic, .normalitalic
+{
+	font-size: 12px;
+	font-style: italic;
+}
+.NormalBI
+{
+	font-size: 12px;
+	font-style: italic;	
+	font-weight: bold;
+}
+.NormalDim
+{
+	color: Silver;
+	font-size: 12px;
+	font-style: italic;
+}
+.normalTextSmallBold
+{
+	font-size: 9px;
+	font-weight: bold;
+}
+.bc_Row, .BreadCrumbs
+{
+}
+.bc_Text, .BreadCrumbsText
+{
+	font-size: 8px;
+}
+.bc_Link, .bc_Link:link, .bc_Link:visited, .BreadCrumbsLink, .BreadCrumbsLink:link, .BreadCrumbsLink:visited
+{
+	color: Black;
+	font-size: 8px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.bc_Link:hover, .BreadCrumbsLink:hover
+{
+	text-decoration: underline;
+}
+.Error, .error
+{
+	color: Red;
+}
+.SubSubHead, .subSubHead, .subsubHead, .subsubhead
+{
+	font-size: 12px;
+	font-weight: bold;
+}
+.ItemTitle, .itemTitle, .itemtitle
+{
+	font-size: 12px;
+	font-weight: bold;
+}
+.ItemDate
+{
+	font-weight: bold;
+	font-size: 12px;
+}
+.CommandButton, .commandButton, .commandbutton, .Commandbutton
+{
+	/*display: block ;*/
+	margin: 0px;
+	background-color: #97C5EF;
+	text-decoration: none;
+	border: 1px solid;
+	border-bottom: #2A00DE;
+	border-right: #2A00DE;
+	border-top: #F9EDD1;
+	border-left: #F9EDD1;
+	font-family: arial;
+	padding: 3px 3px 3px 3px;
+	visibility: visible;
+	color: navy;
+	font-size: 9px;
+	font-weight: 400;
+	text-align: center;
+	height: 21px;
+	Width: 90px;
+	vertical-align: middle;
+}
+a.CommandButton:link, a.commandButton:link, a.commandbutton:link, a.Commandbutton:link
+{
+	color: navy;
+	text-decoration: none;
+}
+a.CommandButton:visited, a.commandButton:visited, a.commandbutton:visited, a.Commandbutton:visited
+{
+	color: navy;
+	text-decoration: none;
+}
+a.CommandButton:hover, a.commandButton:hover, a.commandbutton:hover, a.Commandbutton:hover
+{
+	color: navy;
+	text-decoration: none;
+}
+a.CommandButton:active, a.commandButton:active, a.commandbutton:active, a.Commandbutton:active
+{
+	color: #cc3300;
+	text-decoration: none;
+}
+.Grid_Header
+{
+	color: White;
+	background-color: Gray;
+}
+.Grid_Footer
+{
+}
+.Grid_Item
+{
+}
+.Grid_AlternatingItem
+{
+	background-color: Silver;
+}
+.Grid_SelectedItem
+{
+}
+.Grid_Pager
+{
+}
+
+
+
+.MessageTitle
+{
+	color: Black;
+	font-size: 15px;
+}
+.MessageAuthor
+{
+	color: Black;
+	font-size: 12px;
+}
+.MessageBody
+{
+	color: Black;
+	font-size: 12px;
+}
+DIV.edmenuback
+{
+	border-color: White;
+	border-style: solid;
+	border-width: 1px 1px 0px 1px;
+	width: 100%;
+	background-color: Silver;
+}
+TD.edmenuStyle
+{
+	width: 75px;
+	padding-top: 2px;
+	padding-left: 2px;
+	text-align: right;
+}
+TD.edmenuEditor
+{
+}
+TD.edmenuHTML
+{
+	width: 35px;
+	text-align: right;
+}
+
+.Error
+{
+	color: 993333;
+	font-weight: 800;
+}
+SMALL
+{
+	font-size: 9px;
+}
+BIG
+{
+	font-size: 12px;
+}
+.ItemTitle
+{
+	color: Black;
+	font-size: 12px;
+	font-weight: 800;
+}
+.Message, .message
+{
+	background-color: Silver;
+	font-size: 12px;
+}
+
+
+
+
+

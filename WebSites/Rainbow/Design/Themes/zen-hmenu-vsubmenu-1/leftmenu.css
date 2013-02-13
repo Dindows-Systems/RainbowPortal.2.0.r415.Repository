@@ -1,0 +1,94 @@
+.leftmenu {
+	margin-top:30px;
+	margin-bottom:15px;
+}
+.leftmenu ul { 
+	margin: 0; 
+	padding: 0; 
+	list-style: none;
+	width: 270px; /* Width of Menu Items */ 
+	border-bottom: 1px solid #ccc; 
+} 
+
+.leftmenu ul li { 
+	position: relative; 
+} 
+
+.leftmenu li ul { 
+	position: absolute; 
+	left: 269px; /*Set 1px less than menu width */ 
+	top: 0; 
+	display: block; 
+	z-index:1;
+} 
+
+.leftmenu li:hover ul {
+	display: block; 
+} 
+
+.leftmenu li:hover>ul { 
+	visibility:visible; 
+} 
+
+.leftmenu ul ul {
+	visibility:hidden; 
+} 
+
+/* Fix IE. Hide from IE Mac \*/ 
+* html .leftmenu ul li { float: left; height: 1%; } 
+* html .leftmenu ul li a { height: 1%; } 
+/* End */ 
+
+/* Make-up syles */ 
+
+.leftmenu ul, li { 
+	margin: 0 0 0 0; 
+} 
+
+/* Styles for Menu Items */ 
+.leftmenu ul a { 
+	display: block; 
+	text-decoration: none; 
+	color: black; 
+	background-color: #fff; /* IE6 Bug */ 
+	padding: 5px; 
+	border: 1px solid #ccc; 
+	border-bottom: 0; 
+} 
+
+/* Hover Styles */ 
+.leftmenu ul a:hover { 
+	color: white; 
+	background-color: #3c78b5; 
+} 
+
+/* Sub Menu Styles */ 
+.leftmenu li ul a { 
+	text-decoration: none; 
+	color: black; 
+	background-color: #fff; /* IE6 Bug */ 
+	padding: 5px; 
+	border: 1px solid #ccc; 
+	border-bottom: 0; 
+} 
+
+/* Sub Menu Hover Styles */ 
+.leftmenu li ul a:hover { 
+	color: white; 
+	background-color: #3c78b5; 
+} 
+
+.leftmenu li a.MenuItemSelected {
+	color:white;
+	background: #3c78b5; 
+}
+/* Icon Styles */ 
+.leftmenu ul a.daddy {
+	background-image: url("icon/menu_arrow.gif");
+	background-repeat:no-repeat;
+	background-position: right; 
+} 
+.leftmenu ul a.MenuItemSelected {
+	background-color:#3c78b5 ; 
+} 
+

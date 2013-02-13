@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<HTML>
+	<HEAD>
+		<title>Welcome to Rainbow!</title>
+		<meta content="Microsoft Visual Studio 7.0" name="GENERATOR">
+		<meta content="C#" name="CODE_LANGUAGE">
+		<meta content="JavaScript" name="vs_defaultClientScript">
+		<meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+		<LINK href="msdefault.css" type="text/css" rel="stylesheet">
+		<style> 
+		</style>
+	</HEAD>
+	<body bottomMargin="0" leftMargin="0" topMargin="0" rightMargin="0" marginwidth="0" marginheight="0">
+		<form>
+			<TABLE id="Table1" height="100%" cellSpacing="0" cellPadding="0" width="100%" border="0">
+				<tr bgColor="#101010">
+					<td colspan="3" height="92"><IMG height="110" src="logo_big.gif" width="300"></td>
+				</tr>
+				<tr bgColor="#bababa">
+					<td width="20">&nbsp;</td>
+					<td valign="top">
+						<br>
+						<TABLE class="Normal" id="infopaneltable" cellSpacing="1" width="100%" cellPadding="1"
+							border="0">
+							<TR>
+								<TD>
+									<div style="WIDTH:450px">
+										<B><U>Portal Setup/Update</U></B>
+										<P>Welcome to the portal update page. This page is shown automatically&nbsp;at 
+											first setup and when an update to the database is needed.<BR>
+										</P>
+									</div>
+								</TD>
+							</TR>
+							<tr>
+								<td class="Normal">
+									<b><u>Tips for Installation:</u></b>
+									<ol>
+										<li>
+											Read the <a target="instructions" href="http://support.rainbowportal.net/confluence/pages/viewpage.action?pageId=974">
+												Installation Instructions</a><br>
+											<br>
+										<li>
+											Verify that you have correctly set the database connection string in the 
+											web.config file. See examples below, for remote servers replace the server 
+											value with the IP of the SQL Server and replace the username, password and 
+											database name as needed.<b>Remote hosting will almost never allow Trusted 
+												connections!!</b><br>
+											<table cellpadding="0" cellspacing="0" class="Normal">
+												<tr>
+													<td class="Border-Top Border-Left">Server</td>
+													<td class="Border-Top Border-Left Border-Right">Connection String</td>
+												</tr>
+												<tr>
+													<td class="Border-Left">SQL Server<br>
+														SQL Authentication</td>
+													<td class="Border-Left Border-Right">&lt;add key="ConnectionString" 
+														value="server=localhost;database=Rainbow;uid=sa;pwd=[password here]" /&gt;
+													</td>
+												</tr>
+												<tr>
+													<td class="Border-Left">SQL Server<br>
+														Windows Authentication</td>
+													<td class="Border-Left Border-Right">&lt;add key="ConnectionString" 
+														value="server=localhost;database=Rainbow;Trusted_Connection=true;" /&gt;
+													</td>
+												</tr>
+												<tr>
+													<td class="Border-Left">MSDE<br>
+														SQL Authentication</td>
+													<td class="Border-Left Border-Right">&lt;add key="ConnectionString" 
+														value="server=(local)\NetSDK;database=Rainbow;uid=sa;pwd=[password here]" /&gt;
+													</td>
+												</tr>
+												<tr>
+													<td class="Border-Left">MSDE<br>
+														Windows Authentication</td>
+													<td class="Border-Left Border-Right">&lt;add key="ConnectionString" 
+														value="server=(local)\NetSDK;database=Rainbow;Trusted_Connection=true;" /&gt;
+													</td>
+												</tr>
+											</table>
+											<br>
+										<li>
+											Verify the folder where you copied the Rainbow files to is set as an 
+											application directory
+											<br>
+											1:: start menu-&gt;run-&gt;cmd
+											<br>
+											2: type in mmc and press enter
+											<br>
+											3: In the outside console, go to console menu, then "add/remove snapin"
+											<br>
+											4: Click on the "add" button, go to "Internet Information Services" and click 
+											add again.
+											<br>
+											5: click on close then OK.
+											<br>
+											6: Expand out the tree until you get to "default web server".
+											<br>
+											7: right click on that, select "new -&gt; virtual directory"
+											<br>
+											8: specify your folder location(that you already created), go through the 
+											wizard, etc. Give it "read" and "run scripts" permissions and finish out.
+											<br>
+											9: expand the "default web server" branch, right click on the new item you just 
+											created and go to properties.
+											<br>
+											10: click on button titled "create".
+											<br>
+											11: save changes and exit out. You are done, just create a "bin" directory 
+											inside of the file location you speicfied earlier.
+										</li>
+									</ol>
+									<b><u>Support Resources</u></b><br>
+									<ul>
+										<li>
+											<a href="http://www.rainbowportal.net/site/3405/support.aspx" target="_blank">The 
+												Official Rainbow Support Page</a>
+										<li>
+											<a href="http://support.rainbowportal.net/confluence/display/DOX/FAQ" target="_blank">
+												Rainbow FAQ</a>
+										<li>
+											<a href="http://forums.rainbowportal.net/" target="_blank">Support Forums</a>
+										<li>
+											<a href="http://groups.yahoo.com/group/rainbowportal/" target="_blank">Rainbow 
+												Portal Support Yahoo Group</a></li>
+									</ul>
+									<P align="center">
+										<b><a href="update.aspx"><FONT size="4">Proceed to Installation/Update Page</FONT></a></b>
+									</P>
+								</td>
+							</tr>
+						</TABLE>
+					</td>
+					<td width="20">&nbsp;</td>
+				</tr>
+				<tr>
+					<td style="BACKGROUND: #101010" height="10" colspan="3">
+						<TABLE cellSpacing="5" cellPadding="1" width="100%" border="0" ID="Table3">
+							<TR>
+								<td class="Normal" style="COLOR: white">&nbsp;<STRONG>Rainbow Portal - (c) 2004, 2005</STRONG></td>
+							</TR>
+						</TABLE>
+					</td>
+				</tr>
+			</TABLE>
+		</form>
+	</body>
+</HTML>

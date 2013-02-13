@@ -1,0 +1,186 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D3A33CF8-2AEB-4E6E-AC2E-01C676F33616}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rainbow.Framework</RootNamespace>
+    <AssemblyName>Rainbow.Framework</AssemblyName>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\Rainbow.Framework.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Release\Rainbow.Framework.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveUp.WebControls.HtmlTextBox, Version=2.1.1188.22068, Culture=neutral, PublicKeyToken=debdbfc6bad3ccfc">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\ActiveUp.WebControls.HtmlTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="DateTextBoxControls, Version=1.0.8.42693, Culture=neutral, PublicKeyToken=e747becda5e0f01b">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\DateTextBoxControls.dll</HintPath>
+    </Reference>
+    <Reference Include="DateTextBoxWebForms, Version=1.0.7.42696, Culture=neutral, PublicKeyToken=e271ed41c9902fac">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\DateTextBoxWebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="DevSolution.Portal, Version=1.0.1263.40256, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\DevSolution.Portal.dll</HintPath>
+    </Reference>
+    <Reference Include="EasyListBox, Version=2.4.4.11, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\EasyListBox.dll</HintPath>
+    </Reference>
+    <Reference Include="flashwebcontrol, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\flashwebcontrol.dll</HintPath>
+    </Reference>
+    <Reference Include="ForumModule, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\ForumModule.dll</HintPath>
+    </Reference>
+    <Reference Include="RainbowForum, Version=0.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\WebSites\Rainbow\Bin\RainbowForum.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ZenEngine\ZenBreadCrumbs.cs" />
+    <Compile Include="ZenEngine\ZenContent.cs" />
+    <Compile Include="ZenEngine\ZenHeaderMenu.cs" />
+    <Compile Include="ZenEngine\ZenHeaderTitle.cs" />
+    <Compile Include="ZenEngine\ZenLayout.cs" />
+    <Compile Include="ZenEngine\ZenNavigation.cs" />
+    <Compile Include="ZenEngine\ZenTemplate.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DAL\Modules\BooksDB.cs" />
+    <Compile Include="DAL\Modules\AnnouncementsDB.cs" />
+    <Compile Include="DesktopModules\Articles\Articles.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DAL\Modules\ArticlesDB.cs" />
+    <Compile Include="DAL\Modules\BlogDB.cs" />
+    <Compile Include="DAL\Modules\ComponentModuleDB.cs" />
+    <Compile Include="DAL\Modules\ContactsDB.cs" />
+    <Compile Include="DAL\Modules\ContentManagerDB.cs" />
+    <Compile Include="DAL\Modules\DiscussionEnhancedDB.cs" />
+    <Compile Include="DAL\Modules\DiscussionDB.cs" />
+    <Compile Include="Content\Security\DiscussionPermissions.cs" />
+    <Compile Include="DAL\Modules\DocumentDB.cs" />
+    <Compile Include="DAL\Modules\EnhancedHtmlDB.cs" />
+    <Compile Include="DAL\Modules\EnhancedLinksDB.cs" />
+    <Compile Include="DAL\Modules\EventsDB.cs" />
+    <Compile Include="DAL\Modules\FAQsDB.cs" />
+    <Compile Include="DAL\Modules\HtmlTextDB.cs" />
+    <Compile Include="DAL\Modules\LinksDB.cs" />
+    <Compile Include="DAL\Modules\MilestonesDB.cs" />
+    <Compile Include="Content\Charts\BarGraph.cs" />
+    <Compile Include="Content\Charts\Chart.cs" />
+    <Compile Include="Content\Charts\ChartItem.cs" />
+    <Compile Include="Content\Charts\PieChart.cs" />
+    <Compile Include="DAL\Modules\BlacklistDB.cs" />
+    <Compile Include="DAL\Modules\NewsletterDB.cs" />
+    <Compile Include="DAL\Modules\NewsletterHtmlTextDB.cs" />
+    <Compile Include="DesktopModules\OneFileModule\OneFileModule.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DAL\Modules\PicturesDB.cs" />
+    <Compile Include="DAL\Modules\SecureDocumentDB.cs" />
+    <Compile Include="Content\Security\SpecialRoles.cs" />
+    <Compile Include="DesktopModules\Shortcut\Shortcut.ascx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Content\Security\RandomPasswordLDAP.cs" />
+    <Compile Include="Content\Security\RandomPassword.cs" />
+    <Compile Include="DesktopModules\SimpleMenu\SimpleMenuType.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DesktopModules\SiteMap\ISitemapRenderer.cs" />
+    <Compile Include="DesktopModules\SiteMap\SitemapItem.cs" />
+    <Compile Include="DesktopModules\SiteMap\SitemapItems.cs" />
+    <Compile Include="DesktopModules\SiteMap\TableSitemapRenderer.cs" />
+    <Compile Include="Content\Data\SurveyDB.cs" />
+    <Compile Include="DAL\Modules\TasksDB.cs" />
+    <Compile Include="DAL\Modules\UserDefinedTableDB.cs" />
+    <Compile Include="DesktopModules\UserDefinedTable\UserDefinedTableType.cs" />
+    <Compile Include="DesktopModules\UserDefinedTable\UserDefinedTableXSL.cs" />
+    <Compile Include="UI\AddEditItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\AddItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\EditItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PropertyPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\PropertyPageCustom.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\SecurePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UI\ViewItemPage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rainbow.Framework.Core\Rainbow.Framework.Core.csproj">
+      <Project>{552CCD6F-0A37-4366-9E3E-22B2A0221584}</Project>
+      <Name>Rainbow.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rainbow.Framework.Providers.RainbowMembershipProvider\Rainbow.Framework.Providers.RainbowMembershipProvider.csproj">
+      <Project>{6BC1E6D4-1DD7-4CDB-B362-F390D40DDFFC}</Project>
+      <Name>Rainbow.Framework.Providers.RainbowMembershipProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rainbow.Framework.Providers.RainbowRoleProvider\Rainbow.Framework.Providers.RainbowRoleProvider.csproj">
+      <Project>{599A82DE-6BBE-47D2-BB28-190ABD3CD702}</Project>
+      <Name>Rainbow.Framework.Providers.RainbowRoleProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\WebControls\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

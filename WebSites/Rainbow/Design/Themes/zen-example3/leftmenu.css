@@ -1,0 +1,88 @@
+/* Rainbow.Zen - horizontal navigation Base File - Jes1111 */
+/* outer menu container */
+div.leftmenu{
+background-color:#A99383;
+border-color:#000000;
+border-style:solid;
+border-width:1px 1px 1px 0px;
+font-size:11px;/*padding:0px 0px 0px 0px;*/
+width:199px
+}
+/* all menu blocks */
+div.leftmenu ul{
+line-height:2;
+list-style:none;
+margin:0px;
+padding:0px
+}
+/* all menu containers */
+div.leftmenu li{
+border-top:1px solid #000000;
+list-style:none;
+margin:0px;
+min-height:22px;
+min-width:1%;
+padding:0px;
+text-align:left
+}
+/* all menu items */
+div.leftmenu li a{
+background-color:#A99383;
+border:1px none #3C78B5;
+color:#FFFFFF;
+display:block;
+margin:0px;
+min-height:22px;
+min-width:1%;
+padding:0px 0.5em 0px 0.5em;
+text-decoration:none;
+white-space:normal
+}
+/* all menu items - hover */
+div.leftmenu li a:hover{
+background-color:#A06C56;
+color:#FFFFFF
+}
+/* child menu blocks */
+div.leftmenu li ul{
+border:1px solid #000000;
+left:-999em;/* send them off the screen */
+margin-left:199px;
+margin-top:-23px;
+position:absolute;
+width:199px
+}
+div.leftmenu li:first-child{
+border-top:1px none
+}
+/* items with children */
+div.leftmenu li a.daddy,div.leftmenu li li.daddy{
+background-image:url(icon/menu_arrow.gif);
+background-position:right center;
+background-repeat:no-repeat
+}
+/* hide child menu blocks 2 or more levels below - add more as needed */
+div.leftmenu li:hover ul ul,
+div.leftmenu li:hover ul ul ul,
+div.leftmenu li:hover ul ul ul ul,
+div.leftmenu li:hover ul ul ul ul ul
+div.leftmenu li:hover ul ul ul ul ul ul{
+left:-999em
+}
+/* reveal immediate child menu blocks as needed */
+div.leftmenu li:hover ul,
+div.leftmenu li li:hover ul,
+div.leftmenu li li li:hover ul,
+div.leftmenu li li li li:hover ul,
+div.leftmenu li li li li li:hover ul,
+div.leftmenu li li li li li li:hover ul{
+left:auto
+}
+/* placeholder */
+div.leftmenu div.nav-ph{
+cursor:default;
+line-height:2;
+margin:0px;
+min-height:22px;
+padding:0px 5px
+}

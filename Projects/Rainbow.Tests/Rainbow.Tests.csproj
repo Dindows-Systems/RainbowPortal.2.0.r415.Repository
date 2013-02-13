@@ -1,0 +1,95 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B1021322-5BD0-454F-9C38-F9565C71C2CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rainbow.Tests</RootNamespace>
+    <AssemblyName>Rainbow.Tests</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=2.2.8.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Libs\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="GeographicProviderTest.cs" />
+    <Compile Include="DiagnoseEnvironment.cs" />
+    <Compile Include="MembershipProviderTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoleProviderTest.cs" />
+    <Compile Include="TestHelper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Rainbow.Framework.Core\Rainbow.Framework.Core.csproj">
+      <Project>{552CCD6F-0A37-4366-9E3E-22B2A0221584}</Project>
+      <Name>Rainbow.Framework.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rainbow.Framework.Providers.RainbowMembershipProvider\Rainbow.Framework.Providers.RainbowMembershipProvider.csproj">
+      <Project>{6BC1E6D4-1DD7-4CDB-B362-F390D40DDFFC}</Project>
+      <Name>Rainbow.Framework.Providers.RainbowMembershipProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rainbow.Framework.Providers.RainbowRoleProvider\Rainbow.Framework.Providers.RainbowRoleProvider.csproj">
+      <Project>{599A82DE-6BBE-47D2-BB28-190ABD3CD702}</Project>
+      <Name>Rainbow.Framework.Providers.RainbowRoleProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rainbow.Framework.Providers.RainbowSqlMembershipProvider\Rainbow.Framework.Providers.RainbowSqlMembershipProvider.csproj">
+      <Project>{2F8EA798-5AD7-44BA-A062-8B5721D9CFD1}</Project>
+      <Name>Rainbow.Framework.Providers.RainbowSqlMembershipProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rainbow.Framework.Providers.RainbowSqlRoleProvider\Rainbow.Framework.Providers.RainbowSqlRoleProvider.csproj">
+      <Project>{2C0213D4-00E2-4AD6-B82A-0D42ADAB3FAA}</Project>
+      <Name>Rainbow.Framework.Providers.RainbowSqlRoleProvider</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="App.config.standard" />
+    <None Include="Scripts\MembershipRoleProvidersData.sql" />
+    <None Include="Scripts\SetUp.sql" />
+    <None Include="Scripts\TearDown.sql" />
+    <None Include="Scripts\Test.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\SqlDataScriptsDefinition.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

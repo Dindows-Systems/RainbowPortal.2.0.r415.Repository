@@ -1,0 +1,14 @@
+1) Create a virtual directory called whatever you want, and point it at your downloaded dev\websites\rainbow\ folder.
+2) Create a database called whatever you want or skip this if you already have one.
+(By alpha 4 or 5 we will provide msde, so this will be optional)
+3) correct the connection string in web.config, there is one in connectionStrings section, and one in yafnet section.
+4) point browser to localhost/whatever you called site.
+
+To work on solution, open visual studio and open web site from IIS.
+
+If you are a developer, you can open the Rainbow.sln which will open all the core code projects.
+
+Sites Of Interest:
+Sample Site: http://www.rainbowbeta.com
+Code Documentation: http://codedocs.rainbowbeta.com
+Shout out to me: http://www.jonavi.com ( Also running current solution )
